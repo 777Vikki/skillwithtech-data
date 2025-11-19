@@ -19,7 +19,7 @@
     },
     {
         "id": 4,
-        "links": ["/rxjs.json"],
+        "links": ["/rxjs_list.json"],
         "name": "RxJS",
         "sections": []
     },
