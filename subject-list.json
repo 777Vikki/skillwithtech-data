@@ -1,61 +1,51 @@
 [
     {
         "name": "Angular",
-        "type": "Angular",
         "id": 1,
         "sections": []
     },
     {
         "name": "Angular Unit Test",
-        "type": "AngularUnitTest",
         "id": 11,
         "sections": []
     },
     {
         "name": "NgRx",
-        "type": "NgRx",
         "id": 2,
         "sections": []
     },
     {
         "name": "RxJS",
-        "type": "RxJs",
         "id": 3,
         "sections": []
     },
     {
         "name": "JavaScript",
-        "type": "JavaScript",
         "id": 4,
         "sections": []
     },
     {
         "name": "TypeScript",
-        "type": "TypeScript",
         "id": 5,
         "sections": []
     },
     {
         "name": "HTML",
-        "type": "HTML",
         "id": 6,
         "sections": []
     },
     {
         "name": "CSS",
-        "type": "CSS",
         "id": 7,
         "sections": []
     },
     {
         "name": "Micro Frontend in Angular",
-        "type": "AngularMicroFrontend",
         "id": 9,
         "sections": []
     },
     {
         "name": "Practice Set",
-        "type": "PracticeSet",
         "id": 10,
         "sections": []
     }
