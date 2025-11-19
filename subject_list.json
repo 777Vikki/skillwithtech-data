@@ -1,53 +1,68 @@
 [
     {
-        "name": "Angular",
         "id": 1,
-        "links": ["/angular-list.json"],
+        "links": [],
+        "name": "Angular",
         "sections": []
     },
     {
-        "name": "Angular Unit Test",
-        "id": 11,
-        "sections": []
-    },
-    {
-        "name": "NgRx",
         "id": 2,
+        "links": [],
+        "name": "Angular Unit Test",
         "sections": []
     },
     {
-        "name": "RxJS",
         "id": 3,
+        "links": [],
+        "name": "NgRx",
         "sections": []
     },
     {
-        "name": "JavaScript",
         "id": 4,
+        "links": [],
+        "name": "RxJS",
         "sections": []
     },
     {
-        "name": "TypeScript",
         "id": 5,
+        "links": [],
+        "name": "JavaScript",
         "sections": []
     },
     {
-        "name": "HTML",
         "id": 6,
+        "links": [],
+        "name": "TypeScript",
         "sections": []
     },
     {
-        "name": "CSS",
         "id": 7,
+        "links": [],
+        "name": "HTML",
         "sections": []
     },
     {
-        "name": "Micro Frontend in Angular",
+        "id": 8,
+        "links": [],
+        "name": "CSS",
+        "sections": []
+    },
+    {
         "id": 9,
+        "links": [],
+        "name": "CI/CD pipelines with Azure",
         "sections": []
     },
     {
-        "name": "Practice Set",
         "id": 10,
+        "links": [],
+        "name": "Micro Frontend in Angular",
+        "sections": []
+    },
+    {
+        "id": 11,
+        "links": [],
+        "name": "Practice Set",
         "sections": []
     }
 ]
