@@ -1,67 +1,67 @@
 [
     {
         "id": 1,
-        "links": [],
+        "links": ["/angular_list.json"],
         "name": "Angular",
         "sections": []
     },
     {
         "id": 2,
-        "links": [],
+        "links": ["/angular_unit_test_list.json"],
         "name": "Angular Unit Test",
         "sections": []
     },
     {
         "id": 3,
-        "links": [],
+        "links": ["/ngrx_list.json"],
         "name": "NgRx",
         "sections": []
     },
     {
         "id": 4,
-        "links": [],
+        "links": ["/rxjs.json"],
         "name": "RxJS",
         "sections": []
     },
     {
         "id": 5,
-        "links": [],
+        "links": ["/javascript_list.json"],
         "name": "JavaScript",
         "sections": []
     },
     {
         "id": 6,
-        "links": [],
+        "links": ["/typescript_list.json"],
         "name": "TypeScript",
         "sections": []
     },
     {
         "id": 7,
-        "links": [],
+        "links": ["/html_list.json"],
         "name": "HTML",
         "sections": []
     },
     {
         "id": 8,
-        "links": [],
+        "links": ["/css_list.json"],
         "name": "CSS",
         "sections": []
     },
     {
         "id": 9,
-        "links": [],
+        "links": ["/azure_list.json"],
         "name": "CI/CD pipelines with Azure",
         "sections": []
     },
     {
         "id": 10,
-        "links": [],
+        "links": ["/microfrontend_angular_list.json"],
         "name": "Micro Frontend in Angular",
         "sections": []
     },
     {
         "id": 11,
-        "links": [],
+        "links": ["/practice_set.json"],
         "name": "Practice Set",
         "sections": []
     }
