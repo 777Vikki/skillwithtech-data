@@ -2,6 +2,7 @@
     {
         "name": "Angular",
         "id": 1,
+        "links": ["/angular-list.json"],
         "sections": []
     },
     {
