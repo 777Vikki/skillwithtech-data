@@ -64,5 +64,11 @@
         "links": ["/practice_set_list.json"],
         "name": "Practice Set",
         "sections": []
+    },
+    {
+        "id": 12,
+        "links": ["/demo_list.json"],
+        "name": "Demo",
+        "sections": []
     }
 ]
