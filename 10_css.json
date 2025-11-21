@@ -1,0 +1,285 @@
+[
+    {
+        "name": "<p><strong>Responsive UI</strong></p>",
+        "subjectId": 10,
+        "sectionId": 71,
+        "subSectionId": -1,
+        "subSections": [],
+        "contents": [
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 71,
+                "subSectionId": -1,
+                "contentId": 246,
+                "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">How do you make a webpage responsive?</span></p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 71,
+                "subSectionId": -1,
+                "contentId": 247,
+                "text": "<p>What are media queries?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 71,
+                "subSectionId": -1,
+                "contentId": 248,
+                "text": "<p>What is the difference between max-width and min-width?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 71,
+                "subSectionId": -1,
+                "contentId": 249,
+                "text": "<p>What breakpoints do you usually use?</p>"
+            }
+        ]
+    },
+    {
+        "name": "<p><strong>CSS</strong></p>",
+        "subjectId": 10,
+        "sectionId": 72,
+        "subSectionId": -1,
+        "subSections": [],
+        "contents": [
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 250,
+                "text": "<p>What is the CSS Box Model?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 251,
+                "text": "<p>What is specificity in CSS?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 252,
+                "text": "<p>How do you center a div (horizontally &amp; vertically)?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 253,
+                "text": "<p>Difference between <code>display: none</code> vs <code>visibility: hidden</code>?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 254,
+                "text": "<p>What is the difference between <code>relative</code>, <code>absolute</code>, and <code>fixed</code>?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 255,
+                "text": "<p> What is Flexbox?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 256,
+                "text": "<p>What is CSS Grid?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 257,
+                "text": "<p>Difference between Flexbox and Grid?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 258,
+                "text": "<p>What are pseudo-classes?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 259,
+                "text": "<p>What are pseudo-elements?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 260,
+                "text": "<p>What is the z-index?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 261,
+                "text": "<p>What is <code>calc()</code> function?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 262,
+                "text": "<p>What is responsive design?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 263,
+                "text": "<p>What is <code>rem</code>, <code>em</code>, <code>%</code>, <code>vh</code>, <code>vw</code>?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 264,
+                "text": "<p>What is <code>overflow</code>?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 265,
+                "text": "<p>What is <code>object-fit</code> used for?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 72,
+                "subSectionId": -1,
+                "contentId": 266,
+                "text": "<p>Difference between <code>border-box</code> vs <code>content-box</code>?</p>"
+            }
+        ]
+    },
+    {
+        "name": "<p><strong>SCSS / SASS</strong></p>",
+        "subjectId": 10,
+        "sectionId": 73,
+        "subSectionId": -1,
+        "subSections": [],
+        "contents": [
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 73,
+                "subSectionId": -1,
+                "contentId": 267,
+                "text": "<p>What is SCSS?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 73,
+                "subSectionId": -1,
+                "contentId": 268,
+                "text": "<p>What are SCSS variables?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 73,
+                "subSectionId": -1,
+                "contentId": 269,
+                "text": "<p>What is nesting in SCSS?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 73,
+                "subSectionId": -1,
+                "contentId": 270,
+                "text": "<p>What is a mixin in SCSS?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 73,
+                "subSectionId": -1,
+                "contentId": 271,
+                "text": "<p>What are SCSS functions?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 73,
+                "subSectionId": -1,
+                "contentId": 272,
+                "text": "<p>What is <code>@extend</code> in SCSS?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 73,
+                "subSectionId": -1,
+                "contentId": 273,
+                "text": "<p>What are partials in SCSS?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 73,
+                "subSectionId": -1,
+                "contentId": 274,
+                "text": "<p>Difference between <code>@use</code>, <code>@import</code>, <code>@forward</code>?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 73,
+                "subSectionId": -1,
+                "contentId": 275,
+                "text": "<p>How does SCSS help performance?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 73,
+                "subSectionId": -1,
+                "contentId": 276,
+                "text": "<p>What is the difference between SASS and SCSS syntax?</p>"
+            },
+            {
+                "description": "",
+                "subjectId": 10,
+                "sectionId": 73,
+                "subSectionId": -1,
+                "contentId": 277,
+                "text": "<p>How to write media queries in SCSS?</p>"
+            }
+        ]
+    }
+]

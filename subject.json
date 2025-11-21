@@ -1,0 +1,106 @@
+[
+    {
+        "name": "Angular",
+        "id": 1,
+        "links": [
+            "/1_angular.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "Angular Version Features",
+        "id": 2,
+        "links": [
+            "/2_angular_version_features.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "Advanced Angular",
+        "id": 3,
+        "links": [
+            "/3_advanced_angular.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "Angular Unit Test",
+        "id": 4,
+        "links": [
+            "/4_angular_unit_test.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "NgRx",
+        "id": 5,
+        "links": [
+            "/5_ngrx.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "RxJS",
+        "id": 6,
+        "links": [
+            "/6_rxjs.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "JavaScript",
+        "id": 7,
+        "links": [
+            "/7_javascript.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "TypeScript",
+        "id": 8,
+        "links": [
+            "/8_typescript.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "HTML",
+        "id": 9,
+        "links": [
+            "/9_html.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "CSS",
+        "id": 10,
+        "links": [
+            "/10_css.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "CI/CD pipelines with Azure",
+        "id": 11,
+        "links": [
+            "/11_ci_cd_pipelines_with_azure.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "Micro Frontend in Angular",
+        "id": 12,
+        "links": [
+            "/12_micro_frontend_in_angular.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "Practice Set",
+        "id": 13,
+        "links": [
+            "/13_practice_set.json"
+        ],
+        "sections": []
+    }
+]
