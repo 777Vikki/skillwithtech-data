@@ -831,7 +831,7 @@
         ]
     },
     {
-        "name": "<p><strong>angular.json file</strong></p>",
+        "name": "<p><strong>angular.json and package.json file</strong></p>",
         "subjectId": 1,
         "sectionId": 24,
         "subSectionId": -1,
@@ -844,6 +844,14 @@
                 "subSectionId": -1,
                 "contentId": 83,
                 "text": "<p>When we create a component ‘<span style=\"background-color: rgb(187, 187, 187);\">ng generate component info</span>’, an app is getting added. From where the app is getting added?</p>"
+            },
+            {
+                "text": "<p>What is <strong>angular.json</strong> and <strong>package.json</strong>?</p>",
+                "sectionId": 24,
+                "subSectionId": -1,
+                "subjectId": 1,
+                "contentId": 343,
+                "description": ""
             }
         ]
     },
