@@ -47,6 +47,22 @@
                 "text": "<p>Explain the differences between AngularJS and Angular.</p>"
             },
             {
+                "text": "<p>If we create an application, how can we decide which is better—Angular or React?</p>",
+                "sectionId": 1,
+                "subSectionId": -1,
+                "subjectId": 1,
+                "contentId": 344,
+                "description": "<p><strong>Angular </strong>is the best choice when building <strong>large enterprise applications</strong> that require a <strong>standardized architecture, built-in tooling, dependency injection, and long-term maintainability</strong>. <strong>React </strong>is the best when you need <strong>flexibility, lightweight bundles, faster development, and highly interactive UI</strong>. The decision depends on <strong>project size, team skill, scalability, and architecture requirements.</strong></p></br><p><strong>React </strong>is great for <strong>small-to-medium apps</strong>, but in <strong>large enterprise applications</strong> it becomes difficult to scale because of lack of <strong>built-in architecture</strong>, no DI, heavy reliance on third-party libraries, inconsistent coding patterns across teams, and complex state management. <strong>Angular </strong>is more suited for enterprise because it provides a <strong>complete</strong>, <strong>structured framework</strong> out of the box.</p>"
+            },
+            {
+                "text": "<p>What is different between <strong>library </strong>and <strong>framework</strong>?</p>",
+                "sectionId": 1,
+                "subSectionId": -1,
+                "subjectId": 1,
+                "contentId": 345,
+                "description": "<p>A <strong>library</strong> gives you utility functions and you control the flow of the program.</p></br><p> A <strong>framework</strong> provides a full structure for your application and controls the flow, calling your code when needed.</p>"
+            },
+            {
                 "description": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">The browser loads </span><strong style=\"background-color: transparent; color: rgb(24, 128, 56);\">index.html</strong><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">, which usually contains a root element (like </span><strong style=\"background-color: transparent; color: rgb(24, 128, 56);\">&lt;app-root&gt;</strong><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">). Then </span><strong style=\"background-color: transparent; color: rgb(24, 128, 56);\">main.ts</strong><span style=\"background-color: transparent; color: rgb(0, 0, 0);\"> executes. This is the entry point (the first TypeScript file that runs), and its job is to bootstrap the Angular application.</span></p></br><p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">Earlier, Angular used </span><strong style=\"background-color: transparent; color: rgb(24, 128, 56);\">platformBrowserDynamic().bootstrapModule(AppModule)</strong><span style=\"background-color: transparent; color: rgb(0, 0, 0);\"> for NgModules. But after the introduction of standalone components, it now uses </span><strong style=\"background-color: transparent; color: rgb(24, 128, 56);\">bootstrapApplication()</strong><span style=\"background-color: transparent; color: rgb(0, 0, 0);\"> to bootstrap a component directly.</span></p></br></br><pre data-language=\"plain\">\nmain.ts\n\nimport { bootstrapApplication } from &#39;@angular/platform-browser&#39;;\nimport { appConfig } from &#39;./app/app.config&#39;;\nimport { App } from &#39;./app/app&#39;;\nbootstrapApplication(App, appConfig)\n  .catch((err) =&gt; console.error(err));\n</pre></br><p>Next, Angular initializes AppComponent, whose selector (&lt;app-root&gt;) matches the element in index.html.</p><p>For dependency injection setup, bootstrapApplication() also accepts providers such as HttpClient, Router, etc.</p></br></br><pre data-language=\"plain\">\napp.config.ts\n\nimport { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from &#39;@angular/core&#39;;\nimport { provideRouter } from &#39;@angular/router&#39;;\nimport { routes } from &#39;./app.routes&#39;;\nimport { provideHttpClient } from &#39;@angular/common/http&#39;;\nexport const appConfig: ApplicationConfig = {\n  providers: [\n    provideBrowserGlobalErrorListeners(),\n    provideZoneChangeDetection({ eventCoalescing: true }),\n    provideHttpClient(),\n    provideRouter(routes)\n  ]\n};\n</pre></br><p>Angular then builds the component tree starting from the root component, runs change detection, and updates the DOM.</p>",
                 "subjectId": 1,
                 "sectionId": 1,
@@ -57,62 +73,80 @@
         ]
     },
     {
-        "name": "<p><strong>Angular CLI</strong></p>",
-        "subjectId": 1,
-        "sectionId": 2,
-        "subSectionId": -1,
-        "subSections": [],
-        "contents": [
-            {
-                "description": "<p>The <strong>Angular CLI (Command Line Interface)</strong> is a tool that helps in <strong>creating</strong>, <strong>configuring</strong>, and <strong>managing</strong> Angular projects efficiently.</p></br><p> <code>ng new my-app</code> is used for <strong>project setup</strong> and generates a new <strong>Angular project</strong>.</p><p><strong>Components</strong>, <strong>Services</strong>, <strong>Directives</strong>, <strong>Modules</strong>, <strong>Pipes</strong>, and <strong>Guards</strong> can be generated using the <strong>Angular CLI</strong>.</p></br><p>For example:</p><ul><li>To generate a <strong>Component</strong>: <code>ng generate component component-name</code></li><li>To generate a <strong>Service</strong>: <code>ng generate service service-name</code></li></ul></br><p><code>ng serve</code> runs a <strong>local development server</strong> with <strong>live reload</strong>.</p>",
-                "subjectId": 1,
-                "sectionId": 2,
-                "subSectionId": -1,
-                "contentId": 7,
-                "text": "<p>What is the purpose of Angular CLI?</p>"
-            }
-        ]
-    },
-    {
-        "name": "<p><strong>Module</strong></p>",
-        "subjectId": 1,
-        "sectionId": 3,
-        "subSectionId": -1,
-        "subSections": [],
-        "contents": [
-            {
-                "description": "<p>A <strong>Module</strong> contains the <strong>logical structure</strong> of a project. It <strong>groups</strong> related <strong>Components</strong>, <strong>Directives</strong>, <strong>Pipes</strong>, and <strong>Services</strong>.</p></br><p>After the introduction of <strong>Standalone Components (Angular 14+)</strong>, the <strong>need for modules</strong> is <strong>reduced</strong>.</p>",
-                "subjectId": 1,
-                "sectionId": 3,
-                "subSectionId": -1,
-                "contentId": 8,
-                "text": "<p>What is a module in Angular?</p>"
-            }
-        ]
-    },
-    {
-        "name": "<p><strong>Templates</strong></p>",
-        "subjectId": 1,
-        "sectionId": 4,
-        "subSectionId": -1,
-        "subSections": [],
-        "contents": [
-            {
-                "description": "<p>A <strong>Template</strong> in <strong>Angular</strong> is <strong>HTML</strong> with <strong>Angular syntax</strong> (such as <strong>Interpolation</strong>, <strong>Property Binding</strong>, <strong>Event Binding</strong>, <strong>Two-Way Binding</strong>, and <strong>Directives</strong>) that defines a <strong>Component&#39;s View</strong> and makes the <strong>UI dynamic</strong>.</p>",
-                "subjectId": 1,
-                "sectionId": 4,
-                "subSectionId": -1,
-                "contentId": 9,
-                "text": "<p>What are templates in Angular?</p>"
-            }
-        ]
-    },
-    {
-        "name": "<p><strong>ng-template and ng-container</strong></p>",
+        "name": "<p><strong>Templates, Module, Angular CLI, ng-template and ng-container</strong></p>",
         "subjectId": 1,
         "sectionId": 5,
         "subSectionId": -1,
-        "subSections": [],
+        "subSections": [
+            {
+                "name": "<p><strong>Templates</strong></p>",
+                "sectionId": 5,
+                "subSectionId": 89,
+                "subjectId": 1,
+                "contents": [
+                    {
+                        "text": "<p>What are templates in Angular?</p>",
+                        "sectionId": 5,
+                        "subSectionId": 89,
+                        "subjectId": 1,
+                        "contentId": 347,
+                        "description": "<p>A <strong>Template</strong> in <strong>Angular</strong> is <strong>HTML</strong> with <strong>Angular syntax</strong> (such as <strong>Interpolation</strong>, <strong>Property Binding</strong>, <strong>Event Binding</strong>, <strong>Two-Way Binding</strong>, and <strong>Directives</strong>) that defines a <strong>Component&#39;s View</strong> and makes the <strong>UI dynamic</strong>.</p>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>Module</strong></p>",
+                "sectionId": 5,
+                "subSectionId": 90,
+                "subjectId": 1,
+                "contents": [
+                    {
+                        "text": "<p>What is a module in Angular?</p>",
+                        "sectionId": 5,
+                        "subSectionId": 90,
+                        "subjectId": 1,
+                        "contentId": 348,
+                        "description": "<p>A <strong>Module</strong> contains the <strong>logical structure</strong> of a project. It <strong>groups</strong> related <strong>Components</strong>, <strong>Directives</strong>, <strong>Pipes</strong>, and <strong>Services</strong>.</p></br><p>After the introduction of <strong>Standalone Components (Angular 14+)</strong>, the <strong>need for modules</strong> is <strong>reduced</strong>.</p>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>Angular CLI</strong></p>",
+                "sectionId": 5,
+                "subSectionId": 91,
+                "subjectId": 1,
+                "contents": [
+                    {
+                        "text": "<p>What is the purpose of Angular CLI?</p>",
+                        "sectionId": 5,
+                        "subSectionId": 91,
+                        "subjectId": 1,
+                        "contentId": 346,
+                        "description": "<p>The <strong>Angular CLI (Command Line Interface)</strong> is a tool that helps in <strong>creating</strong>, <strong>configuring</strong>, and <strong>managing</strong> Angular projects efficiently.</p></br><p><code>ng new my-app</code> is used for <strong>project setup</strong> and generates a new <strong>Angular project</strong>.</p><p><strong>Components</strong>, <strong>Services</strong>, <strong>Directives</strong>, <strong>Modules</strong>, <strong>Pipes</strong>, and <strong>Guards</strong> can be generated using the <strong>Angular CLI</strong>.</p></br><p>For example:</p><ul><li>To generate a <strong>Component</strong>: <code>ng generate component component-name</code></li><li>To generate a <strong>Service</strong>: <code>ng generate service service-name</code></li></ul></br><p><code>ng serve</code> runs a <strong>local development server</strong> with <strong>live reload</strong>.</p>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>ng-template and ng-contaner</strong></p>",
+                "sectionId": 5,
+                "subSectionId": 92,
+                "subjectId": 1,
+                "contents": [
+                    {
+                        "text": "<p>What is different between ng-templace and ng-container?</p>",
+                        "sectionId": 5,
+                        "subSectionId": 92,
+                        "subjectId": 1,
+                        "contentId": 349,
+                        "description": "<p><strong>ng-template</strong>:</p></br><p><strong>ng-template </strong>is an <strong>Angular template element</strong> that holds <strong>HTML/Angular code</strong> but is <strong>not rendered in the DOM</strong> by default.</p><p>It’s mainly used with <strong>structural directives</strong> (<code>*ngIf</code>, <code>*ngFor</code>, <code>ngTemplateOutlet</code>) to render <strong>content conditionally</strong> or <strong>dynamically</strong>.</p></br><pre data-language=\"plain\">\n&lt;ng-template #noData&gt;&lt;/ng-template&gt;\n&lt;div *ngIf=&quot;items.length; else noData&quot;&gt;&lt;/div&gt;\n</pre></br><p><strong>Reusable Templates:</strong></p></br><pre data-language=\"plain\">\n&lt;ng-template #welcome&gt;&lt;/ng-template&gt;\n&lt;ng-template #goodbye&gt;&lt;/ng-template&gt;\n\n&lt;ng-container *ngTemplateOutlet=&quot;isLoggedIn ? welcome : goodbye&quot;&gt;&lt;/ng-container&gt;\n</pre></br><p><strong>Dynamic Rendering in TypeScript:</strong></p></br><pre data-language=\"plain\">\nimport { Component, ViewChild, TemplateRef, ViewContainerRef } from &#39;@angular/core&#39;;\n\n@ViewChild(&#39;login&#39;) loginTemplate!: TemplateRef&lt;any&gt;;\n@ViewChild(&#39;signup&#39;) signupTemplate!: TemplateRef&lt;any&gt;;\n@ViewChild(&#39;container&#39;, { read: ViewContainerRef }) container!: ViewContainerRef;\n</pre></br><p><strong>ng-container</strong>:</p></br><p>It’s a <strong>logical container</strong> that does <strong>not create extra DOM elements</strong>.</p><p>It <strong>groups multiple elements</strong> without wrapping them in an unnecessary <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>.</p>"
+                    }
+                ],
+                "subSections": []
+            }
+        ],
         "contents": [
             {
                 "description": "<p><strong>ng-template</strong>:</p></br><p><strong>ng-template </strong>is an <strong>Angular template element</strong> that holds <strong>HTML/Angular code</strong> but is <strong>not rendered in the DOM</strong> by default.</p><p>It’s mainly used with <strong>structural directives</strong> (<code>*ngIf</code>, <code>*ngFor</code>, <code>ngTemplateOutlet</code>) to render <strong>content conditionally</strong> or <strong>dynamically</strong>.</p></br><pre data-language=\"plain\">\n&lt;ng-template #noData&gt;&lt;/ng-template&gt;\n&lt;div *ngIf=&quot;items.length; else noData&quot;&gt;&lt;/div&gt;\n</pre></br><p><strong>Reusable Templates:</strong></p></br><pre data-language=\"plain\">\n&lt;ng-template #welcome&gt;&lt;/ng-template&gt;\n&lt;ng-template #goodbye&gt;&lt;/ng-template&gt;\n\n&lt;ng-container *ngTemplateOutlet=&quot;isLoggedIn ? welcome : goodbye&quot;&gt;&lt;/ng-container&gt;\n</pre></br><p><strong>Dynamic Rendering in TypeScript:</strong></p></br><pre data-language=\"plain\">\nimport { Component, ViewChild, TemplateRef, ViewContainerRef } from &#39;@angular/core&#39;;\n\n@ViewChild(&#39;login&#39;) loginTemplate!: TemplateRef&lt;any&gt;;\n@ViewChild(&#39;signup&#39;) signupTemplate!: TemplateRef&lt;any&gt;;\n@ViewChild(&#39;container&#39;, { read: ViewContainerRef }) container!: ViewContainerRef;\n</pre></br><p><strong>ng-container</strong>:</p></br><p>It’s a <strong>logical container</strong> that does <strong>not create extra DOM elements</strong>.</p><p>It <strong>groups multiple elements</strong> without wrapping them in an unnecessary <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>.</p></br></br></br></br></br>",
