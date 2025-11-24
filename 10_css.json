@@ -193,7 +193,7 @@
         "subSections": [],
         "contents": [
             {
-                "description": "",
+                "description": "<p><strong>SCSS (Sassy CSS)</strong> is used for styling and provides extra <strong>superpowers</strong>. It allows us to use features like <strong>variables </strong>(<code>$primary-color</code>),<strong> nesting, mixins, functions, partials and imports, and inheritance</strong> (<code>@extend</code>)<strong>.</strong></p>",
                 "subjectId": 10,
                 "sectionId": 73,
                 "subSectionId": -1,
@@ -201,7 +201,7 @@
                 "text": "<p>What is SCSS?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>SCSS variables</strong> are <strong>placeholders used to store reusable values</strong> such as colors, font sizes, spacing, breakpoints, or any value you want to use multiple times in your styles.</p></br><pre data-language=\"plain\">\n$primary-color: #3498db;\n$font-large: 18px;\n\nbutton {\n  background-color: $primary-color;\n  font-size: $font-large;\n}\n</pre></br>",
                 "subjectId": 10,
                 "sectionId": 73,
                 "subSectionId": -1,
@@ -209,7 +209,7 @@
                 "text": "<p>What are SCSS variables?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>Nesting </strong>in <strong>SCSS </strong>allows you to write selectors inside other selectors, reducing repetition and making your styles more <strong>structured </strong>and <strong>readable</strong>.</p>",
                 "subjectId": 10,
                 "sectionId": 73,
                 "subSectionId": -1,
@@ -217,7 +217,7 @@
                 "text": "<p>What is nesting in SCSS?</p>"
             },
             {
-                "description": "",
+                "description": "<p>A <strong>mixin in SCSS</strong> is a reusable CSS code block that we can include anywhere using <code>@include</code>. It helps reduce repetition and keeps your code clean.</p></br><pre data-language=\"plain\">\n@mixin center-flex {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.box {\n  width: 100px;\n  height: 100px;\n  @include center-flex;\n}\n</pre></br><p><strong>Mixins with Parameters:</strong></p><pre data-language=\"plain\">\n@mixin font-size-weight($size, $weight) {\n  font-size: $size;\n  font-weight: $weight;\n}\n\n.title {\n  @include font-size-weight(24px, 600);\n}\n</pre></br>",
                 "subjectId": 10,
                 "sectionId": 73,
                 "subSectionId": -1,
@@ -225,7 +225,7 @@
                 "text": "<p>What is a mixin in SCSS?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>SCSS functions allow you to perform calculations or logic and return a value.</strong></p><p>They make your CSS more dynamic, powerful, and maintainable.</p></br><pre data-language=\"plain\">\n@function theme-color($shade) {\n  @if $shade == &#39;primary&#39; {\n    @return #3498db;\n  } @else if $shade == &#39;success&#39; {\n    @return #2ecc71;\n  } @else {\n    @return #333;\n  }\n}\n\n.button {\n  color: theme-color(&#39;success&#39;);\n}\n</pre></br>",
                 "subjectId": 10,
                 "sectionId": 73,
                 "subSectionId": -1,
@@ -233,7 +233,7 @@
                 "text": "<p>What are SCSS functions?</p>"
             },
             {
-                "description": "",
+                "description": "<p><code><strong>@extend</strong></code><strong> in SCSS</strong> is a feature that allows one selector to <strong>inherit</strong> the styles of another selector.</p></br><pre data-language=\"plain\">\n.message {\n  padding: 10px;\n  border-radius: 5px;\n}\n\n.success {\n  @extend .message;\n  background: green;\n}\n\n.warning {\n  @extend .message;\n  background: orange;\n}\n</pre></br>",
                 "subjectId": 10,
                 "sectionId": 73,
                 "subSectionId": -1,
@@ -241,7 +241,7 @@
                 "text": "<p>What is <code>@extend</code> in SCSS?</p>"
             },
             {
-                "description": "",
+                "description": "<p>A <strong>partial </strong>is an <strong>SCSS </strong>file whose name starts with an <strong>underscore </strong>(<code>_</code>) and is meant to be <strong>imported </strong>into other <strong>SCSS </strong>files.</p></br><pre data-language=\"plain\">\n// _variables.scss\n$primary-color: #3498db;\n$font-size-base: 16px;\n\n// _mixins.scss\n@mixin flex-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n\n@use &#39;variables&#39;;\n@use &#39;mixins&#39;;\n\nbutton {\n  background: variables.$primary-color;\n  @include mixins.flex-center;\n}\n</pre></br>",
                 "subjectId": 10,
                 "sectionId": 73,
                 "subSectionId": -1,
@@ -249,7 +249,7 @@
                 "text": "<p>What are partials in SCSS?</p>"
             },
             {
-                "description": "",
+                "description": "<p><code><strong>@import</strong></code> is the old way and is not recommended by the Sass team. When we use<strong> </strong><code><strong>@import</strong></code>, it merges everything into a single global scope, which can lead to name conflicts, slow compilation, and duplicate imports.</p></br><p><code><strong>@use</strong></code><strong> </strong>is the recommended approach. It does not pollute the global scope, and it allows us to access variables, mixins, and functions using a namespace.</p></br><p><code><strong>@forward</strong></code><strong> </strong>is used when creating a central SCSS file that re-exports other partials.</p>",
                 "subjectId": 10,
                 "sectionId": 73,
                 "subSectionId": -1,
@@ -257,7 +257,7 @@
                 "text": "<p>Difference between <code>@use</code>, <code>@import</code>, <code>@forward</code>?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>SCSS </strong>helps improve performance by reducing CSS size through the use of <strong>variables</strong>, <strong>mixins</strong>, <strong>functions</strong>, <strong>nesting</strong>, and <strong>partials</strong>. It also removes duplicate styles using <code>@extend</code>.</p>",
                 "subjectId": 10,
                 "sectionId": 73,
                 "subSectionId": -1,
@@ -265,7 +265,7 @@
                 "text": "<p>How does SCSS help performance?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>SASS </strong>uses <strong>indentation-based</strong> syntax without <strong>braces </strong>or <strong>semicolons</strong>, while <strong>SCSS </strong>uses CSS-like syntax with <strong>braces </strong>and <strong>semicolons</strong>.</p>",
                 "subjectId": 10,
                 "sectionId": 73,
                 "subSectionId": -1,
@@ -273,7 +273,7 @@
                 "text": "<p>What is the difference between SASS and SCSS syntax?</p>"
             },
             {
-                "description": "",
+                "description": "<p>A <strong>media query</strong> is used to apply CSS depending on device characteristics—mainly screen size—to make websites responsive and user-friendly across all devices.</p></br><pre data-language=\"plain\">\n@media (min-width: 250px) {\n  .your-class {\n    /* styles here */\n  }\n}\n\n@media (min-width: 450px) and (max-width: 1200px) {\n  .your-class {\n    /* styles here */\n  }\n}\n\n@media (max-width: 1800px) {\n  .your-class {\n    /* styles here */\n  }\n}\n</pre></br>",
                 "subjectId": 10,
                 "sectionId": 73,
                 "subSectionId": -1,
