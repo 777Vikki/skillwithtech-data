@@ -73,7 +73,7 @@
         ]
     },
     {
-        "name": "<p><strong>Templates, Module, Angular CLI, ng-template and ng-container</strong></p>",
+        "name": "<p><strong>Templates, Module, Angular CLI, Component Communication, ng-template and ng-container</strong></p>",
         "subjectId": 1,
         "sectionId": 5,
         "subSectionId": -1,
@@ -130,6 +130,23 @@
                 "subSections": []
             },
             {
+                "name": "<p><strong>Component Communication</strong></p>",
+                "sectionId": 5,
+                "subSectionId": 95,
+                "subjectId": 1,
+                "contents": [
+                    {
+                        "text": "<p>How do components communicate with each other in a large-scale Angular application?</p>",
+                        "sectionId": 5,
+                        "subSectionId": 95,
+                        "subjectId": 1,
+                        "contentId": 358,
+                        "description": "<p>If the <strong>communication</strong> is between <strong>parent</strong> and <strong>child</strong>, I can <strong>pass data</strong> from <strong>parent to child</strong> through <code>@Input()</code> and <strong>emit data</strong> from <strong>child to parent</strong> through <code>@Output()</code>. I can also <strong>directly access</strong> a <strong>child component instance</strong> using <code>ViewChild</code> or <code>ContentChild</code>.</p></br><p>If <strong>components</strong> are <strong>unrelated</strong>, I create a <strong>shared service</strong> and <strong>share data</strong> through it using <code>Subject</code> or <code>BehaviorSubject</code> for <strong>real-time updates</strong>.</p></br><p>For <strong>large-scale apps</strong>, I use <strong>centralized state management</strong> like <strong>NgRx</strong> to <strong>manage</strong> and <strong>share data</strong>.</p></br><p>I can also <strong>pass data</strong> through <strong>route params</strong>, <strong>query params</strong>, or <strong>route state</strong>.</p>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
                 "name": "<p><strong>ng-template and ng-contaner</strong></p>",
                 "sectionId": 5,
                 "subSectionId": 92,
@@ -147,16 +164,7 @@
                 "subSections": []
             }
         ],
-        "contents": [
-            {
-                "description": "<p><strong>ng-template</strong>:</p></br><p><strong>ng-template </strong>is an <strong>Angular template element</strong> that holds <strong>HTML/Angular code</strong> but is <strong>not rendered in the DOM</strong> by default.</p><p>It’s mainly used with <strong>structural directives</strong> (<code>*ngIf</code>, <code>*ngFor</code>, <code>ngTemplateOutlet</code>) to render <strong>content conditionally</strong> or <strong>dynamically</strong>.</p></br><pre data-language=\"plain\">\n&lt;ng-template #noData&gt;&lt;/ng-template&gt;\n&lt;div *ngIf=&quot;items.length; else noData&quot;&gt;&lt;/div&gt;\n</pre></br><p><strong>Reusable Templates:</strong></p></br><pre data-language=\"plain\">\n&lt;ng-template #welcome&gt;&lt;/ng-template&gt;\n&lt;ng-template #goodbye&gt;&lt;/ng-template&gt;\n\n&lt;ng-container *ngTemplateOutlet=&quot;isLoggedIn ? welcome : goodbye&quot;&gt;&lt;/ng-container&gt;\n</pre></br><p><strong>Dynamic Rendering in TypeScript:</strong></p></br><pre data-language=\"plain\">\nimport { Component, ViewChild, TemplateRef, ViewContainerRef } from &#39;@angular/core&#39;;\n\n@ViewChild(&#39;login&#39;) loginTemplate!: TemplateRef&lt;any&gt;;\n@ViewChild(&#39;signup&#39;) signupTemplate!: TemplateRef&lt;any&gt;;\n@ViewChild(&#39;container&#39;, { read: ViewContainerRef }) container!: ViewContainerRef;\n</pre></br><p><strong>ng-container</strong>:</p></br><p>It’s a <strong>logical container</strong> that does <strong>not create extra DOM elements</strong>.</p><p>It <strong>groups multiple elements</strong> without wrapping them in an unnecessary <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>.</p></br></br></br></br></br>",
-                "subjectId": 1,
-                "sectionId": 5,
-                "subSectionId": -1,
-                "contentId": 10,
-                "text": "<p>What is different between ng-templace and ng-container?</p>"
-            }
-        ]
+        "contents": []
     },
     {
         "name": "<p><strong>Directives</strong></p>",
@@ -166,20 +174,12 @@
         "subSections": [],
         "contents": [
             {
-                "description": "<p>A <strong>Directive</strong> in <strong>Angular</strong> is a <strong>class</strong> that <strong>changes the appearance</strong>, <strong>behavior</strong>, or <strong>layout</strong> of elements <strong>dynamically</strong>.</p>",
+                "description": "<p>A <strong>Directive</strong> in <strong>Angular</strong> is a <strong>class</strong> that <strong>changes the appearance</strong>, <strong>behavior</strong>, or <strong>layout</strong> of elements <strong>dynamically</strong>.</p></br><p><strong>Component Directives</strong>: A <strong>Component</strong> is a <strong>special type of directive</strong> that has a <strong>template</strong> and is used to build <strong>UI views</strong>. Components have their own <strong>templates</strong>, <strong>styles</strong>, and <strong>logic</strong>.</p></br><p><strong>Structural Directives</strong>: <strong>Structural Directives</strong> are <strong>Angular directives</strong> that <strong>change the structure of the DOM</strong> by <strong>adding or removing elements</strong> using <code>*ngIf</code>, <code>*ngFor</code>, or <code>*ngSwitch</code>.</p></br><p><strong>Attribute Directives</strong>: <strong>Attribute Directives</strong> are used to <strong>change the appearance</strong> or <strong>behavior</strong> of <strong>DOM elements</strong> in Angular by <strong>modifying their attributes or styles</strong> using <code>ngClass</code>, <code>ngStyle</code>, or <code>ngModel</code>.</p>",
                 "subjectId": 1,
                 "sectionId": 6,
                 "subSectionId": -1,
                 "contentId": 11,
                 "text": "<p>What is a directive?</p>"
-            },
-            {
-                "description": "<p><strong>Component Directives</strong>: A <strong>Component</strong> is a <strong>special type of directive</strong> that has a <strong>template</strong> and is used to build <strong>UI views</strong>. Components have their own <strong>templates</strong>, <strong>styles</strong>, and <strong>logic</strong>.</p></br><p><strong>Structural Directives</strong>: <strong>Structural Directives</strong> are <strong>Angular directives</strong> that <strong>change the structure of the DOM</strong> by <strong>adding or removing elements</strong> using <code>*ngIf</code>, <code>*ngFor</code>, or <code>*ngSwitch</code>.</p></br><p><strong>Attribute Directives</strong>: <strong>Attribute Directives</strong> are used to <strong>change the appearance</strong> or <strong>behavior</strong> of <strong>DOM elements</strong> in Angular by <strong>modifying their attributes or styles</strong> using <code>ngClass</code>, <code>ngStyle</code>, or <code>ngModel</code>.</p>",
-                "subjectId": 1,
-                "sectionId": 6,
-                "subSectionId": -1,
-                "contentId": 12,
-                "text": "<p>Explain the types of directives in Angular.</p>"
             },
             {
                 "description": "<p><strong>*ngIf</strong>: <code>*ngIf</code> <strong>conditionally adds or removes</strong> an element based on a <strong>boolean expression</strong>.</p></br><p><strong>*ngFor</strong>: <code>*ngFor</code> <strong>iterates over a list</strong> to <strong>render an element</strong> for each <strong>item</strong>.</p>",
@@ -328,20 +328,12 @@
         "subSections": [],
         "contents": [
             {
-                "description": "<p><strong>Lifecycle hooks</strong> are <strong>methods, Angular </strong>calls at different stages of a <strong>component’s creation, update, and destruction</strong>. They allow us to run custom logic at specific moments such as <strong>initialization </strong>(<code>ngOnInit</code>),<strong> input changes</strong> (<code>ngOnChanges</code>), <strong>view initialization </strong>(<code>ngAfterViewInit</code>), and <strong>cleanup </strong>(<code>ngOnDestroy</code>).</p>",
+                "description": "<p><strong>Lifecycle hooks</strong> are <strong>methods, Angular </strong>calls at different stages of a <strong>component’s creation, update, and destruction</strong>. They allow us to run custom logic at specific moments such as <strong>initialization </strong>(<code>ngOnInit</code>),<strong> input changes</strong> (<code>ngOnChanges</code>), <strong>view initialization </strong>(<code>ngAfterViewInit</code>), and <strong>cleanup </strong>(<code>ngOnDestroy</code>).</p></br><h3><strong>1. </strong><code><strong>ngOnChanges(changes: SimpleChanges)</strong></code></h3><ul><li>Runs <strong>when an @Input() value changes</strong>.</li><li>Called <strong>before ngOnInit</strong> (and each time input updates).</li><li>Useful for reacting to parent → child data updates.</li></ul><h3><strong>2. </strong><code><strong>ngOnInit()</strong></code></h3><ul><li>Runs <strong>once</strong> when component is initialized.</li><li>Good for initialization logic (API calls, setting default values).</li><li>Called after the first <code>ngOnChanges</code>.</li></ul><h3><strong>3. </strong><code><strong>ngDoCheck()</strong></code></h3><ul><li>Runs <strong>frequently</strong> (every change detection cycle).</li><li>Use it to write <strong>custom change detection</strong> logic.</li><li>Use rarely → can impact performance.</li></ul><h3><strong>4. </strong><code><strong>ngAfterContentInit()</strong></code></h3><ul><li>Runs when <strong>content projection</strong> (<code>&lt;ng-content&gt;</code>) is initialized.</li></ul><h3><strong>5. </strong><code><strong>ngAfterContentChecked()</strong></code></h3><ul><li>Runs <strong>after every check</strong> of projected content.</li></ul><h3><strong>6. </strong><code><strong>ngAfterViewInit()</strong></code></h3><ul><li>Runs when the component’s <strong>view and child views</strong> are fully initialized.</li><li>Use it when accessing:<ul><li><code>@ViewChild</code></li><li><code>@ViewChildren</code></li></ul></li></ul><h3><strong>7. </strong><code><strong>ngAfterViewChecked()</strong></code></h3><ul><li>Runs after <strong>every view check</strong>.</li><li>Avoid heavy operations here.</li></ul><h3><strong>8. </strong><code><strong>ngOnDestroy()</strong></code></h3><ul><li>Runs when component is destroyed.</li><li>Use it to:<ul><li>Unsubscribe Observables</li><li>Clear intervals</li></ul></li></ul>",
                 "subjectId": 1,
                 "sectionId": 8,
                 "subSectionId": -1,
                 "contentId": 29,
                 "text": "<p>What are lifecycle hooks in Angular?</p>"
-            },
-            {
-                "description": "<h3><strong>1. </strong><code><strong>ngOnChanges(changes: SimpleChanges)</strong></code></h3><ul><li>Runs <strong>when an @Input() value changes</strong>.</li><li>Called <strong>before ngOnInit</strong> (and each time input updates).</li><li>Useful for reacting to parent → child data updates.</li></ul><h3><strong>2. </strong><code><strong>ngOnInit()</strong></code></h3><ul><li>Runs <strong>once</strong> when component is initialized.</li><li>Good for initialization logic (API calls, setting default values).</li><li>Called after the first <code>ngOnChanges</code>.</li></ul><h3><strong>3. </strong><code><strong>ngDoCheck()</strong></code></h3><ul><li>Runs <strong>frequently</strong> (every change detection cycle).</li><li>Use it to write <strong>custom change detection</strong> logic.</li><li>Use rarely → can impact performance.</li></ul><h3><strong>4. </strong><code><strong>ngAfterContentInit()</strong></code></h3><ul><li>Runs when <strong>content projection</strong> (<code>&lt;ng-content&gt;</code>) is initialized.</li></ul><h3><strong>5. </strong><code><strong>ngAfterContentChecked()</strong></code></h3><ul><li>Runs <strong>after every check</strong> of projected content.</li></ul><h3><strong>6. </strong><code><strong>ngAfterViewInit()</strong></code></h3><ul><li>Runs when the component’s <strong>view and child views</strong> are fully initialized.</li><li>Use it when accessing:<ul><li><code>@ViewChild</code></li><li><code>@ViewChildren</code></li></ul></li></ul><h3><strong>7. </strong><code><strong>ngAfterViewChecked()</strong></code></h3><ul><li>Runs after <strong>every view check</strong>.</li><li>Avoid heavy operations here.</li></ul><h3><strong>8. </strong><code><strong>ngOnDestroy()</strong></code></h3><ul><li>Runs when component is destroyed.</li><li>Use it to:<ul><li>Unsubscribe Observables</li><li>Clear intervals</li></ul></li></ul><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"9\">Remove event listeners</td></tr></tbody></table>",
-                "subjectId": 1,
-                "sectionId": 8,
-                "subSectionId": -1,
-                "contentId": 30,
-                "text": "<p>Explain some commonly used lifecycle hooks.</p>"
             },
             {
                 "description": "<p>When an Angular <strong>component loads</strong>, the <strong>first lifecycle hook</strong> that is called is <code><strong>ngOnChanges()</strong></code>, <strong>if the component has any </strong><code><strong>@Input()</strong></code><strong> properties</strong>.</p></br><p>If there are <strong>no </strong><code><strong>@Input()</strong></code><strong> bindings</strong>, then Angular skips <code>ngOnChanges()</code> and directly calls <code><strong>ngOnInit()</strong></code>.</p>",
@@ -706,23 +698,6 @@
                 "subSectionId": -1,
                 "contentId": 63,
                 "text": "<p>Can you explain how to implement authentication guards in Angular?</p>"
-            }
-        ]
-    },
-    {
-        "name": "<p><strong>Component Communication</strong></p>",
-        "subjectId": 1,
-        "sectionId": 17,
-        "subSectionId": -1,
-        "subSections": [],
-        "contents": [
-            {
-                "description": "<p>If the <strong>communication</strong> is between <strong>parent</strong> and <strong>child</strong>, I can <strong>pass data</strong> from <strong>parent to child</strong> through <code>@Input()</code> and <strong>emit data</strong> from <strong>child to parent</strong> through <code>@Output()</code>. I can also <strong>directly access</strong> a <strong>child component instance</strong> using <code>ViewChild</code> or <code>ContentChild</code>.</p></br><p>If <strong>components</strong> are <strong>unrelated</strong>, I create a <strong>shared service</strong> and <strong>share data</strong> through it using <code>Subject</code> or <code>BehaviorSubject</code> for <strong>real-time updates</strong>.</p></br><p>For <strong>large-scale apps</strong>, I use <strong>centralized state management</strong> like <strong>NgRx</strong> to <strong>manage</strong> and <strong>share data</strong>.</p></br><p>I can also <strong>pass data</strong> through <strong>route params</strong>, <strong>query params</strong>, or <strong>route state</strong>.</p>",
-                "subjectId": 1,
-                "sectionId": 17,
-                "subSectionId": -1,
-                "contentId": 64,
-                "text": "<p>How do components communicate with each other in a large-scale Angular application?</p>"
             }
         ]
     },
