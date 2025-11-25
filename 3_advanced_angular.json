@@ -158,36 +158,71 @@
         "contents": []
     },
     {
-        "name": "<p><strong>SSR</strong></p>",
-        "subjectId": 3,
-        "sectionId": 41,
+        "name": "<p><strong>Error Handling and State Management</strong></p>",
+        "sectionId": 96,
         "subSectionId": -1,
-        "subSections": [],
-        "contents": [
+        "subjectId": 3,
+        "contents": [],
+        "subSections": [
             {
-                "description": "",
+                "name": "<p><strong>Error Handling</strong></p>",
+                "sectionId": 96,
+                "subSectionId": 97,
                 "subjectId": 3,
-                "sectionId": 41,
-                "subSectionId": -1,
-                "contentId": 108,
-                "text": "<p><strong style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">What is SSR (Server-Side Rendering)</strong><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">, and why is it used in Angular?</span></p>"
+                "contents": [
+                    {
+                        "text": "<p>How to Handle Errors in Angular?</p>",
+                        "sectionId": 96,
+                        "subSectionId": 97,
+                        "subjectId": 3,
+                        "contentId": 359,
+                        "description": "<p>In Angular, error handling happens at multiple layers:</p><p><strong>1. Global API errors</strong> are handled in an <code>HttpInterceptor</code> using the RxJS <code>catchError</code> operator.</p><pre data-language=\"plain\">\n@Injectable()\nexport class ErrorInterceptor implements HttpInterceptor {\n  intercept(req: HttpRequest&lt;any&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;any&gt;&gt; {\n    return next.handle(req).pipe(\n      catchError((error: HttpErrorResponse) =&gt; {\n        let message = &#39;&#39;;\n\n        if (error.status === 0) {\n          message = &#39;Network error&#39;;\n        } else if (error.status === 401) {\n          message = &#39;Unauthorized&#39;;\n        } else if (error.status === 500) {\n          message = &#39;Server Error&#39;;\n        } else {\n          message = error.error?.message || &#39;Something went wrong&#39;;\n        }\n\n        // Optional: Show toast\n        // this.toastr.error(message);\n\n        return throwError(() =&gt; new Error(message));\n      })\n    );\n  }\n}\n</pre></br><p><strong>2.</strong> I use <code>catchError</code> inside service methods when a specific API requires custom error handling.</p><p><strong>3.</strong> I use the <strong>Optional Chaining Operator (</strong><code><strong>?.</strong></code><strong>)</strong> in templates to safely handle <code>null</code> or <code>undefined</code> values.</p></br><pre data-language=\"plain\">\n&lt;p&gt;{{ user?.name }}&lt;/p&gt;\n</pre></br><p><strong>4.</strong> I use <code><strong>retry</strong></code> and <code><strong>retryWhen</strong></code> for API retry logic when dealing with unstable network calls.</p></br><p><code>retry</code> is an RxJS operator that <strong>automatically retries a failed observable (such as an HTTP call) a specified number of times</strong> before throwing an error.</p><pre data-language=\"plain\">\nthis.http.get(url).pipe(\n  retry(3),     // tries 3 times if the request fails\n  catchError(err =&gt; throwError(() =&gt; err))\n);\n</pre></br><p><code>retryWhen</code> is an advanced operator used when you need <strong>custom retry logic</strong>.</p><p>You can add <strong>delay</strong>, <strong>exponential backoff</strong>, <strong>conditions</strong>, etc.</p><pre data-language=\"plain\">\nthis.http.get(url).pipe(\n  retryWhen(errors =&gt;\n    errors.pipe(\n      delay(2000),   // wait 2 seconds before retrying\n      take(3),       // retry 3 times\n      catchError(err =&gt; throwError(() =&gt; err))\n    )\n  )\n);\n</pre>"
+                    }
+                ],
+                "subSections": []
             },
             {
-                "description": "",
+                "name": "<p><strong>State Management</strong></p>",
+                "sectionId": 96,
+                "subSectionId": 98,
                 "subjectId": 3,
-                "sectionId": 41,
-                "subSectionId": -1,
-                "contentId": 109,
-                "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What are the </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">benefits of SSR</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> in terms of </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">SEO</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> and </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">performance</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">?</span></p>"
+                "contents": [
+                    {
+                        "text": "<p>How can we manage <strong>state </strong>in <strong>Angular</strong>?</p>",
+                        "sectionId": 96,
+                        "subSectionId": 98,
+                        "subjectId": 3,
+                        "contentId": 360,
+                        "description": "<p>We manage <strong>state </strong>in <strong>Angular </strong>depending on the complexity of the application.</p><p>For simple local component state, I use <code>component variables</code>  and  <code>@Input/Output</code> .</p><p>For shared state, I use services with <strong>RxJS </strong><code>BehaviorSubject</code> or <code>ReplaySubject</code>.</p><p>For large enterprise applications, I prefer using <strong>NgRx </strong>because it provides a predictable <strong>store</strong>, <strong>immutability, actions, reducers, effects</strong>, and <strong>selectors</strong>. Angular also supports signals for lightweight <strong>reactive state</strong>.</p>"
+                    }
+                ],
+                "subSections": []
             }
         ]
     },
     {
-        "name": "<p><strong>Caching, Webpack and Auth</strong></p>",
+        "name": "<p><strong>SSR,</strong> <strong>Caching, Webpack and Auth</strong></p>",
         "subjectId": 3,
         "sectionId": 42,
         "subSectionId": -1,
         "subSections": [
+            {
+                "name": "<p><strong>SSR</strong></p>",
+                "sectionId": 42,
+                "subSectionId": 100,
+                "subjectId": 3,
+                "contents": [
+                    {
+                        "text": "<p><strong style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">What is SSR (Server-Side Rendering)</strong><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">, and why is it used in Angular?</span></p>",
+                        "sectionId": 42,
+                        "subSectionId": 100,
+                        "subjectId": 3,
+                        "contentId": 361,
+                        "description": "<p>SSR (Server-Side Rendering) means <strong>Angular renders the initial HTML of the application on the server instead of the browser</strong>.</p><p>Normally, Angular apps load a blank HTML and then bootstrap JavaScript.</p><p>With SSR, the server sends <strong>fully rendered HTML</strong>, and then Angular takes over on the browser.</p></br><p><strong>Add SSR to your app:</strong></p><pre data-language=\"plain\">\nng add @angular/ssr\n</pre></br><p>Angular will:</p><ul><li>Convert your app to SSR setup</li><li>Create <code>server.ts</code></li><li>Create a server build</li><li>Enable hydration automatically</li></ul></br>"
+                    }
+                ],
+                "subSections": []
+            },
             {
                 "name": "<p><strong>Caching</strong></p>",
                 "subjectId": 3,
