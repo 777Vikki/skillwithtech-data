@@ -63,5 +63,22 @@
                 "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What are </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Enums</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> and where are they </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">used</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">?</span></p>"
             }
         ]
+    },
+    {
+        "name": "<p><strong>Interface VS Type</strong></p>",
+        "sectionId": 101,
+        "subSectionId": -1,
+        "subjectId": 8,
+        "contents": [
+            {
+                "text": "<p>What is <strong>Omit </strong>in TypeScript?</p>",
+                "sectionId": 101,
+                "subSectionId": -1,
+                "subjectId": 8,
+                "contentId": 362,
+                "description": "<p><code>Omit&lt;Type, Keys&gt;</code> creates a <strong>new type</strong> by <strong>removing specific keys</strong> from an existing type.</p></br><pre data-language=\"plain\">\nOmit&lt;Type, &#39;key1&#39; | &#39;key2&#39;&gt;\n</pre></br><pre data-language=\"plain\">\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n  password: string;\n}\n\ntype UserWithoutPassword = Omit&lt;User, &#39;password&#39;&gt;;\ntype UserWithoutPasswordEmail = Omit&lt;User, &#39;password&#39; | &#39;email&#39;&gt;;\n</pre>"
+            }
+        ],
+        "subSections": []
     }
 ]
