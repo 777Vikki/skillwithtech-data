@@ -1,6 +1,6 @@
 [
     {
-        "name": "<p><strong>Frountend related questions</strong></p>",
+        "name": "<p><strong>Tokens, Restfull API and HTTP, Soket, SDLC and Project Methodology, CORS</strong></p>",
         "subjectId": 3,
         "sectionId": 35,
         "subSectionId": -1,
@@ -158,12 +158,29 @@
         "contents": []
     },
     {
-        "name": "<p><strong>Error Handling and State Management</strong></p>",
+        "name": "<p><strong>Application&#39;s Architecture, Error Handling and State Management</strong></p>",
         "sectionId": 96,
         "subSectionId": -1,
         "subjectId": 3,
         "contents": [],
         "subSections": [
+            {
+                "name": "<p><strong>Angular Application Architecture</strong></p>",
+                "sectionId": 96,
+                "subSectionId": 102,
+                "subjectId": 3,
+                "contents": [
+                    {
+                        "text": "<p>Can you explain the <strong>architecture </strong>of your <strong>Angular application</strong>?</p>",
+                        "sectionId": 96,
+                        "subSectionId": 102,
+                        "subjectId": 3,
+                        "contentId": 363,
+                        "description": "<p>My Angular architecture follows a clean and scalable structure with core, shared, and feature-based modules. I use standalone components, lazy loading, NgRx or signals for state management, smart/dumb components, services for business logic, and interceptors for global error + auth handling. This results in maintainable, testable, and high-performance Angular applications.</p>"
+                    }
+                ],
+                "subSections": []
+            },
             {
                 "name": "<p><strong>Error Handling</strong></p>",
                 "sectionId": 96,
