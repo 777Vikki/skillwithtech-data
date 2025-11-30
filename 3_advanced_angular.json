@@ -295,6 +295,39 @@
         "contents": []
     },
     {
+        "name": "<p><strong>Tree shaking, Minification, Uglification</strong></p>",
+        "sectionId": 103,
+        "subSectionId": -1,
+        "subjectId": 3,
+        "contents": [
+            {
+                "text": "<p>Tree Shaking</p>",
+                "sectionId": 103,
+                "subSectionId": -1,
+                "subjectId": 3,
+                "contentId": 364,
+                "description": "<p><strong>Tree shaking</strong> is the process of removing unused code from the final <strong>bundle </strong>so that only the parts of the application actually used remain.</p>"
+            },
+            {
+                "text": "<p>Minification</p>",
+                "sectionId": 103,
+                "subSectionId": -1,
+                "subjectId": 3,
+                "contentId": 365,
+                "description": "<p><strong>Minification </strong>removes <strong>whitespace</strong>, <strong>comments</strong>, <strong>line breaks</strong>, and <strong>shortens variable </strong>names to make the code smaller and faster to download.</p>"
+            },
+            {
+                "text": "<p>Uglification (uglifying)</p>",
+                "sectionId": 103,
+                "subSectionId": -1,
+                "subjectId": 3,
+                "contentId": 366,
+                "description": "<p><strong>Uglification </strong>is the process of rewriting code into an <strong>unreadable</strong>, condensed format by shortening variable names, removing structure, and compressing code to reduce file size.</p></br><p><strong>Before Uglification</strong></p><pre data-language=\"plain\">\nfunction calculateTotal(price, tax) {\n  let total = price + tax;\n  return total;\n}\n</pre></br><p><strong>After Uglification</strong></p><pre data-language=\"plain\">\nfunction a(b,c){return b+c}\n</pre>"
+            }
+        ],
+        "subSections": []
+    },
+    {
         "name": "<p><strong>Performance Optimization</strong></p>",
         "sectionId": 88,
         "subSectionId": -1,
