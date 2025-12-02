@@ -79,7 +79,7 @@
                 "subSections": [],
                 "contents": [
                     {
-                        "description": "",
+                        "description": "<p>A socket is a persistent connection between a client and server that allows real-time, two-way communication.</p><p>In Angular, we can use WebSocket or Socket.IO to send and receive messages instantly without refreshing the page, which is useful for chat apps, notifications, or live updates.</p></br><p><strong>install socket.io</strong></p><pre data-language=\"plain\">\nnpm install socket.io-client\n</pre></br><pre data-language=\"plain\">\nimport { Injectable } from &#39;@angular/core&#39;;\nimport { io, Socket } from &#39;socket.io-client&#39;;\nimport { Observable } from &#39;rxjs&#39;;\n\n@Injectable({ providedIn: &#39;root&#39; })\nexport class SocketService {\n  private socket: Socket;\n\n  constructor() {\n    this.socket = io(&#39;http://localhost:3000&#39;); // backend server\n  }\n\n  // Send message to server\n  sendMessage(msg: string) {\n    this.socket.emit(&#39;message&#39;, msg);\n  }\n\n  // Receive message from server\n  onMessage(): Observable&lt;string&gt; {\n    return new Observable(observer =&gt; {\n      this.socket.on(&#39;message&#39;, (data: string) =&gt; observer.next(data));\n    });\n  }\n}\n</pre>",
                         "subjectId": 3,
                         "sectionId": 35,
                         "subSectionId": 38,
@@ -145,7 +145,7 @@
                 "subSections": [],
                 "contents": [
                     {
-                        "description": "",
+                        "description": "<p>CORS is a browser security mechanism that blocks frontend apps from making requests to a different origin unless the server explicitly allows it via <code>Access-Control-Allow-Origin</code> headers. In Angular, we face CORS errors when the frontend and backend have different origins. The correct solution is to configure the backend to allow requests from the Angular app’s origin and, if cookies are used, enable <code>credentials: true</code>.</p>",
                         "subjectId": 3,
                         "sectionId": 35,
                         "subSectionId": 40,
@@ -218,7 +218,7 @@
         ]
     },
     {
-        "name": "<p><strong>SSR,</strong> <strong>Caching, Webpack, Auth and Secure</strong></p>",
+        "name": "<p><strong>SSR,</strong> <strong>Caching, Webpack, Store Token and Secure</strong></p>",
         "subjectId": 3,
         "sectionId": 42,
         "subSectionId": -1,
@@ -248,7 +248,7 @@
                 "subSections": [],
                 "contents": [
                     {
-                        "description": "",
+                        "description": "<p><strong>Caching</strong> is the process of storing data temporarily so that future requests can be served faster without fetching data again from the server.</p></br><pre data-language=\"plain\">\n@Injectable({ providedIn: &#39;root&#39; })\nexport class DataService {\n  private cache = new Map&lt;string, any&gt;();\n\n  constructor(private http: HttpClient) {}\n\n  getData(url: string): Observable&lt;any&gt; {\n    if (this.cache.has(url)) {\n      // Return cached data\n      return of(this.cache.get(url));\n    } else {\n      return this.http.get(url).pipe(\n        tap(data =&gt; this.cache.set(url, data))\n      );\n    }\n  }\n}\n</pre></br>",
                         "subjectId": 3,
                         "sectionId": 42,
                         "subSectionId": 43,
@@ -275,19 +275,19 @@
                 ]
             },
             {
-                "name": "<p><strong>Auth</strong></p>",
+                "name": "<p><strong>Store Token</strong></p>",
                 "subjectId": 3,
                 "sectionId": 42,
                 "subSectionId": 45,
                 "subSections": [],
                 "contents": [
                     {
-                        "description": "",
+                        "description": "<p>The best way to store the authentication token in Angular is in an <strong>HttpOnly Secure Cookie</strong>, which is safe from JavaScript access and XSS attacks.</p><p>For less critical apps, it can be stored in memory during the session.</p><p>Storing tokens in localStorage or sessionStorage is not recommended because they can be accessed by malicious scripts.</p></br><p>Angular <strong>does not need to attach the token manually</strong>. Cookies are automatically sent with requests <strong>if </strong><code><strong>withCredentials</strong></code><strong> is true</strong>:</p><pre data-language=\"plain\">\nthis.http.get(&#39;/api/profile&#39;, { withCredentials: true }).subscribe(\n  data =&gt; console.log(data)\n);\n</pre></br><p>Backend clears the cookie:</p><pre data-language=\"plain\">\napp.post(&#39;/logout&#39;, (req, res) =&gt; {\n  res.clearCookie(&#39;authToken&#39;);\n  res.json({ message: &#39;Logged out&#39; });\n});\n</pre>",
                         "subjectId": 3,
                         "sectionId": 42,
                         "subSectionId": 45,
                         "contentId": 112,
-                        "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Can you explain </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Auth</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">?</span></p>"
+                        "text": "<p><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">Where should we store token in angular?</span></p>"
                     }
                 ]
             },
@@ -303,7 +303,7 @@
                         "subSectionId": 111,
                         "subjectId": 3,
                         "contentId": 397,
-                        "description": ""
+                        "description": "<p>I secure an Angular app using guards, secure cookie-based authentication, interceptors, XSS prevention, HTTPS with security headers, CSRF protection, and proper production builds — keeping all sensitive logic in the backend.</p></br><p><strong>secure cookie-based authentication:</strong></p><p>When I send the login API request with <code>{ withCredentials: true }</code>, the backend sends a cookie to the browser. After that, for every API request made with <code>{ withCredentials: true }</code>, the browser automatically sends the cookie back to the backend for authentication.</p></br><p><strong>Interceptors:</strong></p><p>Angular HTTP interceptors are used to automatically attach authentication credentials to API requests.</p><pre data-language=\"plain\">\nreq = req.clone({\n  withCredentials: true,\n  setHeaders: {\n    Authorization: `Bearer ${token}`\n  }\n});\n</pre></br><p><strong>XSS prevention:</strong></p><p>We can secure an Angular application against XSS (Cross-Site Scripting) attacks. When inserting HTML dynamically using <code>innerHTML</code>, we must sanitize it using <code>this.sanitizer.bypassSecurityTrustHtml(userInput)</code>.</p><pre data-language=\"plain\">\nimport { DomSanitizer, SafeHtml } from &#39;@angular/platform-browser&#39;;\n\nconstructor(private sanitizer: DomSanitizer) {}\n\nsafeHtml: SafeHtml;\n\nngOnInit() {\n  this.safeHtml = this.sanitizer.bypassSecurityTrustHtml(userInput);\n}\n\n</pre></br>"
                     }
                 ],
                 "subSections": []
@@ -365,14 +365,6 @@
                 "subjectId": 3,
                 "contentId": 341,
                 "description": "<p>We can use RxJS operator <strong>race</strong>, in which all observables execute simultaneously. If any one observable <strong>emits first (either value or completion)</strong>, all the other observables will be canceled or unsubscribed.</p></br><pre data-language=\"plain\">\nimport { Component } from &#39;@angular/core&#39;;\nimport { HttpClient } from &#39;@angular/common/http&#39;;\nimport { race, Observable } from &#39;rxjs&#39;;\n\n@Component({\n  selector: &#39;app-api-race&#39;,\n  template: `&lt;button (click)=&quot;callApis()&quot;&gt;Call API&lt;/button&gt;`\n})\nexport class ApiRaceComponent {\n  private apiCalls: Observable&lt;any&gt;[] = [];\n\n  constructor(private http: HttpClient) {}\n\n  callApis() {\n    // Create a new API call on every click\n    const apiCall = this.http.get(&#39;http://localhost:3000/long-api&#39;);\n    this.apiCalls.push(apiCall);\n\n    // Run race on all API calls\n    race(...this.apiCalls).subscribe({\n      next: (res) =&gt; {\n        console.log(&#39;First response wins:&#39;, res);\n        // Cancel all other pending API calls\n        this.apiCalls = [];\n      },\n      error: (err) =&gt; console.log(err)\n    });\n  }\n}\n</pre></br>"
-            },
-            {
-                "text": "<p>If the application takes a long time to load, how can you optimize its performance?</p>",
-                "sectionId": 88,
-                "subSectionId": -1,
-                "subjectId": 3,
-                "contentId": 342,
-                "description": ""
             }
         ],
         "subSections": []
