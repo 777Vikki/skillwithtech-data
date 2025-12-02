@@ -11,31 +11,31 @@
                 "subSectionId": -1,
                 "subjectId": 12,
                 "contentId": 367,
-                "description": "<p><a href=\"https://chatgpt.com/c/68d6a5a3-0d6c-8330-9a6c-f1b654eeddf2\" rel=\"noopener noreferrer\" target=\"_blank\">https://chatgpt.com/c/68d6a5a3-0d6c-8330-9a6c-f1b654eeddf2</a></p></br><p><strong>Micro Frontends:</strong></p><p>Micro Frontends (MFE) is an <strong>architectural style</strong> where a frontend application is split into <strong>smaller, independent, self-contained apps (micro apps)</strong>.</p></br><p>Each micro app is responsible for a specific business domain or feature, and they come together to form a larger application.</p></br><p><strong>Why do we need Micro Frontends?</strong></p></br><ol><li><strong>Scalability</strong><ul><li>Large teams can work on different parts of the app without stepping on each other’s code.</li><li>Each team owns one micro frontend.</li></ul></li><li><strong>Independent Deployment</strong><ul><li>A micro app can be deployed <strong>without redeploying the whole application</strong>.</li><li>Faster release cycles and easier hotfixes.</li></ul></li><li><strong>Technology Agnostic</strong><ul><li>Different teams can use <strong>different frontend frameworks/libraries</strong> (Angular, React, Vue, etc.) if needed.</li><li>Useful in large organizations with mixed tech stacks.</li></ul></li><li><strong>Faster Development</strong><ul><li>Teams can work in <strong>parallel</strong> on different micro frontends.</li><li>Reduces dependency bottlenecks.</li></ul></li><li><strong>Code Maintainability</strong><ul><li>Smaller codebases are easier to maintain and refactor.</li><li>Each micro frontend has its own <strong>repo, build pipeline, and CI/CD</strong>.</li></ul></li><li><strong>Resilience</strong><ul><li>If one micro frontend fails, it doesn’t necessarily break the entire app.</li></ul></li></ol></br>"
+                "description": "<p><a href=\"https://chatgpt.com/c/68d6a5a3-0d6c-8330-9a6c-f1b654eeddf2\" rel=\"noopener noreferrer\" target=\"_blank\">https://chatgpt.com/c/68d6a5a3-0d6c-8330-9a6c-f1b654eeddf2</a></p><p><a href=\"https://chatgpt.com/c/692e59d9-6e74-8321-956f-7a10ea0cfe9b\" rel=\"noopener noreferrer\" target=\"_blank\">https://chatgpt.com/c/692e59d9-6e74-8321-956f-7a10ea0cfe9b</a></p></br><p>Micro Frontends are an architectural approach where a large frontend app is split into smaller, independent modules owned by different teams. The main advantages are <strong>independent development and deployment</strong>, <strong>scalability of teams and code</strong>, <strong>technology flexibility</strong>, <strong>easier maintenance</strong>, <strong>incremental upgrades</strong>, and <strong>failure isolation</strong>, meaning one part failing won’t break the whole app.</p></br><p>On the downside, they introduce <strong>complexity in integration and routing</strong>, <strong>setup overhead</strong>, potential <strong>performance issues</strong> if not optimized, <strong>consistency challenges</strong> in UI/UX across teams, and <strong>more complex end-to-end testing</strong>.</p><p>Overall, they are ideal for large applications with multiple teams, but not always necessary for smaller projects.</p></br><p>A <strong>Monolithic Angular app</strong> is a <strong>single, large frontend application</strong> built as one unified codebase, where all features, modules, and components reside together. It’s the traditional way of building Angular applications.</p>"
             },
             {
-                "text": "<p>How do Micro Frontends differ from a monolithic Angular app?</p>",
+                "text": "<p>What is the difference between Host and Remote apps?</p>",
                 "sectionId": 104,
                 "subSectionId": -1,
                 "subjectId": 12,
                 "contentId": 368,
-                "description": "<p><strong style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">Micro Frontends (MFE) </strong><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">is an </span><strong style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">architectural style</strong><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\"> where a frontend application is split into </span><strong style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">smaller, independent, self-contained apps (micro apps)</strong><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">.</span></p></br><p><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">Each micro app is responsible for a specific business domain or feature, and they come together to form a larger application.</span></p></br><p>A <strong>Monolithic Angular app</strong> is a <strong>single, large frontend application</strong> built as one unified codebase, where all features, modules, and components reside together. It’s the traditional way of building Angular applications.</p>"
+                "description": ""
             },
             {
-                "text": "<p>What are the main advantages and disadvantages of Micro Frontends?</p>",
+                "text": "<p>What is remoteEntry.js and why is it important?</p>",
                 "sectionId": 104,
                 "subSectionId": -1,
                 "subjectId": 12,
                 "contentId": 369,
-                "description": "<p>Micro Frontends are an architectural approach where a large frontend app is split into smaller, independent modules owned by different teams. The main advantages are <strong>independent development and deployment</strong>, <strong>scalability of teams and code</strong>, <strong>technology flexibility</strong>, <strong>easier maintenance</strong>, <strong>incremental upgrades</strong>, and <strong>failure isolation</strong>, meaning one part failing won’t break the whole app.</p></br><p>On the downside, they introduce <strong>complexity in integration and routing</strong>, <strong>setup overhead</strong>, potential <strong>performance issues</strong> if not optimized, <strong>consistency challenges</strong> in UI/UX across teams, and <strong>more complex end-to-end testing</strong>.</p><p>Overall, they are ideal for large applications with multiple teams, but not always necessary for smaller projects.</p>"
+                "description": ""
             },
             {
-                "text": "<p>What approaches are commonly used to implement Micro Frontends in Angular (Module Federation, Angular Elements, iFrames, single-spa)?</p>",
+                "text": "<p>What is the significance of shared libraries in Module Federation?</p>",
                 "sectionId": 104,
                 "subSectionId": -1,
                 "subjectId": 12,
                 "contentId": 370,
-                "description": "<p>Module Federation is currently the most popular approach for Angular apps because it allows independent deployment with shared dependencies.</p>"
+                "description": ""
             },
             {
                 "text": "<p>What is Webpack 5 Module Federation, and how does Angular support it?</p>",
@@ -44,75 +44,42 @@
                 "subjectId": 12,
                 "contentId": 371,
                 "description": "<p><strong>Webpack 5 Module Federation:</strong></p><p><strong>Module Federation</strong> is a feature introduced in <strong>Webpack 5</strong> that allows multiple <strong>independent builds</strong> to form a single application. Each build (called a <strong>remote</strong>) can expose and consume code dynamically at runtime.</p></br><p><strong>Angular Supports Module Federation:</strong></p><p>Angular doesn’t have native module federation built-in, but it <strong>integrates seamlessly</strong> with Webpack 5.</p><p>👉<a href=\"https://www.npmjs.com/package/@angular-architects/module-federation\" rel=\"noopener noreferrer\" target=\"_blank\"> </a><code><a href=\"https://www.npmjs.com/package/@angular-architects/module-federation\" rel=\"noopener noreferrer\" target=\"_blank\">@angular-architects/module-federation</a> </code></p><p>This package helps Angular apps set up Module Federation with minimal configuration.</p></br>"
-            }
-        ],
-        "subSections": []
-    },
-    {
-        "name": "<p><strong>Angular-Specific</strong></p>",
-        "sectionId": 105,
-        "subSectionId": -1,
-        "subjectId": 12,
-        "contents": [
-            {
-                "text": "<p>How do you configure Angular with Module Federation (host and remote apps)?</p>",
-                "sectionId": 105,
-                "subSectionId": -1,
-                "subjectId": 12,
-                "contentId": 372,
-                "description": "<p>First, <strong>create a workspace</strong> for the applications using:</p></br><pre data-language=\"plain\">\nng new mono-repo-workspace --create-application=false\n</pre></br><p>Then <strong>change directory</strong> to the workspace:</p></br><pre data-language=\"plain\">\ncd mono-repo-workspace\n</pre></br><p>In the second step, <strong>generate the host (shell) application</strong> using:</p></br><pre data-language=\"plain\">\nng generate application shell --routing --style=scss\n</pre></br><p>And <strong>generate the remote application</strong> using:</p></br><pre data-language=\"plain\">\nng generate application dashboard --routing --style=scss\n</pre></br><p>In the third step, <strong>add the Module Federation plugin</strong> by installing the <strong>official community package</strong>:</p></br><pre data-language=\"plain\">\nnpm install @angular-architects/module-federation --save-dev\n</pre></br><p>Then <strong>add it to each app</strong>:</p></br><p>For the <strong>host</strong>:</p></br><pre data-language=\"plain\">\nng add @angular-architects/module-federation --project shell --type host\n</pre></br><p>For the <strong>remote</strong>:</p></br><pre data-language=\"plain\">\nng add @angular-architects/module-federation --project dashboard --type remote\n</pre></br><p>This will generate <code><strong>webpack.config.js</strong></code> and <code><strong>webpack.prod.config.js</strong></code> in both apps.</p>"
             },
             {
-                "text": "<p>How do you share Angular libraries (like Angular core, RxJS, Material) across Micro Frontends?</p>",
-                "sectionId": 105,
+                "text": "<p> What problems occur when Angular versions differ across MFEs?</p>",
+                "sectionId": 104,
                 "subSectionId": -1,
                 "subjectId": 12,
-                "contentId": 373,
-                "description": "<p>In a Micro Frontend architecture with Angular, we avoid bundling Angular core, RxJS, and Material in each MFE. We use Webpack Module Federation to share these libraries. We mark Angular libraries as <code>singleton: true</code> to ensure only one instance exists across MFEs and use <code>strictVersion: true</code> to avoid version conflicts. This approach reduces bundle size, prevents runtime errors, and ensures consistent behavior across apps.</p></br><pre data-language=\"plain\">\nshared: share({\n    &quot;@angular/core&quot;: { singleton: true, strictVersion: true },\n    &quot;@angular/common&quot;: { singleton: true, strictVersion: true },\n    &quot;@angular/router&quot;: { singleton: true, strictVersion: true },\n    &quot;rxjs&quot;: { singleton: true },\n    &quot;@angular/material&quot;: { singleton: true }\n  })\n</pre></br><p>OR</p></br><pre data-language=\"plain\">\nshared: { \n...shareAll({ singleton: true, strictVersion: true, requiredVersion: &#39;auto&#39; }), \n},\n</pre></br><p><code>shareAll</code> is a helper from <code>@angular-architects/module-federation</code>and it automatically marks <strong>all dependencies from </strong><code><strong>package.json</strong></code> as shared.</p>"
-            },
-            {
-                "text": "<p>How do you set up routing between multiple Micro Frontends in Angular?</p>",
-                "sectionId": 105,
-                "subSectionId": -1,
-                "subjectId": 12,
-                "contentId": 374,
+                "contentId": 389,
                 "description": ""
             },
             {
-                "text": "<p>What’s the difference between using Angular Elements (Web Components) vs Module Federation?</p>",
-                "sectionId": 105,
+                "text": "<p>What is the significance of shared libraries in Module Federation?</p>",
+                "sectionId": 104,
                 "subSectionId": -1,
                 "subjectId": 12,
-                "contentId": 375,
-                "description": ""
-            },
-            {
-                "text": "<p>How do you manage state across different Micro Frontends (NgRx, shared services, custom events)?</p>",
-                "sectionId": 105,
-                "subSectionId": -1,
-                "subjectId": 12,
-                "contentId": 376,
+                "contentId": 390,
                 "description": ""
             }
         ],
         "subSections": []
     },
     {
-        "name": "<p><strong>Integration &amp; Communication</strong></p>",
+        "name": "<p><strong>Integration &amp; Communication, Routing, ViewContainerRef</strong></p>",
         "sectionId": 106,
         "subSectionId": -1,
         "subjectId": 12,
         "contents": [
             {
-                "text": "<p>How can Micro Frontends communicate with each other?</p>",
+                "text": "<p>How do you configure Angular with Module Federation (host and remote apps)?</p>",
                 "sectionId": 106,
                 "subSectionId": -1,
                 "subjectId": 12,
                 "contentId": 377,
-                "description": "<p>Micro Frontends can communicate using Custom Events, Shared Global State (like RxJS or NgRx), Shared Libraries, Browser Storage, URL parameters, postMessage for cross-domain apps, Event Bus, or backend APIs.</p><p>The method depends on how tightly coupled they are allowed to be. Custom Events and postMessage are great for loose coupling, while shared libraries and global state are used for structured, real-time communication.</p></br><p>GithutLink:</p><p><strong>1. CustomEvent:</strong></p><p>Host-App:</p><p><a href=\"https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-custom-event/projects/host-app/src/app/app.component.ts\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-custom-event/projects/host-app/src/app/app.component.ts</a></p><p>Mfe1-App:</p><p><a href=\"https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-custom-event/projects/mfe1-app/src/app/todo-list/todo-list.component.ts\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-custom-event/projects/mfe1-app/src/app/todo-list/todo-list.component.ts</a></p></br><p><strong style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">2. mfe1-app -&gt; host-app -&gt; mfe2-app through @Input and @Output: </strong></p><p><a href=\"https://github.com/777Vikki/microfrontend-mono-repo-angular15/tree/mfe1-host-mfe2-communication-input-output/projects\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/777Vikki/microfrontend-mono-repo-angular15/tree/mfe1-host-mfe2-communication-input-output/projects</a></p></br><p><strong>3. Shared-lib:</strong></p><p><a href=\"https://github.com/777Vikki/microfrontend-mono-repo-angular15/tree/communication-shared-lib-subject/projects\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/777Vikki/microfrontend-mono-repo-angular15/tree/communication-shared-lib-subject/projects</a></p><p><span style=\"background-color: rgba(129, 139, 152, 0.15); color: rgb(31, 35, 40);\">README.md:</span></p><p><a href=\"https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-shared-lib-subject/README.md\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-shared-lib-subject/README.md</a></p>"
+                "description": "<p>First, <strong>create a workspace</strong> for the applications using:</p></br><pre data-language=\"plain\">\nng new mono-repo-workspace --create-application=false\n</pre></br><p>Then <strong>change directory</strong> to the workspace:</p></br><pre data-language=\"plain\">\ncd mono-repo-workspace\n</pre></br><p>In the second step, <strong>generate the host (shell) application</strong> using:</p></br><pre data-language=\"plain\">\nng generate application shell --routing --style=scss\n</pre></br><p>And <strong>generate the remote application</strong> using:</p></br><pre data-language=\"plain\">\nng generate application dashboard --routing --style=scss\n</pre></br><p>In the third step, <strong>add the Module Federation plugin</strong> by installing the <strong>official community package</strong>:</p></br><pre data-language=\"plain\">\nnpm install @angular-architects/module-federation --save-dev\n</pre></br><p>Then <strong>add it to each app</strong>:</p></br><p>For the <strong>host</strong>:</p></br><pre data-language=\"plain\">\nng add @angular-architects/module-federation --project shell --type host\n</pre></br><p>For the <strong>remote</strong>:</p></br><pre data-language=\"plain\">\nng add @angular-architects/module-federation --project dashboard --type remote\n</pre></br><p>This will generate <code><strong>webpack.config.js</strong></code> and <code><strong>webpack.prod.config.js</strong></code> in both apps.</p>"
             },
             {
-                "text": "<p>How do you handle authentication and authorization in Micro Frontend architecture?</p>",
+                "text": "<p>How do you configure module-federation.config.js in Angular?</p>",
                 "sectionId": 106,
                 "subSectionId": -1,
                 "subjectId": 12,
@@ -128,15 +95,82 @@
                 "description": ""
             },
             {
-                "text": "<p>How do you integrate Angular Micro Frontends with React/Vue Micro Frontends?</p>",
+                "text": "<p>What are the common communication methods between MFEs?</p>",
                 "sectionId": 106,
                 "subSectionId": -1,
                 "subjectId": 12,
                 "contentId": 380,
+                "description": "<p>Micro Frontends can communicate using Custom Events, Shared Global State (like RxJS or NgRx), Shared Libraries, Browser Storage, URL parameters, postMessage for cross-domain apps, Event Bus, or backend APIs.</p><p>The method depends on how tightly coupled they are allowed to be. Custom Events and postMessage are great for loose coupling, while shared libraries and global state are used for structured, real-time communication.</p></br><p>1. CustomEvents</p><p>2. window.postMessage</p><p>3. Shared RxJS store</p><p>4. Shared libraries/services</p><p>5. BroadcastChannel API</p><p>6. LocalStorage/sessionStorage</p></br><p>GithutLink:</p><p><strong>1. CustomEvent:</strong></p><p>Host-App:</p><p><a href=\"https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-custom-event/projects/host-app/src/app/app.component.ts\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-custom-event/projects/host-app/src/app/app.component.ts</a></p><p>Mfe1-App:</p><p><a href=\"https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-custom-event/projects/mfe1-app/src/app/todo-list/todo-list.component.ts\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-custom-event/projects/mfe1-app/src/app/todo-list/todo-list.component.ts</a></p></br><p><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">2. mfe1-app -&gt; host-app -&gt; mfe2-app through @Input and @Output: </strong></p><p><a href=\"https://github.com/777Vikki/microfrontend-mono-repo-angular15/tree/mfe1-host-mfe2-communication-input-output/projects\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/777Vikki/microfrontend-mono-repo-angular15/tree/mfe1-host-mfe2-communication-input-output/projects</a></p></br><p><strong>3. Shared-lib:</strong></p><p><a href=\"https://github.com/777Vikki/microfrontend-mono-repo-angular15/tree/communication-shared-lib-subject/projects\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/777Vikki/microfrontend-mono-repo-angular15/tree/communication-shared-lib-subject/projects</a></p><p><span style=\"color: rgb(31, 35, 40); background-color: rgba(129, 139, 152, 0.15);\">README.md:</span></p><p><a href=\"https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-shared-lib-subject/README.md\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/777Vikki/microfrontend-mono-repo-angular15/blob/communication-shared-lib-subject/README.md</a></p>"
+            },
+            {
+                "text": "<p>Difference between CustomEvent and postMessage?</p>",
+                "sectionId": 106,
+                "subSectionId": -1,
+                "subjectId": 12,
+                "contentId": 391,
+                "description": ""
+            },
+            {
+                "text": "<p>How do you ensure cleanup of event listeners in Angular?</p>",
+                "sectionId": 106,
+                "subSectionId": -1,
+                "subjectId": 12,
+                "contentId": 392,
+                "description": ""
+            },
+            {
+                "text": "<p>How do you share authentication state across MFEs?</p>",
+                "sectionId": 106,
+                "subSectionId": -1,
+                "subjectId": 12,
+                "contentId": 393,
                 "description": ""
             }
         ],
-        "subSections": []
+        "subSections": [
+            {
+                "name": "<p><strong>Routing</strong></p>",
+                "sectionId": 106,
+                "subSectionId": 109,
+                "subjectId": 12,
+                "contents": [
+                    {
+                        "text": "<p>How do you implement routing in Microfrontends?</p>",
+                        "sectionId": 106,
+                        "subSectionId": 109,
+                        "subjectId": 12,
+                        "contentId": 394,
+                        "description": ""
+                    },
+                    {
+                        "text": "<p>How do you lazy load a remote Angular component/module?</p>",
+                        "sectionId": 106,
+                        "subSectionId": 109,
+                        "subjectId": 12,
+                        "contentId": 395,
+                        "description": ""
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>ViewContainerRef</strong></p>",
+                "sectionId": 106,
+                "subSectionId": 110,
+                "subjectId": 12,
+                "contents": [
+                    {
+                        "text": "<p>How do you dynamically create a remote component using ViewContainerRef?</p>",
+                        "sectionId": 106,
+                        "subSectionId": 110,
+                        "subjectId": 12,
+                        "contentId": 396,
+                        "description": ""
+                    }
+                ],
+                "subSections": []
+            }
+        ]
     },
     {
         "name": "<p><strong>Performance &amp; Deployment</strong></p>",
@@ -153,7 +187,7 @@
                 "description": ""
             },
             {
-                "text": "<p>How do you handle duplicate dependencies across Micro Frontends?</p>",
+                "text": "<p>What happens if a remote MFE is offline or remoteEntry fails to load?</p>",
                 "sectionId": 107,
                 "subSectionId": -1,
                 "subjectId": 12,
@@ -161,7 +195,7 @@
                 "description": ""
             },
             {
-                "text": "<p>How do you ensure version compatibility of shared libraries in Module Federation?</p>",
+                "text": "<p>How do you handle environment-specific remote URLs?</p>",
                 "sectionId": 107,
                 "subSectionId": -1,
                 "subjectId": 12,
@@ -169,7 +203,7 @@
                 "description": ""
             },
             {
-                "text": "<p>How do you manage CI/CD for multiple Micro Frontends?</p>",
+                "text": "<p>How do you secure Microfrontends?</p>",
                 "sectionId": 107,
                 "subSectionId": -1,
                 "subjectId": 12,

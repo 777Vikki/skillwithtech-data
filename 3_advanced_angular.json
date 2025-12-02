@@ -218,7 +218,7 @@
         ]
     },
     {
-        "name": "<p><strong>SSR,</strong> <strong>Caching, Webpack and Auth</strong></p>",
+        "name": "<p><strong>SSR,</strong> <strong>Caching, Webpack, Auth and Secure</strong></p>",
         "subjectId": 3,
         "sectionId": 42,
         "subSectionId": -1,
@@ -290,6 +290,23 @@
                         "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Can you explain </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Auth</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">?</span></p>"
                     }
                 ]
+            },
+            {
+                "name": "<p><strong>Secure</strong></p>",
+                "sectionId": 42,
+                "subSectionId": 111,
+                "subjectId": 3,
+                "contents": [
+                    {
+                        "text": "<p>How can we secure Angular Application?</p>",
+                        "sectionId": 42,
+                        "subSectionId": 111,
+                        "subjectId": 3,
+                        "contentId": 397,
+                        "description": ""
+                    }
+                ],
+                "subSections": []
             }
         ],
         "contents": []
