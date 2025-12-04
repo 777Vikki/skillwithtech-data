@@ -368,5 +368,31 @@
             }
         ],
         "subSections": []
+    },
+    {
+        "name": "<p><strong>Encapsulation (Emulated, None, ShadowDom)</strong></p>",
+        "sectionId": 112,
+        "subSectionId": -1,
+        "subjectId": 3,
+        "contents": [],
+        "subSections": [
+            {
+                "name": "<p><strong>Encapsulation (Emulated, None, ShadowDom)</strong></p>",
+                "sectionId": 112,
+                "subSectionId": 113,
+                "subjectId": 3,
+                "contents": [
+                    {
+                        "text": "<p>Can you explain Encapsulation?</p>",
+                        "sectionId": 112,
+                        "subSectionId": 113,
+                        "subjectId": 3,
+                        "contentId": 399,
+                        "description": "<p>ViewEncapsulation in Angular determines how component styles are isolated. Angular supports Emulated (default), ShadowDom, and None to control whether styles apply only inside a component or globally.</p></br><p><strong>ViewEncapsulation.Emulated (Default):</strong></p><p>1. Angular <strong>simulates Shadow DOM</strong> by adding unique attributes to elements.</p><p>2. Component styles are scoped and do not leak outside.</p></br><p><strong>ViewEncapsulation.None:</strong></p><p>1. <strong>No encapsulation</strong> → styles behave like normal global CSS.</p><p>2. Styles from the component can <strong>leak to other components</strong>.</p></br><p><strong>ViewEncapsulation.ShadowDom: </strong></p><p>1. Uses the <strong>real browser Shadow DOM</strong>.</p><p>2. Provides <strong>strong style isolation</strong> (stronger than Emulated).</p><p>3. Global styles <strong>cannot enter</strong> the component and vice-versa.</p>"
+                    }
+                ],
+                "subSections": []
+            }
+        ]
     }
 ]
