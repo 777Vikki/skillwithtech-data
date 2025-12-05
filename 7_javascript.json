@@ -490,6 +490,14 @@
                 "subSectionId": -1,
                 "contentId": 204,
                 "text": "<p>Check Brackets are balance or not?</p><p>a = [&#39;[&#39;, &#39;{&#39;, &#39;(&#39;, &#39;)&#39;, &#39;}&#39;, &#39;]&#39;];</p>"
+            },
+            {
+                "text": "<p>Find Prime Number list and remove duplicate number.</p>",
+                "sectionId": 66,
+                "subSectionId": -1,
+                "subjectId": 7,
+                "contentId": 400,
+                "description": "<pre data-language=\"plain\">\nconst arr = [2, 3, 5, 16, 23, 49, 47, 63, 93, 92, 91, 23, 47, 91, 101, 102];\n\nfunction isPrime(n) {\n    if(n &lt;= 1) return false;\n    if(n === 2) return true;\n    if(n % 2 === 0) return false;\n    \n    for(let i=3; i&lt;n/2; i+=2) {\n        if(n%i === 0) {\n            return false;\n        }\n    }\n    return true;\n}\n\n\n// Method1\nconst primeNumberList = [...new Set(arr.filter(isPrime))];\nconsole.log(primeNumberList);\n\n// Method2\nconst primeNumberList = arr.filter((d, index) =&gt; arr.indexOf(d) === index &amp;&amp; isPrime(d));\nconsole.log(primeNumberList);\n</pre>"
             }
         ]
     }
