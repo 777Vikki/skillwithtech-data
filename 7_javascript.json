@@ -24,7 +24,7 @@
         "subSections": [],
         "contents": [
             {
-                "description": "<p>In JavaScript, <strong>call</strong>, <strong>apply</strong>, and <strong>bind</strong> are methods that allow you to control the context (<strong>this</strong> value) in which a function is executed.</p></br><pre data-language=\"plain\">\nfunction greet(city, country) {\n    console.log(this.name + &#39; from &#39; + city + &#39;, &#39; + country);\n}\nconst person = {\n    name: &#39;Alice&#39;\n};\n\n</pre></br><p>The <strong>call()</strong> method invokes a function with a specified <strong>this</strong> value and arguments passed <strong>individually</strong>.</p></br><pre data-language=\"plain\">\ngreet.call(person, &#39;Delhi&#39;, &#39;India&#39;); // Alice from Delhi, India\n</pre></br><p>The <strong>apply()</strong> method invokes a function with a specified <strong>this</strong> value and arguments passed as an <strong>array</strong>.</p></br><pre data-language=\"plain\">\ngreet.apply(person, [&#39;Los Angeles&#39;, &#39;U.S.&#39;]); // Alice from Los Angeles, U.S.\n</pre></br><p>The <strong>bind()</strong> method creates a <strong>new function</strong> with a given <strong>this</strong> value and optional arguments, <strong>without immediately invoking</strong> it.</p></br><pre data-language=\"plain\">\nconst detail = greet.bind(person, &#39;Moscow&#39;);\ndetail(&#39;Russia&#39;); // Alice from Moscow, Russia\n</pre>",
+                "description": "<pre data-language=\"plain\">\nfunction greet(greeting, punctuation) {\n  console.log(`${greeting}, ${this.name}${punctuation}`);\n}\n\nconst person = { name: &#39;Vivek&#39; };\n</pre></br><p><strong>1. call(): </strong></p><p>Invokes a function <strong>immediately</strong> and allows us to set its <code>this</code> context.</p><p>Arguments are passed <strong>individually</strong>.</p><pre data-language=\"plain\">\ngreet.call(person, &#39;Hello&#39;, &#39;!&#39;); // Hello, Vivek!\n\n</pre><p><strong>Use case:</strong> Call a function with a different this and pass arguments one by one.</p></br><p><strong>2. apply():</strong></p><p>Invokes a function <strong>immediately</strong> and allows us to set its <code>this</code> context.</p><p>Arguments are passed <strong>individually</strong>.</p><pre data-language=\"plain\">\ngreet.apply(person, [&#39;Hi&#39;, &#39;!!!&#39;]); // Hi, Vivek!!!\n\n</pre><p><strong>Use case:</strong> Call a function with a different this when arguments are already in an array.</p></br><p><strong>3. bind(): </strong> <code>bind()</code> returns a new function with <code>this</code> permanently bound, which can be called later.</p><pre data-language=\"plain\">\nconst boundGreet = greet.bind(person, &#39;Hey&#39;);\nboundGreet(&#39;!!!&#39;); // Hey, Vivek!!!\n</pre></br><p><strong>Use case:</strong></p><p>When you need a function to be called later but with a specific this.</p><p>Commonly used in event handlers in JavaScript/Angular.</p>",
                 "subjectId": 7,
                 "sectionId": 55,
                 "subSectionId": -1,
@@ -41,7 +41,7 @@
         "subSections": [],
         "contents": [
             {
-                "description": "<p><strong>Closures</strong> in <strong>JavaScript</strong> are a <strong>powerful feature</strong> that allows <strong>inner functions</strong> to access the <strong>scope</strong> of their <strong>outer (enclosing) functions</strong>, even after the <strong>outer function</strong> has <strong>finished executing</strong>.</p></br><p><strong>Main uses of closures in JavaScript:</strong></p><ul><li>Data Privacy / Encapsulation</li><li>Maintaining State</li><li>Callbacks &amp; Event Handlers</li><li>Function Factories</li><li>Module Pattern</li></ul>",
+                "description": "<p>A <strong>closure in JavaScript</strong> is a feature where an <strong>inner function remembers and can access variables</strong> from its <strong>outer function’s scope</strong>, even after the outer function has finished executing.</p></br><p><strong>Closures </strong>help <strong>Angular </strong>by allowing us to create <strong>utilities </strong>that maintain private state—such as <strong>debouncers, feature toggles, and cached API results</strong>—without storing everything in <strong>components </strong>or <strong>services</strong>.</p></br><p><strong>Closures </strong>provide <strong>encapsulation (Hiding internal data) </strong>in <strong>JavaScript</strong>. They allow us to create<strong> private variables</strong> and expose only controlled functionality, similar to private members in <strong>object-oriented programming</strong>.</p></br><p><strong>Notes:</strong></p><p><strong>1. Closures</strong> store their <strong>variables </strong>in the <strong>JavaScript lexical environment</strong>, not in <strong>Angular components </strong>or <strong>services</strong>.</p><p>This memory is kept alive by the <strong>inner function reference</strong>, so even if the <strong>outer function</strong> finishes, the <strong>variables </strong>remain accessible.</p></br><p><strong>2.</strong> The<strong> Lexical Environment </strong>consists of the <strong>local memory </strong>and a <strong>reference to the Lexical Environment of its parent</strong>. <span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">A </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Lexical Environment</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> is created </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">whenever an Execution Context is created</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">.</span></p></br><p><strong>3.</strong> A <strong>utility</strong> (or <strong>utility function</strong> / <strong>utility file</strong>) simply means: A small reusable helper function that performs a common task.</p>",
                 "subjectId": 7,
                 "sectionId": 56,
                 "subSectionId": -1,
@@ -49,20 +49,28 @@
                 "text": "<p>What is closures in JavaScript?</p>"
             },
             {
-                "description": "<pre data-language=\"plain\">\nts file\n\nincrement!: () =&gt; void;\ndecrement!: () =&gt; void;\n\nconstructor() {}\n\nngOnInit() {\n  const counter = this.createCounterHandler();\n  this.increment = counter.increment;\n  this.decrement = counter.decrement;\n}\n\ncreateCounterHandler() {\n  let count = 0;\n\n  return {\n    increment: () =&gt; {\n      count++;\n      console.log(count);\n    },\n    decrement: () =&gt; {\n      count--;\n      console.log(count);\n    }\n  };\n}\n</pre></br></br><pre data-language=\"plain\">\nhtml file\n\n&lt;div&gt;\n  &lt;button (click)=&quot;increment()&quot;&gt;Increment&lt;/button&gt;\n  &lt;button (click)=&quot;decrement()&quot;&gt;Decrement&lt;/button&gt;\n&lt;/div&gt;\n</pre></br>",
+                "description": "<pre data-language=\"plain\">\n// 👉 debounce.ts\n\nexport function debounce(fn: (...args: any[]) =&gt; void, delay: number) {\n  let timer: any;\n\n  return function (...args: any[]) {\n    clearTimeout(timer);\n\n    timer = setTimeout(() =&gt; {\n      fn.apply(this, args);\n    }, delay);\n  };\n}\n</pre></br><pre data-language=\"plain\">\n// 👉 search.component.ts\n\nimport { Component } from &#39;@angular/core&#39;;\nimport { debounce } from &#39;./debounce&#39;;\n\n@Component({\n  selector: &#39;app-search&#39;,\n  standalone: true,\n  template: `\n    &lt;input type=&quot;text&quot; (input)=&quot;search($event)&quot; placeholder=&quot;Search...&quot; /&gt;\n  `,\n})\nexport class SearchComponent {\n  search = debounce((event: any) =&gt; {\n    console.log(&#39;API call for:&#39;, event.target.value);\n  }, 500);\n}\n</pre>",
                 "subjectId": 7,
                 "sectionId": 56,
                 "subSectionId": -1,
                 "contentId": 161,
-                "text": "<p>Can you implement increment and decrement count in closures in Angular?</p>"
+                "text": "<p>Create a Debounce Utility Using Closure</p>"
             },
             {
-                "description": "<pre data-language=\"plain\">\nhtml\n\n&lt;!DOCTYPE html&gt;\n&lt;html lang=&quot;en&quot;&gt;\n\n&lt;head&gt;\n  &lt;meta charset=&quot;UTF-8&quot;&gt;\n  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;\n  &lt;title&gt;Click Counter&lt;/title&gt;\n&lt;/head&gt;\n\n&lt;body&gt;\n  &lt;button id=&quot;incBtn&quot;&gt;Increment&lt;/button&gt;\n  &lt;button id=&quot;decBtn&quot;&gt;Decrement&lt;/button&gt;\n\n  &lt;script src=&quot;./index.js&quot;&gt;&lt;/script&gt;\n&lt;/body&gt;\n\n&lt;/html&gt;\n</pre></br><pre data-language=\"plain\">\nJavaScript\n\nfunction setupClickTracker(incrementBtnId, decrementBtnId) {\n  let clickCount = 0;\n\n  document.getElementById(incrementBtnId).addEventListener(&quot;click&quot;, function () {\n    clickCount++;\n    console.log(&quot;Count:&quot;, clickCount);\n  });\n\n  document.getElementById(decrementBtnId).addEventListener(&quot;click&quot;, function () {\n    clickCount--;\n    console.log(&quot;Count:&quot;, clickCount);\n  });\n}\n\nsetupClickTracker(&quot;incBtn&quot;, &quot;decBtn&quot;);\n</pre></br></br>",
+                "description": "<pre data-language=\"plain\">\n// Create a private counter in a service\n\n@Injectable({ providedIn: &#39;root&#39; })\nexport class CounterService {\n  private counter = (() =&gt; {\n    let count = 0;\n    return () =&gt; ++count;   // closure\n  })();\n\n  getNextId() {\n    return this.counter();\n  }\n}\n</pre></br><pre data-language=\"plain\">\n// Usage:\n\nconsole.log(this.counterService.getNextId()); // 1\nconsole.log(this.counterService.getNextId()); // 2\n</pre>",
                 "subjectId": 7,
                 "sectionId": 56,
                 "subSectionId": -1,
                 "contentId": 162,
-                "text": "<p>Can you implement increment and decrement count in closures in JavaScript?</p>"
+                "text": "<p>Create a private counter in a service</p>"
+            },
+            {
+                "text": "<p>Create a Feature Toggle (Dark Mode / Any Flag) Using Closure</p>",
+                "sectionId": 56,
+                "subSectionId": -1,
+                "subjectId": 7,
+                "contentId": 401,
+                "description": "<pre data-language=\"plain\">\n// 🟦 toggle.util.ts (closure-based toggle)\n\nexport function createToggle() {\n  let state = false; // private variable\n\n  return {\n    toggle: () =&gt; (state = !state),\n    getState: () =&gt; state,\n  };\n}\n</pre></br><pre data-language=\"plain\">\n// 🟦 Use in Angular Component / Service\n\nimport { Component } from &#39;@angular/core&#39;;\nimport { createToggle } from &#39;./toggle.util&#39;;\n\n@Component({\n  selector: &#39;app-theme&#39;,\n  standalone: true,\n  template: `\n    &lt;button (click)=&quot;toggleTheme()&quot;&gt;Toggle Theme&lt;/button&gt;\n    &lt;div [class.dark]=&quot;theme.getState()&quot;&gt;Theme: {{ theme.getState() ? &#39;Dark&#39; : &#39;Light&#39; }}&lt;/div&gt;\n  `\n})\nexport class ThemeComponent {\n  theme = createToggle(); // closure maintains state\n\n  toggleTheme() {\n    this.theme.toggle();\n  }\n}\n</pre></br>"
             },
             {
                 "description": "<pre data-language=\"plain\">\nfunction x() {\n    for (var i = 1; i &lt;= 5; i++) {\n        setTimeout(function() {\n            console.log(i);\n        }, i * 1000);\n    }\n}\nx(); // O/P: 6 6 6 6 6\n</pre></br><p><strong>Explain: </strong><code>var</code> is function-scoped, so all iterations share the same <code>i</code>. By the time the <code>setTimeout</code> callbacks execute, the loop has finished, and <code>i</code> is 6. That’s why the output is <code>6 6 6 6 6</code>.</p></br><pre data-language=\"plain\">\nfunction x() {\n    for (let i = 1; i &lt;= 5; i++) {\n        setTimeout(function() {\n            console.log(i);\n        }, i * 1000);\n    }\n}\nx(); // O/P: 1 2 3 4 5\n</pre></br><p><strong>Explain:</strong> When we use <code>let</code>, each iteration has its own <strong>block-scoped </strong><code><strong>i</strong></code>. So, when the <code>setTimeout</code> callbacks run, they print the correct values (1–5).</p></br><pre data-language=\"plain\">\nfunction x() {\n    for (var i = 1; i &lt;= 5; i++) {\n        function close(x) {\n            setTimeout(function() {\n                console.log(x);\n            }, x * 1000);\n        }\n        close(i);\n    }\n}\nx();\n</pre></br><p><strong>Explain:</strong> For each iteration, when the <code>close</code> function is called, it creates a new local execution context. By the time the <code>setTimeout</code> callbacks execute, each one has its own separate copy of <code>i</code> (passed as <code>x</code>). Therefore, the result will be <code>1 2 3 4 5</code>.</p>",
@@ -82,7 +90,7 @@
         "subSections": [],
         "contents": [
             {
-                "description": "<p>In JavaScript, <strong>hoisting</strong> is a phenomenon in which variables and function declarations are moved to the top of their scope during the compilation phase.</p>",
+                "description": "<p>In JavaScript, <strong>hoisting</strong> is a phenomenon in which <strong>variable and function declarations</strong> to the top of their scope <strong>before execution</strong>.</p></br><p>The main benefit of <strong>hoisting </strong>is that it allows us to use functions before they are defined, enabling a <strong>top-down code structure</strong>. It also ensures <strong>variable declarations </strong>exist in <strong>memory </strong>before <strong>execution</strong>. <strong>Function hoisting</strong> especially improves <strong>code readability</strong> and <strong>organization</strong>.</p></br><p>The <strong>disadvantage </strong>of <strong>hoisting </strong>is that it can create confusing behavior. <strong>Variables </strong>declared with var become <strong>undefined </strong>instead of <strong>throwing errors</strong>, <strong>leading to bugs</strong>. Also, <strong>function expressions</strong> and <strong>arrow functions</strong> are not <strong>hoisted</strong>, which causes <strong>runtime errors</strong>. <strong>Let </strong>and <strong>const </strong>are <strong>hoisted </strong>but in a <strong>Temporal Dead Zone</strong>, making their behavior confusing too.</p>",
                 "subjectId": 7,
                 "sectionId": 57,
                 "subSectionId": -1,
@@ -149,7 +157,7 @@
                 "text": "<p>Can you explain Promise APIs | all, allSettled, race, any</p>"
             },
             {
-                "description": "<p><strong>Callbacks</strong> are <strong>functions</strong> passed as <strong>arguments</strong> to handle <strong>asynchronous operations</strong>, but can lead to <strong>&quot;callback hell&quot;</strong>.</p></br><p>A <strong>Promise</strong> in <strong>JavaScript</strong> is an <strong>object</strong> that represents the eventual <strong>success</strong> or <strong>failure</strong> of an <strong>asynchronous operation</strong>. <strong>Promises</strong> provide <code><strong>.then()</strong></code> for <strong>success</strong> and <code><strong>.catch()</strong></code> for <strong>error handling</strong>.</p></br><p><strong>Promises</strong> provide <strong>better error handling</strong> and avoid <strong>deeply nested callbacks</strong>.</p>",
+                "description": "<p><strong>Callbacks </strong>execute an <strong>async function</strong> by passing another function as an <strong>argument</strong>, but they suffer from <strong>callback hell</strong>, <strong>poor error handling</strong>, and <strong>inversion of control</strong>. <strong>Promises </strong>solve these issues by providing a<strong> cleaner chainable structure, centralized error handling, and better control </strong>over async flow with <code>.then()</code>, <code>.catch()</code>, and <code>.finally()</code>.</p>",
                 "subjectId": 7,
                 "sectionId": 58,
                 "subSectionId": -1,
@@ -165,12 +173,20 @@
                 "text": "<p>Can you write a simple example of creating and using a Promise?</p>"
             },
             {
-                "description": "<p>async/await is built on top of Promises and only improves readability and error handling. Promises use chaining, while async/await uses synchronous-looking code with try/catch. They both work the same under the hood, async/await just makes async code cleaner and easier to write.</p>",
+                "description": "<p><strong>Promises </strong>provide <strong>asynchronous operations</strong> using <code>.then()</code> and <code>.catch()</code>, while <strong>async/await</strong> makes <strong>asynchronous </strong>code look <strong>synchronous </strong>and easier to read. <strong>Error handling</strong> and <strong>debugging </strong>are simpler with <strong>async/await</strong>.</p>",
                 "subjectId": 7,
                 "sectionId": 58,
                 "subSectionId": -1,
                 "contentId": 172,
                 "text": "<p>What is difference between <strong>async/await</strong> and <strong>Promises</strong>?</p>"
+            },
+            {
+                "text": "<p>What is difference between <strong>Promises </strong>and <strong>Observables</strong>?</p>",
+                "sectionId": 58,
+                "subSectionId": -1,
+                "subjectId": 7,
+                "contentId": 402,
+                "description": "<p>A <strong>Promise </strong>handles a single async value and executes immediately, while an <strong>Observable </strong>can handle multiple values over time, is lazy, cancellable, and supports <strong>powerful RxJS operators</strong>. <strong>Angular </strong>uses <strong>Observables </strong>for <strong>most async tasks</strong> because they are more <strong>flexible </strong>and <strong>scalable</strong>.</p>"
             }
         ]
     },
@@ -182,7 +198,7 @@
         "subSections": [],
         "contents": [
             {
-                "description": "<p><strong>Arrow functions</strong> in <strong>JavaScript</strong> are a <strong>concise syntax</strong> for writing <strong>functions</strong> introduced in <strong>ES6</strong>. They look like this:</p></br><pre data-language=\"plain\">\nconst add = (a, b) =&gt; a + b;\n</pre></br>",
+                "description": "<p><strong>Arrow functions </strong>are a <strong>shorter syntax</strong> for writing functions in <strong>JavaScript </strong>and they don’t have their own <code>this</code>. They inherit <code>this</code> from their <strong>lexical scope</strong>, making them very useful in <strong>Angular </strong>for <strong>callbacks</strong>, <strong>RxJS</strong>, and <strong>event handlers</strong>.</p></br><pre data-language=\"plain\">\nconst add = (a, b) =&gt; a + b;\n</pre>",
                 "subjectId": 7,
                 "sectionId": 60,
                 "subSectionId": -1,
@@ -190,12 +206,20 @@
                 "text": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">What are arrow functions in JavaScript?</span></p>"
             },
             {
-                "description": "<p><strong>Regular functions</strong> have a <code><strong>this</strong></code> value. It depends on <strong>how the function is called</strong>, whereas <strong>arrow functions</strong> do not have their own <code><strong>this</strong></code> value. They <strong>inherit </strong><code><strong>this</strong></code> from their surrounding (<strong>lexical scope</strong>).</p></br><pre data-language=\"plain\">\nconst obj = {\n  value: 10,\n  regularFunc: function() {\n    console.log(this.value); // &#39;this&#39; refers to obj\n  },\n  arrowFunc: () =&gt; {\n    console.log(this.value); // &#39;this&#39; refers to outer scope (e.g., window in browser)\n  }\n};\n\nobj.regularFunc(); // Output: 10\nobj.arrowFunc();   // Output: undefined\n</pre></br><p>We can use <code><strong>arguments</strong></code> in <strong>regular functions</strong>. It gives access to all <strong>passed arguments</strong>, whereas <strong>arrow functions</strong> do not have <code><strong>arguments</strong></code>. <strong>Rest parameters (</strong><code><strong>...args</strong></code><strong>)</strong> can be used instead.</p></br></br><p>A <strong>regular function</strong> can be used as a <strong>constructor</strong> with the <code><strong>new</strong></code> keyword that creates <strong>instances</strong>, whereas an <strong>arrow function</strong> cannot be used as a <strong>constructor</strong>.</p></br><pre data-language=\"plain\">\n// Correct: Regular function as constructor\nfunction Person(name) {\n  this.name = name;\n}\nconst p = new Person(&quot;Vivek&quot;);\nconsole.log(p.name); // &quot;Vivek&quot;\n</pre></br><pre data-language=\"plain\">\n// ❌ Incorrect: Arrow function cannot be used as constructor\nconst PersonArrow = (name) =&gt; {\n  this.name = name;\n};\nconst p2 = new PersonArrow(&quot;Vivek&quot;); // TypeError\n</pre>",
+                "description": "<p><strong>Arrow functions</strong> are a <strong>shorter syntax</strong> for functions and inherit <code>this</code> from their surrounding scope. Unlike <strong>regular functions</strong>, they do not have their own <code>this</code> or <code>arguments</code>, cannot be used as <strong>constructors</strong>, and are not hoisted if defined as expressions. They are widely used in <strong>Angular </strong>for <strong>callbacks </strong>and <strong>event handlers</strong> due to their <strong>lexical </strong><code>this</code> behavior.</p></br><p>A <strong>regular function</strong> can be used as a <strong>constructor</strong> with the <code><strong>new</strong></code> keyword that creates <strong>instances</strong>, whereas an <strong>arrow function</strong> cannot be used as a <strong>constructor</strong>.</p></br><pre data-language=\"plain\">\n// Correct: Regular function as constructor\nfunction Person(name) {\n  this.name = name;\n}\nconst p = new Person(&quot;Vivek&quot;);\nconsole.log(p.name); // &quot;Vivek&quot;\n</pre></br><pre data-language=\"plain\">\n// ❌ Incorrect: Arrow function cannot be used as constructor\nconst PersonArrow = (name) =&gt; {\n  this.name = name;\n};\nconst p2 = new PersonArrow(&quot;Vivek&quot;); // TypeError\n</pre></br><p><strong>Notes: </strong></p><p><strong>1.</strong> <code>arguments</code> is an <strong>array-like object</strong> available inside <strong>regular functions</strong>. It contains all the arguments passed to that function, regardless of the number of parameters defined.</p>",
                 "subjectId": 7,
                 "sectionId": 60,
                 "subSectionId": -1,
                 "contentId": 174,
                 "text": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">How do arrow function differ from regular functions?</span></p>"
+            },
+            {
+                "text": "<p>Explain the output:</p><pre data-language=\"plain\">\nconst obj = {\n  value: 10,\n  regularFunc: function() {\n    console.log(this.value);\n  },\n  arrowFunc: () =&gt; {\n    console.log(this.value);\n  }\n};\n\nobj.regularFunc(); // 10\nobj.arrowFunc();   // undefined\n</pre></br>",
+                "sectionId": 60,
+                "subSectionId": -1,
+                "subjectId": 7,
+                "contentId": 404,
+                "description": "<pre data-language=\"plain\">\nconst obj = {\n  value: 10,\n  regularFunc: function() {\n    console.log(this.value);\n  },\n  arrowFunc: () =&gt; {\n    console.log(this.value);\n  }\n};\n\nobj.regularFunc(); // 10\nobj.arrowFunc();   // undefined\n</pre></br><p>Regular functions have dynamic <code>this</code> determined by how they are called, whereas arrow functions inherit <code>this</code> lexically from their surrounding scope. That’s why a regular function accesses the object’s property but an arrow function inside the same object does not.</p>"
             }
         ]
     },
@@ -238,6 +262,32 @@
                 "subSectionId": -1,
                 "contentId": 177,
                 "text": "<p>sum(1)(2)(3)(4)..( n)()</p>"
+            }
+        ]
+    },
+    {
+        "name": "<p><strong>Event Handlers</strong></p>",
+        "sectionId": 114,
+        "subSectionId": -1,
+        "subjectId": 7,
+        "contents": [],
+        "subSections": [
+            {
+                "name": "<p><strong>Event Handlers</strong></p>",
+                "sectionId": 114,
+                "subSectionId": 115,
+                "subjectId": 7,
+                "contents": [
+                    {
+                        "text": "<p>What is <strong>Event Handlers</strong>?</p>",
+                        "sectionId": 114,
+                        "subSectionId": 115,
+                        "subjectId": 7,
+                        "contentId": 403,
+                        "description": "<p><strong>Event handlers</strong> are functions that run in response to user actions or browser events.</p><p>Examples of events:</p><ul><li>Click</li><li>Input</li><li>Key press</li><li>Mouse over</li><li>Scroll</li><li>Submit</li><li>Load</li></ul><p>When an event happens, the handler function executes.</p></br></br>"
+                    }
+                ],
+                "subSections": []
             }
         ]
     },
