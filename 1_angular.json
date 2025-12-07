@@ -562,7 +562,7 @@
                         "subSectionId": 93,
                         "subjectId": 1,
                         "contentId": 355,
-                        "description": "<p>ddd</p></br><pre data-language=\"plain\">\nconst passwordMatchValidator: ValidatorFn = (\n  controls: AbstractControl\n): ValidationErrors | null =&gt; {\n  const password = controls.get(&#39;password&#39;);\n  const confirmPassword = controls.get(&#39;confirmPassword&#39;);\n  if (password?.value !== confirmPassword?.value) {\n    return { passwordMisMatch: true };\n  }\n  return null;\n};\n</pre></br><pre data-language=\"plain\">\nconst phoneNumberValidator: ValidatorFn = (\n  controls: AbstractControl\n): ValidationErrors | null =&gt; {\n  const phoneNumberControls = controls as FormArray;\n  const phoneNumber1 = phoneNumberControls.at(0); // Gives FormControl\n  // logic\n  return null;\n};\n</pre></br><pre data-language=\"true\">\nconst companyValidator: ValidatorFn = (\n  controls: AbstractControl\n): ValidationErrors | null =&gt; {\n  const companyGroupControls = controls as FormArray;\n  const companyGroup1 = companyGroupControls.at(0); // Gives FormGroup\n  // logic\n  return null;\n};\n</pre></br><pre data-language=\"plain\">\ncreateUserForm(): FormGroup {\n    return this.formBuilder.group({\n      userName: [&#39;&#39;, [Validators.required]],\n      passwordGroup: this.formBuilder.group(\n        {\n          password: [&#39;&#39;, [Validators.required]],\n          confirmPassword: [&#39;&#39;, [Validators.required]],\n        },\n        { validator: passwordMatchValidator }\n      ),\n      phoneNumbers: this.formBuilder.array([this.formBuilder.control(&#39;&#39;)], {\n        validators: phoneNumberValidator,\n      }),\n      companies: this.formBuilder.array([this.createContryForm()], {\n        validators: [companyValidator],\n      }),\n    });\n  }\n</pre>"
+                        "description": "<pre data-language=\"plain\">\nconst passwordMatchValidator: ValidatorFn = (\n  controls: AbstractControl\n): ValidationErrors | null =&gt; {\n  const password = controls.get(&#39;password&#39;);\n  const confirmPassword = controls.get(&#39;confirmPassword&#39;);\n  if (password?.value !== confirmPassword?.value) {\n    return { passwordMisMatch: true };\n  }\n  return null;\n};\n</pre></br><pre data-language=\"plain\">\nconst phoneNumberValidator: ValidatorFn = (\n  controls: AbstractControl\n): ValidationErrors | null =&gt; {\n  const phoneNumberControls = controls as FormArray;\n  const phoneNumber1 = phoneNumberControls.at(0); // Gives FormControl\n  // logic\n  return null;\n};\n</pre></br><pre data-language=\"true\">\nconst companyValidator: ValidatorFn = (\n  controls: AbstractControl\n): ValidationErrors | null =&gt; {\n  const companyGroupControls = controls as FormArray;\n  const companyGroup1 = companyGroupControls.at(0); // Gives FormGroup\n  // logic\n  return null;\n};\n</pre></br><pre data-language=\"plain\">\ncreateUserForm(): FormGroup {\n    return this.formBuilder.group({\n      userName: [&#39;&#39;, [Validators.required]],\n      passwordGroup: this.formBuilder.group(\n        {\n          password: [&#39;&#39;, [Validators.required]],\n          confirmPassword: [&#39;&#39;, [Validators.required]],\n        },\n        { validator: passwordMatchValidator }\n      ),\n      phoneNumbers: this.formBuilder.array([this.formBuilder.control(&#39;&#39;)], {\n        validators: phoneNumberValidator,\n      }),\n      companies: this.formBuilder.array([this.createContryForm()], {\n        validators: [companyValidator],\n      }),\n    });\n  }\n</pre>"
                     },
                     {
                         "text": "<p>Error show in HTML</p>",
@@ -582,6 +582,23 @@
                     }
                 ],
                 "subSections": []
+            },
+            {
+                "name": "<p><strong>setValue and patchValue</strong></p>",
+                "sectionId": 14,
+                "subSectionId": 120,
+                "subjectId": 1,
+                "contents": [
+                    {
+                        "text": "<p>What is difference between <strong>setValue </strong>and <strong>patchValue?</strong></p>",
+                        "sectionId": 14,
+                        "subSectionId": 120,
+                        "subjectId": 1,
+                        "contentId": 408,
+                        "description": "<p>In Angular Reactive Forms, <strong>both </strong><code><strong>setValue()</strong></code><strong> and </strong><code><strong>patchValue()</strong></code><strong> are used to update form controls.</strong></p></br><p><code>setValue()</code> updates the entire form and is strict; <code>patchValue()</code> updates only the specified fields and is flexible.</p>"
+                    }
+                ],
+                "subSections": []
             }
         ],
         "contents": [
@@ -594,7 +611,7 @@
                 "text": "<p>What is the difference between reactive forms and template-driven forms?</p>"
             },
             {
-                "description": "<ul><li><strong>FormControl</strong>: Represents a <strong>single form field</strong> (<strong>input</strong>, <strong>select</strong>, etc.).</li></ul></br><ul><li><strong>FormGroup</strong>: A <strong>collection</strong> of <strong>FormControl</strong> elements, treating them as a <strong>unit</strong>.</li></ul></br><ul><li><strong>FormArray</strong>: A <strong>collection</strong> of <strong>single form fields</strong> or <strong>FormGroup</strong>, like an <strong>array</strong>.</li></ul>",
+                "description": "<p><strong>FormControl:</strong></p><p>A <strong>FormControl</strong> represents a single input field in a form.</p><p>It holds the <strong>value</strong>, <strong>validation state</strong>, and <strong>status</strong> of that field.</p><p>It is the smallest and fundamental unit of a reactive form.</p></br><p><strong>FormGroup:</strong></p><p>A <strong>FormGroup</strong> is a collection of FormControls (or other FormGroups or FormArrays).</p><p>It allows us to treat multiple fields as a single unit and validate them together.</p></br><p><strong>FormArray:</strong> </p><p>A <strong>FormArray</strong> is a dynamic array of FormControls, FormGroups, or even nested FormArrays.</p><p>Used when you need a variable number of form fields.</p>",
                 "subjectId": 1,
                 "sectionId": 14,
                 "subSectionId": -1,

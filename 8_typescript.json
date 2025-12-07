@@ -65,20 +65,46 @@
         ]
     },
     {
-        "name": "<p><strong>Interface VS Type</strong></p>",
+        "name": "<p><strong>Omit, keyof</strong></p>",
         "sectionId": 101,
         "subSectionId": -1,
         "subjectId": 8,
-        "contents": [
+        "contents": [],
+        "subSections": [
             {
-                "text": "<p>What is <strong>Omit </strong>in TypeScript?</p>",
+                "name": "<p><strong>Omit</strong></p>",
                 "sectionId": 101,
-                "subSectionId": -1,
+                "subSectionId": 118,
                 "subjectId": 8,
-                "contentId": 362,
-                "description": "<p><code>Omit&lt;Type, Keys&gt;</code> creates a <strong>new type</strong> by <strong>removing specific keys</strong> from an existing type.</p></br><pre data-language=\"plain\">\nOmit&lt;Type, &#39;key1&#39; | &#39;key2&#39;&gt;\n</pre></br><pre data-language=\"plain\">\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n  password: string;\n}\n\ntype UserWithoutPassword = Omit&lt;User, &#39;password&#39;&gt;;\ntype UserWithoutPasswordEmail = Omit&lt;User, &#39;password&#39; | &#39;email&#39;&gt;;\n</pre>"
+                "contents": [
+                    {
+                        "text": "<p>What is <strong>Omit </strong>in <strong>TypeScript</strong>?</p>",
+                        "sectionId": 101,
+                        "subSectionId": 118,
+                        "subjectId": 8,
+                        "contentId": 406,
+                        "description": "<p><code>Omit&lt;Type, Keys&gt;</code> creates a <strong>new type</strong> by <strong>removing specific keys</strong> from an existing type.</p></br><pre data-language=\"plain\">\nOmit&lt;Type, &#39;key1&#39; | &#39;key2&#39;&gt;\n</pre></br><pre data-language=\"plain\">\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n  password: string;\n}\n\ntype UserWithoutPassword = Omit&lt;User, &#39;password&#39;&gt;;\ntype UserWithoutPasswordEmail = Omit&lt;User, &#39;password&#39; | &#39;email&#39;&gt;;\n</pre></br>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>keyof</strong></p>",
+                "sectionId": 101,
+                "subSectionId": 119,
+                "subjectId": 8,
+                "contents": [
+                    {
+                        "text": "<p>What is <strong>keyof </strong>in <strong>TypeScript</strong>?</p>",
+                        "sectionId": 101,
+                        "subSectionId": 119,
+                        "subjectId": 8,
+                        "contentId": 407,
+                        "description": "<p>In TypeScript, <code><strong>keyof</strong></code><strong> is a type operator that takes an object type and returns a union of its keys.</strong></p><pre data-language=\"plain\">\ninterface User {\n  name: string;\n  email: string;\n  age: number;\n}\n\ntype UserKeys = keyof User;\n</pre></br><pre data-language=\"plain\">\n// UserKeys = &quot;name&quot; | &quot;email&quot; | &quot;age&quot;\n</pre></br></br>"
+                    }
+                ],
+                "subSections": []
             }
-        ],
-        "subSections": []
+        ]
     }
 ]
