@@ -141,7 +141,7 @@
                         "subSectionId": 95,
                         "subjectId": 1,
                         "contentId": 358,
-                        "description": "<p>If the <strong>communication</strong> is between <strong>parent</strong> and <strong>child</strong>, I can <strong>pass data</strong> from <strong>parent to child</strong> through <code>@Input()</code> and <strong>emit data</strong> from <strong>child to parent</strong> through <code>@Output()</code>. I can also <strong>directly access</strong> a <strong>child component instance</strong> using <code>ViewChild</code> or <code>ContentChild</code>.</p></br><p>If <strong>components</strong> are <strong>unrelated</strong>, I create a <strong>shared service</strong> and <strong>share data</strong> through it using <code>Subject</code> or <code>BehaviorSubject</code> for <strong>real-time updates</strong>.</p></br><p>For <strong>large-scale apps</strong>, I use <strong>centralized state management</strong> like <strong>NgRx</strong> to <strong>manage</strong> and <strong>share data</strong>.</p></br><p>I can also <strong>pass data</strong> through <strong>route params</strong>, <strong>query params</strong>, or <strong>route state</strong>.</p>"
+                        "description": "<p>If the <strong>communication</strong> is between <strong>parent</strong> and <strong>child</strong>, I can <strong>pass data</strong> from <strong>parent to child</strong> through <code>@Input()</code> and <strong>emit data</strong> from <strong>child to parent</strong> through <code>@Output()</code>. I can also <strong>directly access</strong> a <strong>child component instance</strong> using <code>ViewChild</code> or <code>ContentChild</code>.</p></br><p>If <strong>components</strong> are <strong>unrelated</strong>, I create a <strong>shared service</strong> and <strong>share data</strong> through it using <code>Subject</code> or <code>BehaviorSubject</code> for <strong>real-time updates</strong>.</p></br><p>For <strong>large-scale apps</strong>, I use <strong>centralized state management</strong> like <strong>NgRx</strong> to <strong>manage</strong> and <strong>share data</strong>.</p></br><p>I can also <strong>pass data</strong> through <strong>route params</strong>, <strong>query params</strong>, or <strong>route state</strong>.</p></br><p><strong>OR</strong></p></br><p>In a <strong>large-scale Angular application</strong>, <strong>component communication </strong>cannot rely only on <strong>Input </strong>and <strong>Output</strong>. We use a <strong>combination of architectural patterns </strong>depending on the <strong>level of communication</strong> needed.</p><p> For simple <strong>parent-child interactions</strong>, <strong>Input/Output</strong> works. For <strong>communication </strong>between <strong>unrelated components </strong>or cross-screen <strong>communication</strong>, we prefer <strong>shared services</strong> using <strong>RxJS or Angular Signals</strong>.</p><p>When the app becomes large and many <strong>components </strong>depend on the <strong>same data</strong>, we adopt a <strong>centralized state management tool </strong>like <strong>NgRx </strong>to provide a <strong>predictable</strong>, <strong>scalable </strong>and <strong>maintainable </strong>approach. For UI-level flexibility, we use <strong>content projection</strong>, <strong>ViewChild </strong>for component API access, and <strong>router params</strong> for <strong>navigation-driven communication</strong>.</p>"
                     }
                 ],
                 "subSections": []
@@ -706,7 +706,7 @@
                 "subSectionId": -1,
                 "subjectId": 1,
                 "contentId": 350,
-                "description": "<p><strong>CanActivate:</strong></p><p>Decides <strong>if a route can be accessed</strong> by the user.</p></br><p><strong>CanLoad:</strong></p><p>Decides <strong>if a lazy-loaded module should be downloaded</strong> at all.</p>"
+                "description": "<p><strong>CanActivate </strong>checks if a route can be accessed, while <strong>CanLoad </strong>checks if a <strong>lazy-loaded module</strong> can be loaded at all. <strong>CanLoad </strong>stops module download; <strong>CanActivate </strong>only stops route access.</p>"
             },
             {
                 "text": "<p>What is difference between <strong>CanLoad </strong>and <strong>Resolver</strong></p>",
@@ -750,7 +750,7 @@
                 "text": "<p>What is ViewChildren?</p>"
             },
             {
-                "description": "<p><code>@ContentChild</code> in <strong>Angular</strong> is a <strong>decorator</strong> that allows a component to <strong>access a child element or directive</strong> that is <strong>projected into it</strong> using <code><strong>&lt;ng-content&gt;</strong></code>. It is available after <strong>ngAfterContentInit</strong></p></br><p><strong>Accessing projected content</strong></p><pre data-language=\"plain\">\n@Component({\n  selector: &#39;child-comp&#39;,\n  template: `&lt;ng-content&gt;&lt;/ng-content&gt;`\n})\nexport class ChildComponent implements AfterContentInit {\n  @ContentChild(&#39;projected&#39;) projected!: ElementRef;\n\n  ngAfterContentInit() {\n    console.log(this.projected.nativeElement.textContent);\n  }\n}\n</pre></br><pre data-language=\"plain\">\n&lt;!-- Parent Component Template --&gt;\n&lt;child-comp&gt;\n  &lt;p #projected&gt;Hello from Parent&lt;/p&gt;\n&lt;/child-comp&gt;\n</pre>",
+                "description": "<p><code>ContentChild</code> is an Angular decorator used to get a <strong>reference to a single projected content element</strong> inside a component. It is available after <strong>ngAfterContentInit.</strong></p></br><p><strong>Projected Content (ng-content)</strong> sends <strong>HTML/TEMPLATE/UI</strong> structure.</p></br><p><strong>Accessing projected content</strong></p><pre data-language=\"plain\">\n@Component({\n  selector: &#39;child-comp&#39;,\n  template: `&lt;ng-content&gt;&lt;/ng-content&gt;`\n})\nexport class ChildComponent implements AfterContentInit {\n  @ContentChild(&#39;projected&#39;) projected!: ElementRef;\n\n  ngAfterContentInit() {\n    console.log(this.projected.nativeElement.textContent);\n  }\n}\n</pre></br><pre data-language=\"plain\">\n&lt;!-- Parent Component Template --&gt;\n&lt;child-comp&gt;\n  &lt;p #projected&gt;Hello from Parent&lt;/p&gt;\n&lt;/child-comp&gt;\n</pre>",
                 "subjectId": 1,
                 "sectionId": 18,
                 "subSectionId": -1,
@@ -758,7 +758,7 @@
                 "text": "<p>What is ContentChild?</p>"
             },
             {
-                "description": "<p><code>ContentChildren</code> is used to get references to <strong>multiple elements or components projected into a component</strong> via <code>&lt;ng-content&gt;</code>. It returns a <strong>QueryList</strong> and becomes available after <strong>ngAfterContentInit</strong>.</p></br><p><strong>Accessing multiple projected elements</strong></p><pre data-language=\"plain\">\n@Component({\n  selector: &#39;child-comp&#39;,\n  template: `&lt;ng-content&gt;&lt;/ng-content&gt;`\n})\nexport class ChildComponent implements AfterContentInit {\n  @ContentChildren(&#39;projected&#39;) projectedItems!: QueryList&lt;ElementRef&gt;;\n\n  ngAfterContentInit() {\n    this.projectedItems.forEach(item =&gt; \n      console.log(item.nativeElement.textContent)\n    );\n  }\n}\n</pre></br><pre data-language=\"plain\">\n&lt;!-- Parent Component Template --&gt;\n&lt;child-comp&gt;\n  &lt;p #projected&gt;Item 1&lt;/p&gt;\n  &lt;p #projected&gt;Item 2&lt;/p&gt;\n&lt;/child-comp&gt;\n</pre>",
+                "description": "<p><code>ContentChildren</code> is an Angular decorator used to <strong>get multiple projected child elements or directives</strong> that are passed from the parent component into the child component through <strong>Content Projection</strong> (<code>ng-content</code>). It returns a <strong>QueryList</strong> and becomes available after <strong>ngAfterContentInit</strong>.</p></br><p><strong>Accessing multiple projected elements</strong></p><pre data-language=\"plain\">\n@Component({\n  selector: &#39;child-comp&#39;,\n  template: `&lt;ng-content&gt;&lt;/ng-content&gt;`\n})\nexport class ChildComponent implements AfterContentInit {\n  @ContentChildren(&#39;projected&#39;) projectedItems!: QueryList&lt;ElementRef&gt;;\n\n  ngAfterContentInit() {\n    this.projectedItems.forEach(item =&gt; \n      console.log(item.nativeElement.textContent)\n    );\n  }\n}\n</pre></br><pre data-language=\"plain\">\n&lt;!-- Parent Component Template --&gt;\n&lt;child-comp&gt;\n  &lt;p #projected&gt;Item 1&lt;/p&gt;\n  &lt;p #projected&gt;Item 2&lt;/p&gt;\n&lt;/child-comp&gt;\n</pre>",
                 "subjectId": 1,
                 "sectionId": 18,
                 "subSectionId": -1,
@@ -766,12 +766,20 @@
                 "text": "<p>What is ContentChildren?</p>"
             },
             {
-                "description": "<p><strong>Content Projection</strong> is a way to <strong>pass content (HTML or components)</strong> from a <strong>parent component</strong> into a <strong>child component’s template</strong>, allowing the child to display it <strong>in a specific place</strong> using the <code>&lt;ng-content&gt;</code> tag.</p>",
+                "description": "<p>If we pass <strong>Projected Content</strong> from the parent component, we can display that content inside the <strong>child component’s template</strong> using <code>&lt;ng-content&gt;&lt;/ng-content&gt;</code>. This mechanism is known as <strong><em>Content Projection</em> </strong>in Angular.</p>",
                 "subjectId": 1,
                 "sectionId": 18,
                 "subSectionId": -1,
                 "contentId": 69,
                 "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What is </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Content Projection</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> in Angular?</span></p>"
+            },
+            {
+                "text": "<p>What is <strong>ng-content</strong>?</p>",
+                "sectionId": 18,
+                "subSectionId": -1,
+                "subjectId": 1,
+                "contentId": 411,
+                "description": "<p><code>ng-content</code> is an <strong>Angular directive</strong> used to display the <strong>projected content </strong>inside a <strong>child component’s template</strong>. It acts as a <strong>placeholder </strong>where <strong>Angular </strong>inserts the <strong>content </strong>passed from the <strong>parent component</strong>.</p>"
             }
         ]
     },
