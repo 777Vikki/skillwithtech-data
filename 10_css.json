@@ -7,7 +7,7 @@
         "subSections": [],
         "contents": [
             {
-                "description": "",
+                "description": "<p>To make a <strong>webpage responsive</strong>, I use <strong>CSS media queries</strong>, <strong>flexible layouts</strong> like <strong>Flexbox and Grid, responsive units, and fluid images</strong>. I follow a <strong>mobile-first approach</strong>, include the viewport meta tag, and often use frameworks like <strong>Bootstrap </strong>or <strong>Tailwind</strong>. This ensures the layout adapts smoothly across different devices.</p></br><p><strong>Using Responsive Units:</strong></p><p>Avoid fixed <code>px</code> and use:</p><ul><li><code>%</code> (percentage)</li><li><code>vw / vh</code> (viewport width/height)</li><li><code>rem / em</code> (scalable font sizes)</li><li><code>minmax()</code> in CSS Grid</li></ul></br><p><strong>Responsive Images</strong></p><ul><li>Use <code>max-width: 100%</code> so images shrink with screen size</li><li>Use <code>srcset</code> for different resolutions</li><li>Use <strong>picture</strong> tag for device-specific images</li></ul><pre data-language=\"plain\">\nimg {\n  max-width: 100%;\n  height: auto;\n}\n</pre></br><p><strong>Mobile-First Design</strong></p><p>Start designing for small screens, then scale up using media queries.</p><pre data-language=\"plain\">\n/* Base (mobile) */\nbutton { width: 100%; }\n\n/* Tablet/Desktop */\n@media (min-width: 768px) {\n  button { width: auto; }\n}\n</pre></br><p><strong>Viewport Meta Tag (mandatory for mobile)</strong></p><p>Without this, your page won’t scale properly on mobile.</p><pre data-language=\"plain\">\n&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;\n</pre></br></br></br>",
                 "subjectId": 10,
                 "sectionId": 71,
                 "subSectionId": -1,
@@ -15,7 +15,7 @@
                 "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">How do you make a webpage responsive?</span></p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>Media queries</strong> are CSS techniques that apply styles conditionally based on the device characteristics like <strong>screen width, height, orientation, or resolution, enabling responsive web design</strong>.</p></br><pre data-language=\"plain\">\n/* Mobile devices */\n@media (max-width: 480px) { ... }\n\n/* Tablets */\n@media (max-width: 768px) { ... }\n\n/* Small laptops */\n@media (max-width: 1024px) { ... }\n\n/* Large desktops */\n@media (min-width: 1200px) { ... }\n</pre></br><pre data-language=\"plain\">\n// Orientation\n@media (orientation: landscape) { ... }\n\n// High DPI / Retina Screens\n@media (min-resolution: 2dppx) { ... }\n\n// Print Styles\n@media print {\n  body { color: black; }\n}\n\n// Mobile only\n@media (min-width: 480px) and (max-width: 768px) { ... }\n</pre>",
                 "subjectId": 10,
                 "sectionId": 71,
                 "subSectionId": -1,
@@ -23,7 +23,7 @@
                 "text": "<p>What are media queries?</p>"
             },
             {
-                "description": "",
+                "description": "<p><code>max-width</code> applies CSS <strong>when the screen width is less than or equal to</strong> the given value.</p><p><code>min-width</code>  applies CSS <strong>when the screen width is greater than or equal to</strong> the given value.</p>",
                 "subjectId": 10,
                 "sectionId": 71,
                 "subSectionId": -1,
@@ -31,7 +31,7 @@
                 "text": "<p>What is the difference between max-width and min-width?</p>"
             },
             {
-                "description": "",
+                "description": "<pre data-language=\"plain\">\n// Extra Small (Mobile)\n0px – 480px\n\n// Small (Mobile)\n481px – 768px\n\n// Medium (Tablet)\n769px – 1024px\n\n// Large (Small Laptops)\n1025px – 1280px\n\n// Extra Large (Desktops)\n1281px – 1440px\n\n// 2XL Screens (Large Monitors)\n1441px – 1920px+\n</pre></br>",
                 "subjectId": 10,
                 "sectionId": 71,
                 "subSectionId": -1,
@@ -48,7 +48,7 @@
         "subSections": [],
         "contents": [
             {
-                "description": "",
+                "description": "<p>The <strong>CSS Box Model</strong> defines how every element is structured using <strong>content, padding, border, and margin</strong>. It determines how total <strong>space </strong>is calculated for any <strong>element </strong>on the page.</p>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -56,7 +56,7 @@
                 "text": "<p>What is the CSS Box Model?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>Specificity </strong>is the <strong>rule </strong>that decides which <strong>CSS </strong>style applies when multiple rules target the same element, based on a points hierarchy of selectors.</p></br><p><strong>Specificity Hierarchy (Highest → Lowest):</strong></p><ol><li><strong>Inline styles</strong> → <code>style=&quot;...&quot;</code> → <strong>1000 points</strong></li><li><strong>ID selectors</strong> → <code>#id</code> → <strong>100 points</strong></li><li><strong>Class, pseudo-class, attribute selectors</strong> → <code>.class</code>, <code>[type=&quot;text&quot;]</code>, <code>:hover</code> → <strong>10 points</strong></li><li><strong>Element &amp; pseudo-element selectors</strong> → <code>div</code>, <code>p</code>, <code>::before</code> → <strong>1 point</strong></li><li><strong>Universal selector </strong><code><strong>*</strong></code>, combinators (<code>&gt;</code>, <code>+</code>, <code>~</code>) → <strong>0 points</strong></li></ol>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -64,7 +64,7 @@
                 "text": "<p>What is specificity in CSS?</p>"
             },
             {
-                "description": "",
+                "description": "<p>Centering a div can be done in multiple ways. The modern approach is using Flexbox with <code>justify-content: center</code> and <code>align-items: center</code>. Another clean method is CSS Grid using <code>place-items: center</code>. For horizontal-only centering, we use <code>margin: 0 auto</code>. For older layouts, we can center using <code>position: absolute</code> with <code>transform</code>.</p>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -72,7 +72,7 @@
                 "text": "<p>How do you center a div (horizontally &amp; vertically)?</p>"
             },
             {
-                "description": "",
+                "description": "<p><code>display: none</code> removes the element from the document flow completely, so it doesn’t take any space. <code>visibility: hidden</code> hides the element but keeps its space reserved. Layout shifts with <code>display: none</code>, while with <code>visibility: hidden</code>, the layout stays the same.</p>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -80,7 +80,7 @@
                 "text": "<p>Difference between <code>display: none</code> vs <code>visibility: hidden</code>?</p>"
             },
             {
-                "description": "",
+                "description": "<p><code>relative</code> keeps the element in the normal flow but allows slight movement. <code>absolute</code> removes the element from the flow and positions it relative to the nearest positioned ancestor. <code>fixed</code> also removes the element from flow, but it stays fixed in the viewport even on scroll.</p></br></br>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -88,7 +88,7 @@
                 "text": "<p>What is the difference between <code>relative</code>, <code>absolute</code>, and <code>fixed</code>?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>Flexbox </strong>is a<strong> one-dimensional CSS layout system</strong> that helps <strong>align items</strong> and distribute space efficiently along a <strong>row </strong>or <strong>column</strong>. It makes tasks like <strong>centering, spacing, and responsive design</strong> much easier using properties like <code>flex-direction</code>, <code>justify-content</code>, and <code>align-items</code>.</p>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -96,7 +96,7 @@
                 "text": "<p> What is Flexbox?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>CSS Grid</strong> is a<strong> two-dimensional layout system</strong> in CSS that lets you create <strong>responsive layouts</strong> using <strong>rows </strong>and <strong>columns</strong>. It allows precise control over <strong>spacing, alignment, and placement of elements</strong>, making it ideal for <strong>complex page structures</strong> and <strong>grid-based designs</strong>.</p>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -104,7 +104,7 @@
                 "text": "<p>What is CSS Grid?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>Flexbox </strong>is a <strong>one-dimensional layout system</strong> used for arranging items in a <strong>row </strong>or <strong>column</strong>, perfect for smaller components. <strong>CSS Grid</strong> is a <strong>two-dimensional layout system</strong> that handles both <strong>rows </strong>and <strong>columns</strong>, making it ideal for complex page layouts.</p></br><p><strong>Flexbox </strong>is <strong>content-driven</strong>, while <strong>Grid </strong>is <strong>layout-driven</strong>.</p>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -112,7 +112,7 @@
                 "text": "<p>Difference between Flexbox and Grid?</p>"
             },
             {
-                "description": "",
+                "description": "<p>A <strong>pseudo-class</strong> is a keyword added to a selector that <strong>defines a special state of an element</strong>. It allows you to style elements <strong>based on user interaction, position, or other conditions</strong>, without adding extra classes or IDs in HTML.</p><pre data-language=\"plain\">\nselector:pseudo-class {\n  /* styles */\n}\n</pre></br><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"1\">Pseudo-class Description Example</td></tr><tr><td data-row=\"2\"><code>:hover</code></td><td data-row=\"2\">When the user hovers over an element</td><td data-row=\"2\"><code>button:hover { background: blue; }</code></td></tr><tr><td data-row=\"3\"><code>:active</code></td><td data-row=\"3\">When the element is being clicked</td><td data-row=\"3\"><code>a:active { color: red; }</code></td></tr><tr><td data-row=\"4\"><code>:focus</code></td><td data-row=\"4\">When an input or button is focused</td><td data-row=\"4\"><code>input:focus { border-color: green; }</code></td></tr><tr><td data-row=\"5\"><code>:first-child</code></td><td data-row=\"5\">Selects the first child of its parent</td><td data-row=\"5\"><code>li:first-child { font-weight: bold; }</code></td></tr><tr><td data-row=\"6\"><code>:last-child</code></td><td data-row=\"6\">Selects the last child of its parent</td><td data-row=\"6\"><code>li:last-child { font-style: italic; }</code></td></tr><tr><td data-row=\"7\"><code>:nth-child(n)</code></td><td data-row=\"7\">Selects the nth child</td><td data-row=\"7\"><code>li:nth-child(2) { color: red; }</code></td></tr><tr><td data-row=\"8\"><code>:not()</code></td><td data-row=\"8\">Selects elements that do <strong>not</strong> match a selector</td><td data-row=\"8\"><code>p:not(.special) { color: gray; }</code></td></tr></tbody></table></br><ul><li><strong>Pseudo-classes (</strong><code><strong>:hover</strong></code><strong>, </strong><code><strong>:first-child</strong></code><strong>)</strong> → style the <strong>whole element</strong> based on state or position.</li><li><strong>Pseudo-elements (</strong><code><strong>::before</strong></code><strong>, </strong><code><strong>::after</strong></code><strong>)</strong> → style <strong>part of the element</strong> or insert content.</li></ul></br><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"1\"></td></tr></tbody></table>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -120,7 +120,7 @@
                 "text": "<p>What are pseudo-classes?</p>"
             },
             {
-                "description": "",
+                "description": "<p>A <strong>pseudo-element</strong> allows you to <strong>style specific parts of an element’s content</strong> or <strong>insert content</strong> without adding extra HTML elements. It targets <strong>a portion of the element</strong>, unlike pseudo-classes which target the whole element based on state.</p><pre data-language=\"plain\">\nselector::pseudo-element {\n  /* styles */\n}\n</pre><h3></h3><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"1\">Pseudo-element Description Example</td></tr><tr><td data-row=\"2\"> <code>::before</code></td><td data-row=\"2\">Inserts content <strong>before</strong> the element’s content</td><td data-row=\"2\"><code>p::before { content: &quot;Note: &quot;; font-weight: bold; }</code></td></tr><tr><td data-row=\"3\"><code>::after</code></td><td data-row=\"3\">Inserts content <strong>after</strong> the element’s content</td><td data-row=\"3\"><code>p::after { content: &quot; ✔&quot;; color: green; }</code></td></tr><tr><td data-row=\"4\"><code>::first-letter</code></td><td data-row=\"4\">Styles the <strong>first letter</strong> of an element</td><td data-row=\"4\"><code>p::first-letter { font-size: 2rem; color: red; }</code></td></tr><tr><td data-row=\"5\"><code>::first-line</code></td><td data-row=\"5\">Styles the <strong>first line</strong> of an element</td><td data-row=\"5\"><code>p::first-line { font-weight: bold; }</code></td></tr><tr><td data-row=\"6\"><code>::marker</code></td><td data-row=\"6\">Styles the <strong>list item marker</strong> (bullet or number)</td><td data-row=\"6\"><code>li::marker { color: red; font-size: 1.2rem; }</code></td></tr></tbody></table></br><ul><li><strong>Pseudo-classes (</strong><code><strong>:hover</strong></code><strong>, </strong><code><strong>:first-child</strong></code><strong>)</strong> → style the <strong>whole element</strong> based on state or position.</li><li><strong>Pseudo-elements (</strong><code><strong>::before</strong></code><strong>, </strong><code><strong>::after</strong></code><strong>)</strong> → style <strong>part of the element</strong> or insert content.</li></ul></br>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -128,7 +128,7 @@
                 "text": "<p>What are pseudo-elements?</p>"
             },
             {
-                "description": "",
+                "description": "<p>The <code><strong>z-index</strong></code> property in CSS controls the <strong>stacking order</strong> of elements along the <strong>z-axis (depth)</strong>. Elements with a higher <code>z-index</code> appear <strong>on top</strong> of elements with a lower <code>z-index</code>.</p></br><p>Only works on elements that have a <code>position</code> value of <code>relative</code>, <code>absolute</code>, <code>fixed</code>, or <code>sticky</code>.</p>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -136,7 +136,7 @@
                 "text": "<p>What is the z-index?</p>"
             },
             {
-                "description": "",
+                "description": "<p>The <code><strong>calc()</strong></code> function in CSS allows you to perform <strong>mathematical calculations</strong> to determine property values.</p><p> You can combine <strong>different units</strong> (%, px, em, rem, etc.) in one expression.</p></br><pre data-language=\"plain\">\nselector {\n  property: calc(expression);\n}\n</pre></br><pre data-language=\"plain\">\nh1 {\n  font-size: calc(16px + 1vw); /* base 16px + 1% of viewport width */\n}\n</pre></br>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -144,7 +144,7 @@
                 "text": "<p>What is <code>calc()</code> function?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>Responsive design</strong> is an approach in web development where a website <strong>adapts its layout and content</strong> to look good on <strong>all devices and screen sizes</strong>—desktops, tablets, and mobile phones.</p>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -152,7 +152,7 @@
                 "text": "<p>What is responsive design?</p>"
             },
             {
-                "description": "",
+                "description": "<p><code>em</code> → relative to <strong>parent</strong>, can compound.</p><p><code>rem</code> → relative to <strong>root</strong>, consistent across page.</p><p><code>%</code> → relative to <strong>parent container</strong>.</p><p><code>vh</code> / <code>vw</code> → relative to <strong>viewport</strong>, great for full-screen layouts.</p>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -160,7 +160,7 @@
                 "text": "<p>What is <code>rem</code>, <code>em</code>, <code>%</code>, <code>vh</code>, <code>vw</code>?</p>"
             },
             {
-                "description": "",
+                "description": "<p>The <code><strong>overflow</strong></code> property in CSS controls <strong>what happens when content inside an element exceeds its defined width or height</strong>.</p></br><pre data-language=\"plain\">\nselector {\n  overflow: visible | hidden | scroll | auto;\n}\n</pre></br><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"1\">Value Description</td></tr><tr><td data-row=\"2\"> <code>visible</code> (default)</td><td data-row=\"2\">Content <strong>overflows</strong> the box and is <strong>fully visible</strong> outside the container.</td></tr><tr><td data-row=\"3\"><code>hidden</code></td><td data-row=\"3\">Content that exceeds the box <strong>is clipped</strong> and <strong>not visible</strong>.</td></tr><tr><td data-row=\"4\"><code>scroll</code></td><td data-row=\"4\">Always shows <strong>scrollbars</strong>, even if content fits inside.</td></tr><tr><td data-row=\"5\"><code>auto</code></td><td data-row=\"5\">Adds <strong>scrollbars only when needed</strong> (content overflows).</td></tr></tbody></table></br>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -168,7 +168,7 @@
                 "text": "<p>What is <code>overflow</code>?</p>"
             },
             {
-                "description": "",
+                "description": "<p>The <code><strong>object-fit</strong></code> property specifies <strong>how an image or video should be resized to fit its container</strong> while maintaining its aspect ratio (or not).</p><p> It is commonly used with <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code> elements.</p></br><pre data-language=\"plain\">\nimg {\n  object-fit: fill | contain | cover | none | scale-down;\n}\n</pre></br>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
@@ -176,7 +176,7 @@
                 "text": "<p>What is <code>object-fit</code> used for?</p>"
             },
             {
-                "description": "",
+                "description": "<p>The <strong>box-sizing</strong> property in CSS defines <strong>how the total width and height of an element are calculated</strong>.</p></br><p><strong>content-box (Default)</strong></p><ul><li><strong>Width &amp; height</strong> include <strong>only the content</strong>.</li><li>Padding and border are <strong>added outside</strong>, increasing the total size.</li></ul></br><pre data-language=\"plain\">\ndiv {\n  width: 200px;\n  padding: 20px;\n  border: 10px solid black;\n  box-sizing: content-box; /* default */\n}\n</pre><p><strong>Total width</strong> = content width + padding + border = 200 + (20*<em>2) + (10*</em>2) = 260px</p></br><p><strong>border-box:</strong></p><ul><li><strong>Width &amp; height</strong> include <strong>content + padding + border</strong>.</li><li>Makes layout sizing easier and avoids overflow issues.</li></ul></br><pre data-language=\"plain\">\ndiv {\n  width: 200px;\n  padding: 20px;\n  border: 10px solid black;\n  box-sizing: border-box;\n}\n</pre></br><p><strong>Total width</strong> = 200px (includes content, padding, and border)</p>",
                 "subjectId": 10,
                 "sectionId": 72,
                 "subSectionId": -1,
