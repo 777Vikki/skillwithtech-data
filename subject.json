@@ -96,14 +96,6 @@
         "sections": []
     },
     {
-        "name": "System Design",
-        "id": 14,
-        "links": [
-            "/14_system_design.json"
-        ],
-        "sections": []
-    },
-    {
         "name": "Important Points",
         "id": 13,
         "links": [
