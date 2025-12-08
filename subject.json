@@ -96,10 +96,18 @@
         "sections": []
     },
     {
-        "name": "Practice Set",
+        "name": "System Design",
+        "id": 14,
+        "links": [
+            "/14_system_design.json"
+        ],
+        "sections": []
+    },
+    {
+        "name": "Important Points",
         "id": 13,
         "links": [
-            "/13_practice_set.json"
+            "/13_important_points.json"
         ],
         "sections": []
     }
