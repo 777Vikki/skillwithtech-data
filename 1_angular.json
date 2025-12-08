@@ -912,7 +912,7 @@
                 "subSectionId": -1,
                 "subjectId": 1,
                 "contentId": 343,
-                "description": ""
+                "description": "<p><strong>angular.json</strong> is the CLI configuration file that defines how <strong>Angular projects </strong>are <strong>structured</strong>, <strong>built</strong>, <strong>served</strong>, <strong>tested</strong>, and what <strong>global styles/scripts</strong> are included.</p></br><p><strong>package.json</strong> defines the <strong>project’s dependencies, development tools, version, and npm scripts</strong>. It is required by <strong>Node/NPM</strong> to manage and install <strong>packages</strong>.</p>"
             }
         ]
     }
