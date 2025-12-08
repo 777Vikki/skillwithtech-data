@@ -182,7 +182,7 @@
                 "text": "<p>What is a directive?</p>"
             },
             {
-                "description": "<p><strong>*ngIf</strong>: <code>*ngIf</code> <strong>conditionally adds or removes</strong> an element based on a <strong>boolean expression</strong>.</p></br><p><strong>*ngFor</strong>: <code>*ngFor</code> <strong>iterates over a list</strong> to <strong>render an element</strong> for each <strong>item</strong>.</p>",
+                "description": "<p><code>*ngIf</code> is used for conditional rendering. It adds or removes elements from the DOM based on a Boolean expression.</p></br><p> <code>*ngFor</code> is used for looping — it repeats an element for each item in a collection.</p><p> Both are structural directives, but <code>*ngIf</code> handles conditions while <code>*ngFor</code> handles iteration.</p>",
                 "subjectId": 1,
                 "sectionId": 6,
                 "subSectionId": -1,
