@@ -176,7 +176,7 @@
                         "subSectionId": 102,
                         "subjectId": 3,
                         "contentId": 363,
-                        "description": "<p>My Angular architecture follows a clean and scalable structure with core, shared, and feature-based modules. I use standalone components, lazy loading, NgRx or signals for state management, smart/dumb components, services for business logic, and interceptors for global error + auth handling. This results in maintainable, testable, and high-performance Angular applications.</p>"
+                        "description": "<p>In my <strong>Angular projects</strong>, I follow a combination of <strong>architectural </strong>and <strong>design patterns</strong> that help ensure <strong>scalability</strong>, <strong>maintainability</strong>, and <strong>clean separation</strong> of concerns.</p></br><p>I primarily use <strong>Component-based architecture</strong> along with <strong>Smart–Dumb component</strong> separation to keep <strong>UI </strong>and<strong> logic decoupled</strong>.</p></br><p>For state isolation and cleaner APIs, I use the <strong>Facade pattern</strong>.</p></br><p>Shared logic is placed in <strong>Singleton services </strong>using <strong>Angular’s dependency injection system</strong>.</p></br><p>I follow<strong> reactive programming principles</strong> using<strong> RxJS Observables</strong>, and for <strong>complex state</strong>, I use the <strong>NgRx Store pattern</strong> <strong>(actions, reducers, selectors, effects)</strong>.</p></br><p>Together, these patterns help me deliver <strong>scalable</strong>, <strong>predictable</strong>, and easily <strong>testable Angular applications</strong>.</p>"
                     }
                 ],
                 "subSections": []
@@ -370,7 +370,7 @@
         "subSections": []
     },
     {
-        "name": "<p><strong>Encapsulation (Emulated, None, ShadowDom)</strong></p>",
+        "name": "<p><strong>Encapsulation (Emulated, None, ShadowDom), UI and UX, state and state management</strong></p>",
         "sectionId": 112,
         "subSectionId": -1,
         "subjectId": 3,
@@ -389,6 +389,40 @@
                         "subjectId": 3,
                         "contentId": 399,
                         "description": "<p>ViewEncapsulation in Angular determines how component styles are isolated. Angular supports Emulated (default), ShadowDom, and None to control whether styles apply only inside a component or globally.</p></br><p><strong>ViewEncapsulation.Emulated (Default):</strong></p><p>1. Angular <strong>simulates Shadow DOM</strong> by adding unique attributes to elements.</p><p>2. Component styles are scoped and do not leak outside.</p></br><p><strong>ViewEncapsulation.None:</strong></p><p>1. <strong>No encapsulation</strong> → styles behave like normal global CSS.</p><p>2. Styles from the component can <strong>leak to other components</strong>.</p></br><p><strong>ViewEncapsulation.ShadowDom: </strong></p><p>1. Uses the <strong>real browser Shadow DOM</strong>.</p><p>2. Provides <strong>strong style isolation</strong> (stronger than Emulated).</p><p>3. Global styles <strong>cannot enter</strong> the component and vice-versa.</p>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>UI and UX</strong></p>",
+                "sectionId": 112,
+                "subSectionId": 121,
+                "subjectId": 3,
+                "contents": [
+                    {
+                        "text": "<p>What is difference between <strong>UI </strong>and <strong>UX</strong>?</p>",
+                        "sectionId": 112,
+                        "subSectionId": 121,
+                        "subjectId": 3,
+                        "contentId": 412,
+                        "description": "<p><strong>UI </strong>is about designing the <strong>look </strong>and <strong>feel </strong>of the application — the <strong>colors</strong>, <strong>layout</strong>, <strong>typography</strong>, and all <strong>visual elements</strong>. <strong>UX </strong>focuses on how users interact with the product — ensuring the flow is <strong>smooth</strong>, <strong>intuitive</strong>, and helps users accomplish tasks easily. Good <strong>UI </strong>attracts users, but good <strong>UX </strong>keeps them engaged.</p>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>State and State Management</strong></p>",
+                "sectionId": 112,
+                "subSectionId": 122,
+                "subjectId": 3,
+                "contents": [
+                    {
+                        "text": "<p>What is <strong>state </strong>and <strong>state management</strong>?</p>",
+                        "sectionId": 112,
+                        "subSectionId": 122,
+                        "subjectId": 3,
+                        "contentId": 413,
+                        "description": "<p><strong>State</strong> refers to the data or information that your application stores at a given moment and uses to determine how the UI should look or behave.</p></br><p><strong>🔹 Examples of State</strong></p><p><strong>1.</strong> Logged-in user information</p><p><strong>2.</strong> Form inputs</p><p><strong>3.</strong> List of employees retrieved from API</p><p><strong>4.</strong> UI flags (like <code>isLoading</code>, <code>showModal</code>, etc.)</p><p><strong>5.</strong> Cart items in an e-commerce app</p></br><p><strong>State management</strong> is the process of <strong>handling, updating, storing, and synchronizing</strong> this state across different parts of your application.</p><p>It ensures:</p><p><strong>1. </strong>Data remains <strong>consistent</strong></p><p><strong>2.</strong> Multiple components using the same data stay <strong>in sync</strong></p><p><strong>3.</strong> UI updates correctly when the state changes</p><p><strong>4.</strong> Application remains predictable and easier to debug</p>"
                     }
                 ],
                 "subSections": []

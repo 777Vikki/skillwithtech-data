@@ -303,7 +303,7 @@
                 "text": "<p>What is injectable?</p>"
             },
             {
-                "description": "<p>We can use @Injectable at <strong>root level</strong>, <strong>module level</strong>, and <strong>component level</strong>. </p></br><p>If <code>providedIn</code> is root (<code>@Injectable({ providedIn: &#39;root&#39; })</code>), it can be <strong>used across the application</strong>. For the <strong>module level</strong>, we can add it in <strong>NgModule</strong> using the <strong>providers array</strong>. For the <strong>component level</strong>, we can add it in the <strong>providers array</strong> for any specific component.</p>",
+                "description": "<p>We can use @Injectable at <strong>root level</strong>, <strong>module level</strong>, and <strong>component level</strong>.</p></br><p>If <code>providedIn</code> is root (<code>@Injectable({ providedIn: &#39;root&#39; })</code>), it can be <strong>used across the application</strong>. For the <strong>module level</strong>, we can add it in <strong>NgModule</strong> using the <strong>providers array</strong>. For the <strong>component level</strong>, we can add it in the <strong>providers array</strong> for any specific component.</p>",
                 "subjectId": 1,
                 "sectionId": 7,
                 "subSectionId": -1,
@@ -317,6 +317,14 @@
                 "subSectionId": -1,
                 "contentId": 28,
                 "text": "<p>How does Angular handle dependency injection under the hood?</p>"
+            },
+            {
+                "text": "<p>Service is <strong>singleton.</strong></p>",
+                "sectionId": 7,
+                "subSectionId": -1,
+                "subjectId": 1,
+                "contentId": 414,
+                "description": "<p>If I don’t use <code>providedIn: &#39;root&#39;</code>, the <strong>service </strong>won’t be <strong>globally </strong>available.</p><p>I must provide it either in a <strong>module </strong>or in a <strong>component</strong>.</p><p>Providing in a <strong>module </strong>can still create a <strong>singleton </strong>for that <strong>module</strong>,</p><p>but providing in a <strong>component </strong>creates a <strong>new instance </strong>per <strong>component tree</strong>.</p></br><p>To make a <strong>service a singleton ONLY for ComponentA and ComponentB</strong> (both standalone, unrelated, and <strong>not global</strong>)</p></br><p><strong>Solution 1: Provide the service in a Shared Route (Best Approach):</strong></p></br><pre data-language=\"plain\">\nexport const routes: Routes = [\n  {\n    path: &#39;&#39;,\n    providers: [SharedService],   // 👈 one shared instance\n    children: [\n      { path: &#39;a&#39;, component: ComponentA },\n      { path: &#39;b&#39;, component: ComponentB }\n    ]\n  }\n];\n</pre></br><p><strong>Solution 2: Create a Shared Feature Provider (without modules):</strong></p></br><pre data-language=\"plain\">\n// Create a feature provider function:\nexport function provideSharedService() {\n  return [\n    SharedService,  // provider token\n  ];\n}\n\n// Then include it in both components:\n@Component({\n  standalone: true,\n  providers: [provideSharedService()]\n})\nexport class ComponentA {}\n</pre></br><p><strong>Solution 3: Create a Shared Parent Component (Only if possible)</strong></p><p>If you can wrap both components inside a common parent:</p><pre data-language=\"plain\">\n@Component({\n  selector: &#39;app-shared-wrapper&#39;,\n  standalone: true,\n  providers: [SharedService],\n  template: `&lt;component-a /&gt;&lt;component-b /&gt;`\n})\nexport class SharedWrapperComponent {}\n</pre></br><p>If two <strong>standalone components</strong> are <strong>unrelated </strong>but need to share one <strong>singleton instance </strong>of a <strong>service</strong>, I provide the <strong>service </strong>at the <strong>route level</strong>. <strong>Angular </strong>creates a <strong>single injector</strong> for that <strong>route</strong>, and <strong>both components</strong> inherit the <strong>same instance</strong>. This keeps the <strong>service </strong>shared but not <strong>global</strong>.</p></br>"
             }
         ]
     },
