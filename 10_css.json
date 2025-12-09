@@ -56,6 +56,14 @@
                 "text": "<p>What is the CSS Box Model?</p>"
             },
             {
+                "text": "<p>What is <strong>selector</strong>?</p>",
+                "sectionId": 72,
+                "subSectionId": -1,
+                "subjectId": 10,
+                "contentId": 415,
+                "description": "<p>A <strong>CSS selector </strong>is a pattern that tells the <strong>browser </strong>which <strong>HTML elements</strong> to apply styles to.</p><p><strong>Selectors </strong>can target elements by <strong>tag</strong>, <strong>class</strong>, <strong>id</strong>, <strong>attributes</strong>, <strong>pseudo-classes</strong>, and their relationships in the <strong>DOM</strong>.</p>"
+            },
+            {
                 "description": "<p><strong>Specificity </strong>is the <strong>rule </strong>that decides which <strong>CSS </strong>style applies when multiple rules target the same element, based on a points hierarchy of selectors.</p></br><p><strong>Specificity Hierarchy (Highest → Lowest):</strong></p><ol><li><strong>Inline styles</strong> → <code>style=&quot;...&quot;</code> → <strong>1000 points</strong></li><li><strong>ID selectors</strong> → <code>#id</code> → <strong>100 points</strong></li><li><strong>Class, pseudo-class, attribute selectors</strong> → <code>.class</code>, <code>[type=&quot;text&quot;]</code>, <code>:hover</code> → <strong>10 points</strong></li><li><strong>Element &amp; pseudo-element selectors</strong> → <code>div</code>, <code>p</code>, <code>::before</code> → <strong>1 point</strong></li><li><strong>Universal selector </strong><code><strong>*</strong></code>, combinators (<code>&gt;</code>, <code>+</code>, <code>~</code>) → <strong>0 points</strong></li></ol>",
                 "subjectId": 10,
                 "sectionId": 72,
