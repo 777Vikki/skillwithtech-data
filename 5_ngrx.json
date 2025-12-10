@@ -92,7 +92,7 @@
         ]
     },
     {
-        "name": "<p><strong>createSelector and createFeatureSelector</strong></p>",
+        "name": "<p><strong>createSelector and createFeatureSelector, Mutable and Immutable </strong></p>",
         "sectionId": 116,
         "subSectionId": -1,
         "subjectId": 5,
@@ -111,6 +111,31 @@
                         "subjectId": 5,
                         "contentId": 405,
                         "description": "<p><strong>createFeatureSelector:</strong></p><p>Used to select a <em>top-level feature slice</em> from the global store.</p></br><p><strong>How it works:</strong></p><ul><li>It takes the feature key.</li><li>Returns the whole feature state object.</li><li>Acts as the starting point for more specific selectors.</li></ul></br><pre data-language=\"plain\">\nexport const selectEmployeeFeature =\n  createFeatureSelector&lt;EmployeeState&gt;(&#39;employees&#39;);\n</pre></br><p><strong>createSelector:</strong></p><p>Used to derive a <strong>specific piece</strong> of data from the <strong>feature state</strong>  or <strong>another selector</strong> or <strong>multiple selectors</strong></p></br><pre data-language=\"plain\">\nexport const selectEmployees = createSelector(\n  selectEmployeeFeature,\n  (state) =&gt; state.employees\n);\n</pre>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>Mutable and Immutable </strong></p>",
+                "sectionId": 116,
+                "subSectionId": 124,
+                "subjectId": 5,
+                "contents": [
+                    {
+                        "text": "<p>What is difference between <strong>Mutable </strong>and <strong>Immutable</strong>?</p>",
+                        "sectionId": 116,
+                        "subSectionId": 124,
+                        "subjectId": 5,
+                        "contentId": 416,
+                        "description": "<p><strong>Mutable </strong>values can be changed directly in <strong>memory</strong>, while <strong>immutable</strong> values always create a <strong>new copy</strong> when changed. In <strong>JavaScript</strong>, <strong>objects</strong> and <strong>arrays </strong>are <strong>mutable</strong>; <strong>primitives </strong>like <strong>numbers</strong>, <strong>strings</strong>, and <strong>booleans </strong>are <strong>immutable</strong>.</p></br><p><strong>Mutable Example: Arrays</strong></p><pre data-language=\"plain\">\nconst arr = [1, 2, 3];\nconst arr2 = arr;\n\narr2.push(4);\n\nconsole.log(arr); // [1, 2, 3, 4]\nconsole.log(arr2); // [1, 2, 3, 4]\n</pre></br><p><strong>Immutable Example: Numbers</strong></p><pre data-language=\"plain\">\nlet x = 10;\nlet y = x;\n\ny = y + 5;\n\nconsole.log(x); // 10\nconsole.log(y); // 15\n</pre></br>"
+                    },
+                    {
+                        "text": "<p>how to make <strong>objects </strong>and <strong>arrays immutable?</strong></p>",
+                        "sectionId": 116,
+                        "subSectionId": 124,
+                        "subjectId": 5,
+                        "contentId": 417,
+                        "description": "<p><strong> Why Make Objects &amp; Arrays Immutable?</strong></p><ul><li>Prevent accidental modifications</li><li>Keep application state predictable</li><li>Essential for NgRx, Redux, and functional programming</li><li>Makes debugging and testing easier</li></ul></br><p><strong>1. Using </strong><code><strong>Object.freeze()</strong></code><strong> (Shallow Immutability)</strong></p><pre data-language=\"plain\">\nconst user = Object.freeze({\n  name: &quot;Vivek&quot;,\n  age: 31\n});\n\nuser.name = &quot;Rahul&quot;;  // ❌ fails silently in non-strict mode\nconsole.log(user.name); // Vivek\n\n\n// Nested objects remain mutable. (Limitation: It is shallow)\nconst emp = Object.freeze({\n  details: {\n    city: &quot;Mumbai&quot;\n  }\n});\n\nemp.details.city = &quot;Delhi&quot;; // ❌ still changes!\n</pre></br><p><strong>2. Deep Freeze (Full Immutability)</strong></p><pre data-language=\"plain\">\nfunction deepFreeze(obj) {\n  Object.keys(obj).forEach(key =&gt; {\n    if (typeof obj[key] === &#39;object&#39; &amp;&amp; obj[key] !== null) {\n      deepFreeze(obj[key]);\n    }\n  });\n  return Object.freeze(obj);\n}\n\nconst user = deepFreeze({\n  name: &quot;Vivek&quot;,\n  address: { city: &quot;Mumbai&quot;, pin: 400001 }\n});\n\nuser.address.city = &quot;Delhi&quot;;  // ❌ Not allowed\nconsole.log(user.address.city); // &quot;Mumbai&quot;\n</pre></br><p><strong>3. Using Spread Operator to Create New Copies (Most Common)</strong></p><p><strong>Immutable Object Update</strong></p><pre data-language=\"plain\">\nconst user = { name: &quot;Vivek&quot;, age: 31 };\n\nconst updatedUser = {\n  ...user,\n  age: 32\n};\n\nconsole.log(updatedUser); // new object\nconsole.log(user);        // unchanged\n</pre></br><p><strong>Immutable Array Update</strong></p><pre data-language=\"plain\">\nconst arr = [1, 2, 3];\n\nconst updatedArr = [...arr, 4];\n\nconsole.log(updatedArr); // [1, 2, 3, 4]\nconsole.log(arr);        // [1, 2, 3]\n</pre></br><p><strong>Replace element immutably</strong></p><pre data-language=\"plain\">\nconst arr = [10, 20, 30];\n\nconst newArr = arr.map(val =&gt; val === 20 ? 200 : val);\n\nconsole.log(newArr); // [10, 200, 30]\n</pre></br><p><strong>Remove element immutably</strong></p><pre data-language=\"plain\">\nconst arr = [1, 2, 3];\n\nconst newArr = arr.filter(v =&gt; v !== 2);\n\nconsole.log(newArr); // [1, 3]\n</pre></br><p><strong>Using structuredClone() (Deep Copy)</strong></p><pre data-language=\"plain\">\nconst user = {\n  name: &quot;Vivek&quot;,\n  address: { city: &quot;Mumbai&quot; }\n};\n\nconst newUser = structuredClone(user);\nnewUser.address.city = &quot;Delhi&quot;;\n\nconsole.log(user.address.city);   // Mumbai\nconsole.log(newUser.address.city); // Delhi\n</pre></br>"
                     }
                 ],
                 "subSections": []
