@@ -31,14 +31,6 @@
                 "subSectionId": -1,
                 "contentId": 137,
                 "text": "<p>What is NgRx in Angular?</p>"
-            },
-            {
-                "description": "<p><strong>NgRx</strong> handles <strong>immutability</strong> by using <strong>pure functions</strong> (<strong>reducers</strong>) that return <strong>new state objects</strong> instead of modifying the <strong>existing state</strong> directly.</p>",
-                "subjectId": 5,
-                "sectionId": 48,
-                "subSectionId": -1,
-                "contentId": 138,
-                "text": "<p>How does NgRx handle immutability?</p>"
             }
         ]
     },
@@ -136,6 +128,14 @@
                         "subjectId": 5,
                         "contentId": 417,
                         "description": "<p><strong> Why Make Objects &amp; Arrays Immutable?</strong></p><ul><li>Prevent accidental modifications</li><li>Keep application state predictable</li><li>Essential for NgRx, Redux, and functional programming</li><li>Makes debugging and testing easier</li></ul></br><p><strong>1. Using </strong><code><strong>Object.freeze()</strong></code><strong> (Shallow Immutability)</strong></p><pre data-language=\"plain\">\nconst user = Object.freeze({\n  name: &quot;Vivek&quot;,\n  age: 31\n});\n\nuser.name = &quot;Rahul&quot;;  // ❌ fails silently in non-strict mode\nconsole.log(user.name); // Vivek\n\n\n// Nested objects remain mutable. (Limitation: It is shallow)\nconst emp = Object.freeze({\n  details: {\n    city: &quot;Mumbai&quot;\n  }\n});\n\nemp.details.city = &quot;Delhi&quot;; // ❌ still changes!\n</pre></br><p><strong>2. Deep Freeze (Full Immutability)</strong></p><pre data-language=\"plain\">\nfunction deepFreeze(obj) {\n  Object.keys(obj).forEach(key =&gt; {\n    if (typeof obj[key] === &#39;object&#39; &amp;&amp; obj[key] !== null) {\n      deepFreeze(obj[key]);\n    }\n  });\n  return Object.freeze(obj);\n}\n\nconst user = deepFreeze({\n  name: &quot;Vivek&quot;,\n  address: { city: &quot;Mumbai&quot;, pin: 400001 }\n});\n\nuser.address.city = &quot;Delhi&quot;;  // ❌ Not allowed\nconsole.log(user.address.city); // &quot;Mumbai&quot;\n</pre></br><p><strong>3. Using Spread Operator to Create New Copies (Most Common)</strong></p><p><strong>Immutable Object Update</strong></p><pre data-language=\"plain\">\nconst user = { name: &quot;Vivek&quot;, age: 31 };\n\nconst updatedUser = {\n  ...user,\n  age: 32\n};\n\nconsole.log(updatedUser); // new object\nconsole.log(user);        // unchanged\n</pre></br><p><strong>Immutable Array Update</strong></p><pre data-language=\"plain\">\nconst arr = [1, 2, 3];\n\nconst updatedArr = [...arr, 4];\n\nconsole.log(updatedArr); // [1, 2, 3, 4]\nconsole.log(arr);        // [1, 2, 3]\n</pre></br><p><strong>Replace element immutably</strong></p><pre data-language=\"plain\">\nconst arr = [10, 20, 30];\n\nconst newArr = arr.map(val =&gt; val === 20 ? 200 : val);\n\nconsole.log(newArr); // [10, 200, 30]\n</pre></br><p><strong>Remove element immutably</strong></p><pre data-language=\"plain\">\nconst arr = [1, 2, 3];\n\nconst newArr = arr.filter(v =&gt; v !== 2);\n\nconsole.log(newArr); // [1, 3]\n</pre></br><p><strong>Using structuredClone() (Deep Copy)</strong></p><pre data-language=\"plain\">\nconst user = {\n  name: &quot;Vivek&quot;,\n  address: { city: &quot;Mumbai&quot; }\n};\n\nconst newUser = structuredClone(user);\nnewUser.address.city = &quot;Delhi&quot;;\n\nconsole.log(user.address.city);   // Mumbai\nconsole.log(newUser.address.city); // Delhi\n</pre></br>"
+                    },
+                    {
+                        "description": "<p><strong>NgRx</strong> handles <strong>immutability</strong> by using <strong>pure functions</strong> (<strong>reducers</strong>) that return <strong>new state objects</strong> instead of modifying the <strong>existing state</strong> directly.</p>",
+                        "subjectId": 5,
+                        "sectionId": 116,
+                        "subSectionId": 124,
+                        "contentId": 138,
+                        "text": "<p>How does NgRx handle immutability?</p>"
                     }
                 ],
                 "subSections": []
