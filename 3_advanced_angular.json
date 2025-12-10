@@ -375,6 +375,23 @@
                     }
                 ],
                 "subSections": []
+            },
+            {
+                "name": "<p><strong>Challenges Faced in Angular Project</strong></p>",
+                "subjectId": 1,
+                "sectionId": 88,
+                "subSectionId": 23,
+                "subSections": [],
+                "contents": [
+                    {
+                        "description": "<p>One of the challenges I faced was <strong>implementing a search box</strong>. Initially, every keystroke was hitting the backend API, which <strong>created unnecessary load and poor performance</strong>. I solved this by using <strong>RxJS operators</strong> — <code>debounceTime</code> to wait for the user to stop typing, <code>distinctUntilChanged</code> to avoid duplicate searches, and <code>switchMap</code> to cancel previous API calls when a new value was entered. This <strong>optimized API usage</strong> and <strong>improved the user experience</strong>.</p></br><p>Another challenge was <strong>implementing nested drag-and-drop functionality</strong>. The Angular CDK works well for flat lists, but in my project, we needed <strong>hierarchical data movement across multiple levels</strong>. I extended the CDK drag-drop with <strong>custom logic for nested structures</strong> and handled <strong>index recalculations</strong>. This provided <strong>smooth drag-and-drop</strong> for complex data.</p></br><p>I also faced <strong>memory leak issues</strong> due to multiple subscriptions. Some observables were not unsubscribed properly, <strong>leading to performance degradation</strong>. To fix this, I applied the <strong>async pipe</strong> wherever possible, used the <strong>takeUntil pattern with a Subject</strong>, and even created a <strong>BaseComponent</strong> to centralize cleanup logic in <code>ngOnDestroy</code>. This <strong>ensured stability</strong> and <strong>prevented memory leaks</strong>.</p>",
+                        "subjectId": 1,
+                        "sectionId": 88,
+                        "subSectionId": 23,
+                        "contentId": 82,
+                        "text": "<p>Tell me about some challenges you faced in your Angular projects.</p>"
+                    }
+                ]
             }
         ]
     },
