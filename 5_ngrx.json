@@ -21,6 +21,55 @@
                         "text": "<p>Can you explain NgRx Flow (Redux Pattern in Angular)?</p>"
                     }
                 ]
+            },
+            {
+                "name": "<p><strong>key concept of NgRx (Store, Actions, Reducer, Selectors, effects)</strong></p>",
+                "subjectId": 5,
+                "sectionId": 48,
+                "subSectionId": 50,
+                "subSections": [],
+                "contents": [
+                    {
+                        "description": "<p>The <strong>Store</strong> in <strong>NgRx</strong> is a <strong>centralized state management container</strong> for Angular applications. It holds the entire <strong>application state</strong> in a <strong>single tree structure</strong>, following the <strong>Redux pattern</strong> and <strong>RxJS observables</strong>.</p></br><ul><li><span style=\"background-color: rgb(255, 255, 255); color: rgb(10, 10, 10);\">The single source of truth for the application state.</span></li><li><span style=\"background-color: rgb(255, 255, 255); color: rgb(10, 10, 10);\">Holds the entire application state tree.</span></li><li><span style=\"background-color: rgb(255, 255, 255); color: rgb(10, 10, 10);\">Provides methods to dispatch actions and select data.</span></li></ul></br>",
+                        "subjectId": 5,
+                        "sectionId": 48,
+                        "subSectionId": 50,
+                        "contentId": 139,
+                        "text": "<p>What is ‘store’ in NgRx?</p>"
+                    },
+                    {
+                        "description": "<p><strong>Actions</strong> are <strong>plain TypeScript objects</strong>, and they are the <strong>only way</strong> to express that <strong>something happened</strong> (e.g., a <strong>user clicked a button</strong>, <strong>data loaded</strong> from an <strong>API</strong>, or a <strong>login failed</strong>).</p>",
+                        "subjectId": 5,
+                        "sectionId": 48,
+                        "subSectionId": 50,
+                        "contentId": 140,
+                        "text": "<p>What is ‘Actions’ in NgRx?</p>"
+                    },
+                    {
+                        "description": "<ul><li><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Are </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">pure functions </strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">responsible for updating the application state based on </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">dispatched actions</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li><li><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Receive the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">current state</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> and an </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">action as input</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li><li><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Return a new </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">state object</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">, ensuring immutability of the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">original state</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li><li><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Define how the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">state changes</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> in response to </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">specific actions</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li></ul>",
+                        "subjectId": 5,
+                        "sectionId": 48,
+                        "subSectionId": 50,
+                        "contentId": 141,
+                        "text": "<p>What is ‘Reducer’ in NgRx?</p>"
+                    },
+                    {
+                        "description": "<ul><li><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Pure functions</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> used to extract specific </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">pieces of data</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> from the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">store</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li><li><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Allow </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">components </strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">to subscribe to only the relevant parts of the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">state</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">, </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">optimizing performance</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> and preventing unnecessary</span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> re-renders</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li></ul>",
+                        "subjectId": 5,
+                        "sectionId": 48,
+                        "subSectionId": 50,
+                        "contentId": 142,
+                        "text": "<p>What is ‘Selectors’ in NgRx?</p>"
+                    },
+                    {
+                        "description": "<ul><li><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Handle side effects</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">, which are </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">asynchronous operations</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> or </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">interactions </strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">with external resources (e.g., API calls, local storage).</span></li><li><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Listen </strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">for specific </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">actions </strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">and perform </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">asynchronous tasks</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li><li><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Dispatch new actions</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> (e.g., success or error actions) upon completion of the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">side effect</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">, which are then handled by </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">reducers</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li></ul><p class=\"ql-indent-1\"></p>",
+                        "subjectId": 5,
+                        "sectionId": 48,
+                        "subSectionId": 50,
+                        "contentId": 143,
+                        "text": "<p>What are ‘effects’ in NgRx?</p>"
+                    }
+                ]
             }
         ],
         "contents": [
@@ -31,55 +80,6 @@
                 "subSectionId": -1,
                 "contentId": 137,
                 "text": "<p>What is NgRx in Angular?</p>"
-            }
-        ]
-    },
-    {
-        "name": "<p><strong>key concept of NgRx (Store, Actions, Reducer, Selectors, effects)</strong></p>",
-        "subjectId": 5,
-        "sectionId": 50,
-        "subSectionId": -1,
-        "subSections": [],
-        "contents": [
-            {
-                "description": "<p>The <strong>Store</strong> in <strong>NgRx</strong> is a <strong>centralized state management container</strong> for Angular applications. It holds the entire <strong>application state</strong> in a <strong>single tree structure</strong>, following the <strong>Redux pattern</strong> and <strong>RxJS observables</strong>.</p></br><ul><li><span style=\"background-color: rgb(255, 255, 255); color: rgb(10, 10, 10);\">The single source of truth for the application state.</span></li><li><span style=\"background-color: rgb(255, 255, 255); color: rgb(10, 10, 10);\">Holds the entire application state tree.</span></li><li><span style=\"background-color: rgb(255, 255, 255); color: rgb(10, 10, 10);\">Provides methods to dispatch actions and select data.</span></li></ul></br>",
-                "subjectId": 5,
-                "sectionId": 50,
-                "subSectionId": -1,
-                "contentId": 139,
-                "text": "<p>What is ‘store’ in NgRx?</p>"
-            },
-            {
-                "description": "<p><strong>Actions</strong> are <strong>plain TypeScript objects</strong>, and they are the <strong>only way</strong> to express that <strong>something happened</strong> (e.g., a <strong>user clicked a button</strong>, <strong>data loaded</strong> from an <strong>API</strong>, or a <strong>login failed</strong>).</p>",
-                "subjectId": 5,
-                "sectionId": 50,
-                "subSectionId": -1,
-                "contentId": 140,
-                "text": "<p>What is ‘Actions’ in NgRx?</p>"
-            },
-            {
-                "description": "<ul><li><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Are </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">pure functions </strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">responsible for updating the application state based on </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">dispatched actions</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li><li><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Receive the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">current state</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> and an </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">action as input</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li><li><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Return a new </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">state object</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">, ensuring immutability of the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">original state</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li><li><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Define how the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">state changes</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> in response to </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">specific actions</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li></ul>",
-                "subjectId": 5,
-                "sectionId": 50,
-                "subSectionId": -1,
-                "contentId": 141,
-                "text": "<p>What is ‘Reducer’ in NgRx?</p>"
-            },
-            {
-                "description": "<ul><li><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Pure functions</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> used to extract specific </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">pieces of data</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> from the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">store</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li><li><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Allow </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">components </strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">to subscribe to only the relevant parts of the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">state</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">, </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">optimizing performance</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> and preventing unnecessary</span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> re-renders</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li></ul>",
-                "subjectId": 5,
-                "sectionId": 50,
-                "subSectionId": -1,
-                "contentId": 142,
-                "text": "<p>What is ‘Selectors’ in NgRx?</p>"
-            },
-            {
-                "description": "<ul><li><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Handle side effects</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">, which are </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">asynchronous operations</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> or </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">interactions </strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">with external resources (e.g., API calls, local storage).</span></li><li><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Listen </strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">for specific </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">actions </strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">and perform </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">asynchronous tasks</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li><li><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">Dispatch new actions</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"> (e.g., success or error actions) upon completion of the </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">side effect</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">, which are then handled by </span><strong style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">reducers</strong><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\">.</span></li></ul><p class=\"ql-indent-1\"></p>",
-                "subjectId": 5,
-                "sectionId": 50,
-                "subSectionId": -1,
-                "contentId": 143,
-                "text": "<p>What are ‘effects’ in NgRx?</p>"
             }
         ]
     },
