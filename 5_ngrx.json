@@ -1,6 +1,6 @@
 [
     {
-        "name": "<p><strong>NgRx and NgRx Workflow</strong></p>",
+        "name": "<p><strong>NgRx and NgRx Workflow, key concept (Store, Actions, Reducer, Selectors, effects)</strong></p>",
         "subjectId": 5,
         "sectionId": 48,
         "subSectionId": -1,
