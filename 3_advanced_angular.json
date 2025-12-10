@@ -205,6 +205,14 @@
                 "subjectId": 3,
                 "contents": [
                     {
+                        "text": "<p>What is <strong>state </strong>and <strong>state management</strong>?</p>",
+                        "sectionId": 96,
+                        "subSectionId": 98,
+                        "subjectId": 3,
+                        "contentId": 413,
+                        "description": "<p><strong>State</strong> refers to the data or information that your application stores at a given moment and uses to determine how the UI should look or behave.</p></br><p><strong>🔹 Examples of State</strong></p><p><strong>1.</strong> Logged-in user information</p><p><strong>2.</strong> Form inputs</p><p><strong>3.</strong> List of employees retrieved from API</p><p><strong>4.</strong> UI flags (like <code>isLoading</code>, <code>showModal</code>, etc.)</p><p><strong>5.</strong> Cart items in an e-commerce app</p></br><p><strong>State management</strong> is the process of <strong>handling, updating, storing, and synchronizing</strong> this state across different parts of your application.</p><p>It ensures:</p><p><strong>1. </strong>Data remains <strong>consistent</strong></p><p><strong>2.</strong> Multiple components using the same data stay <strong>in sync</strong></p><p><strong>3.</strong> UI updates correctly when the state changes</p><p><strong>4.</strong> Application remains predictable and easier to debug</p>"
+                    },
+                    {
                         "text": "<p>How can we manage <strong>state </strong>in <strong>Angular</strong>?</p>",
                         "sectionId": 96,
                         "subSectionId": 98,
@@ -396,7 +404,7 @@
         ]
     },
     {
-        "name": "<p><strong>Encapsulation (Emulated, None, ShadowDom), UI and UX, state and state management</strong></p>",
+        "name": "<p><strong>Encapsulation (Emulated, None, ShadowDom), UI and UX</strong></p>",
         "sectionId": 112,
         "subSectionId": -1,
         "subjectId": 3,
@@ -432,23 +440,6 @@
                         "subjectId": 3,
                         "contentId": 412,
                         "description": "<p><strong>UI </strong>is about designing the <strong>look </strong>and <strong>feel </strong>of the application — the <strong>colors</strong>, <strong>layout</strong>, <strong>typography</strong>, and all <strong>visual elements</strong>. <strong>UX </strong>focuses on how users interact with the product — ensuring the flow is <strong>smooth</strong>, <strong>intuitive</strong>, and helps users accomplish tasks easily. Good <strong>UI </strong>attracts users, but good <strong>UX </strong>keeps them engaged.</p>"
-                    }
-                ],
-                "subSections": []
-            },
-            {
-                "name": "<p><strong>State and State Management</strong></p>",
-                "sectionId": 112,
-                "subSectionId": 122,
-                "subjectId": 3,
-                "contents": [
-                    {
-                        "text": "<p>What is <strong>state </strong>and <strong>state management</strong>?</p>",
-                        "sectionId": 112,
-                        "subSectionId": 122,
-                        "subjectId": 3,
-                        "contentId": 413,
-                        "description": "<p><strong>State</strong> refers to the data or information that your application stores at a given moment and uses to determine how the UI should look or behave.</p></br><p><strong>🔹 Examples of State</strong></p><p><strong>1.</strong> Logged-in user information</p><p><strong>2.</strong> Form inputs</p><p><strong>3.</strong> List of employees retrieved from API</p><p><strong>4.</strong> UI flags (like <code>isLoading</code>, <code>showModal</code>, etc.)</p><p><strong>5.</strong> Cart items in an e-commerce app</p></br><p><strong>State management</strong> is the process of <strong>handling, updating, storing, and synchronizing</strong> this state across different parts of your application.</p><p>It ensures:</p><p><strong>1. </strong>Data remains <strong>consistent</strong></p><p><strong>2.</strong> Multiple components using the same data stay <strong>in sync</strong></p><p><strong>3.</strong> UI updates correctly when the state changes</p><p><strong>4.</strong> Application remains predictable and easier to debug</p>"
                     }
                 ],
                 "subSections": []
