@@ -158,7 +158,7 @@
         "contents": []
     },
     {
-        "name": "<p><strong>Application&#39;s Architecture, Error Handling and State Management</strong></p>",
+        "name": "<p><strong>Application&#39;s Architecture, Error Handling and State Management, Core and Shared Folder</strong></p>",
         "sectionId": 96,
         "subSectionId": -1,
         "subjectId": 3,
@@ -176,7 +176,7 @@
                         "subSectionId": 102,
                         "subjectId": 3,
                         "contentId": 363,
-                        "description": "<p>In my <strong>Angular projects</strong>, I follow a combination of <strong>architectural </strong>and <strong>design patterns</strong> that help ensure <strong>scalability</strong>, <strong>maintainability</strong>, and <strong>clean separation</strong> of concerns.</p></br><p>I primarily use <strong>Component-based architecture</strong> along with <strong>Smart–Dumb component</strong> separation to keep <strong>UI </strong>and<strong> logic decoupled</strong>.</p></br><p>For state isolation and cleaner APIs, I use the <strong>Facade pattern</strong>.</p></br><p>Shared logic is placed in <strong>Singleton services </strong>using <strong>Angular’s dependency injection system</strong>.</p></br><p>I follow<strong> reactive programming principles</strong> using<strong> RxJS Observables</strong>, and for <strong>complex state</strong>, I use the <strong>NgRx Store pattern</strong> <strong>(actions, reducers, selectors, effects)</strong>.</p></br><p>Together, these patterns help me deliver <strong>scalable</strong>, <strong>predictable</strong>, and easily <strong>testable Angular applications</strong>.</p>"
+                        "description": "<p>I follow a <strong>feature-based architecture</strong> using <strong>standalone components</strong>.</p></br><p>Each feature contains its pages, <strong>reusable components</strong>, <strong>services</strong>, and its own <strong>NgRx state</strong> if needed.</p></br><p>The application has a <strong>Core folde</strong>r for <strong>single-instance services</strong> and a <strong>Shared folder</strong> for reusable UI components.</p></br><p>I divide components into <strong>Smart (container) </strong>and <strong>Dumb (presentation)</strong> components.</p><p><strong>Smart components</strong> interact with <strong>NgRx </strong>or <strong>services</strong>; <strong>dumb components</strong> only receive <code>@Input</code> and emit <code>@Output</code> for UI interactions.</p></br><p><strong>State management</strong> depends on complexity—<strong>NgRx </strong>for large-scale shared <strong>state </strong>and <strong>RxJS/Signals</strong> for localized or medium state.</p></br><p><strong>Lazy loading </strong>is handled via <strong>standalone </strong>routes to <strong>optimize performance.</strong></p></br><p>Data is shared across components using <code>@Input/@Output</code>, services with <strong>RxJS Subjects</strong>, or <strong>NgRx Store </strong>depending on the scenario.</p>"
                     }
                 ],
                 "subSections": []
@@ -219,6 +219,23 @@
                         "subjectId": 3,
                         "contentId": 360,
                         "description": "<p>We manage <strong>state </strong>in <strong>Angular </strong>depending on the complexity of the application.</p><p>For simple local component state, I use <code>component variables</code>  and  <code>@Input/Output</code> .</p><p>For shared state, I use services with <strong>RxJS </strong><code>BehaviorSubject</code> or <code>ReplaySubject</code>.</p><p>For large enterprise applications, I prefer using <strong>NgRx </strong>because it provides a predictable <strong>store</strong>, <strong>immutability, actions, reducers, effects</strong>, and <strong>selectors</strong>. Angular also supports signals for lightweight <strong>reactive state</strong>.</p>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>Core and Shared Folder</strong></p>",
+                "sectionId": 96,
+                "subSectionId": 127,
+                "subjectId": 3,
+                "contents": [
+                    {
+                        "text": "<p>What is use of <strong>core </strong>and <strong>shared </strong>folder in angular?</p>",
+                        "sectionId": 96,
+                        "subSectionId": 127,
+                        "subjectId": 3,
+                        "contentId": 421,
+                        "description": ""
                     }
                 ],
                 "subSections": []
