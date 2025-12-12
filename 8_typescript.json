@@ -21,14 +21,6 @@
                 "subSectionId": -1,
                 "contentId": 206,
                 "text": "<p><strong>Difference between type vs interface and when to use each.</strong></p>"
-            },
-            {
-                "description": "<p>Enums in TypeScript are a special type that allow you to define a <strong>set of named constant values</strong>. They help make code more <strong>readable, maintainable, and type-safe</strong>, especially when working with a known set of options.</p>",
-                "subjectId": 8,
-                "sectionId": 67,
-                "subSectionId": -1,
-                "contentId": 211,
-                "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What are </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Enums</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> and where are they </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">used</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">?</span></p>"
             }
         ]
     },
@@ -137,6 +129,23 @@
                         "subSectionId": 131,
                         "contentId": 210,
                         "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What are </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">tuple types</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">?</span></p>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>Enums</strong></p>",
+                "sectionId": 101,
+                "subSectionId": 132,
+                "subjectId": 8,
+                "contents": [
+                    {
+                        "description": "<p>Enums in TypeScript are a special type that allow you to define a <strong>set of named constant values</strong>. They help make code more <strong>readable, maintainable, and type-safe</strong>, especially when working with a known set of options.</p>",
+                        "subjectId": 8,
+                        "sectionId": 101,
+                        "subSectionId": 132,
+                        "contentId": 211,
+                        "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What are </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Enums</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> and where are they </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">used</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">?</span></p>"
                     }
                 ],
                 "subSections": []
