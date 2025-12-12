@@ -1,13 +1,13 @@
 [
     {
-        "name": "<p><strong>Basic</strong></p>",
+        "name": "<p><strong>Introduction, Type and Interface</strong></p>",
         "subjectId": 8,
         "sectionId": 67,
         "subSectionId": -1,
         "subSections": [],
         "contents": [
             {
-                "description": "<p><strong>JavaScript</strong> is a <strong>dynamic type</strong>. It doesn’t check <strong>types</strong> at <strong>compile time</strong>. <strong>Errors</strong> like <code>&quot;undefined is not a function&quot;</code> only appear at <strong>runtime</strong>, whereas <strong>TypeScript</strong> adds <strong>static type checking</strong> that catches <strong>bugs</strong> before <strong>execution</strong>.</p></br><p><strong>TypeScript</strong> supports <strong>interfaces</strong>, <strong>generics</strong>, <strong>access modifiers</strong>, <strong>abstract classes</strong> that support better <strong>design patterns</strong>.</p>",
+                "description": "<p><strong>TypeScript </strong>is a <strong>superset </strong>of <strong>JavaScript</strong>. <strong>JavaScript </strong>is powerful, but it has some limitations when <strong>projects </strong>become <strong>large </strong>and <strong>complex</strong>. <strong>TypeScript </strong>was introduced to solve those issues and make <strong>JavaScript </strong>development more <strong>scalable</strong>, <strong>maintainable</strong>, and <strong>less error-prone</strong>.</p></br><p><strong>1. Type Safety &amp; Early Error Detection:</strong></p><p><strong>JavaScript </strong>is <strong>dynamically typed</strong>, so many <strong>errors </strong>appear only at <strong>runtime</strong>. <strong>TypeScript </strong>adds <strong>static typing</strong>, which catches <strong>errors <em>during development</em></strong>.</p></br><p><strong>2. Better Tooling &amp; Developer Productivity: </strong>TypeScript provides: <strong>Intelligent auto-completion, Real-time type checking, Refactoring support, Improved code navigation. </strong></p><p>This significantly improves productivity and reduces debugging time.</p></br><p><strong>3.  Helps in Building Large-Scale Applications: </strong>In <strong>big applications </strong>(like <strong>Angular apps</strong>), managing and understanding code becomes hard. <strong>Interfaces</strong>, <strong>Generics</strong>, <strong>Enums </strong>and <strong>Access modifiers</strong>.</p><p>These help <strong>structure </strong>and <strong>scale applications properly</strong>.</p></br><p><strong>TypeScript </strong>was introduced to make <strong>JavaScript development safer</strong>, <strong>more organized</strong>, and <strong>scalable</strong>—especially for<strong> large enterprise applications</strong>.</p>",
                 "subjectId": 8,
                 "sectionId": 67,
                 "subSectionId": -1,
@@ -15,44 +15,12 @@
                 "text": "<p><strong>Why did we introduce typescript, we have JavaScript?</strong></p>"
             },
             {
-                "description": "<p><strong>Type </strong>and <strong>Interface </strong>both describe shapes of data, but <code>type</code> is more flexible since it supports <strong>unions</strong>, <strong>intersections</strong>, <strong>function types</strong>, and <strong>tuples</strong>.</p><p><strong>Interface </strong>is better for <strong>object structures</strong> and supports declaration <strong>merging </strong>and <strong>extends</strong>.</p><p>For reusable object models, <strong>interface </strong>is preferred, but for <strong>complex types</strong>, <strong>union types</strong>, or <strong>function types</strong>,<strong> type alias</strong> is better.</p></br><p><strong>Example of Type</strong></p><p><strong>1. Type for an object</strong></p><pre data-language=\"plain\">\ntype User = {\n  id: number;\n  name: string;\n  isActive: boolean;\n};\n</pre></br><p><strong>2. Type alias for primitive values</strong></p><pre data-language=\"plain\">\ntype ID = number | string;\n</pre></br><p><strong>3. Type alias for functions</strong></p><pre data-language=\"plain\">\ntype Callback = (message: string) =&gt; void;\n</pre></br><p><strong>4. Type alias for tuples</strong></p><pre data-language=\"plain\">\ntype Point = [number, number];\n</pre></br><p><strong>5. Type alias for union &amp; intersection types</strong></p><pre data-language=\"plain\">\ntype Status = &quot;success&quot; | &quot;error&quot; | &quot;loading&quot;;\ntype Employee = User &amp; { salary: number };\n</pre></br><p><strong>Example of interface</strong></p><p><strong>1. Basic Interface Example</strong></p><pre data-language=\"plain\">\ninterface User {\n  id: number;\n  name: string;\n  isActive: boolean;\n}\n</pre><p><strong>Purpose:</strong> Defines the shape of an object.</p></br><p><strong>2. Interface with Optional Properties</strong></p><pre data-language=\"plain\">\ninterface Employee {\n  id: number;\n  name: string;\n  salary?: number;  // optional\n}\n</pre></br><p><strong>3. Interface with Readonly Properties</strong></p><pre data-language=\"plain\">\ninterface Product {\n  readonly id: number;\n  name: string;\n}\n</pre><p><strong>Purpose:</strong> Prevents modification.</p></br><p><strong>4. Interface with Functions</strong></p><pre data-language=\"plain\">\ninterface Logger {\n  log(message: string): void;\n}\n\nconst consoleLogger: Logger = {\n  log(msg) {\n    console.log(&quot;Log:&quot;, msg);\n  }\n};\n</pre><p><strong>Purpose:</strong> Defines a contract for functions.</p></br><p><strong>5. Interface Extending Another Interface</strong></p><pre data-language=\"plain\">\ninterface Person {\n  name: string;\n  age: number;\n}\n\ninterface Developer extends Person {\n  skills: string[];\n}\n</pre><p><strong>Purpose:</strong> Inheritance between interfaces.</p></br><p><strong>6. Using Interface with Classes</strong></p><pre data-language=\"plain\">\ninterface Printable {\n  print(): void;\n}\n\nclass Report implements Printable {\n  print() {\n    console.log(&quot;Printing report...&quot;);\n  }\n}\n</pre><p><strong>Purpose:</strong> Enforces that class implements specific methods.</p></br><p><strong>7. Interface for Array Structure</strong></p><pre data-language=\"plain\">\ninterface StringArray {\n  [index: number]: string;\n}\n\nconst names: StringArray = [&quot;Amit&quot;, &quot;Ravi&quot;, &quot;Sohan&quot;];\n</pre><p><strong>Purpose:</strong> Index signature for arrays.</p></br><p><strong>8. Interface with Multiple Index Signatures</strong></p><pre data-language=\"plain\">\ninterface Dictionary {\n  [key: string]: number;\n}\n\nconst scores: Dictionary = {\n  vipin: 95,\n  amit: 88,\n};\n</pre>",
+                "description": "<p>Both <strong>type</strong> and <strong>interface</strong> are used in <strong>TypeScript </strong>to define the<strong> shape of objects</strong>, but they are not exactly the same.</p></br><p><strong>Interfaces </strong>are best for defining <strong>object shapes</strong> and can be extended or merged easily. Type <strong>aliases </strong>are more flexible and can represent <strong>unions</strong>, <strong>intersections</strong>, <strong>primitives</strong>, and <strong>complex types</strong>. Use <strong>interface </strong>for object models; use <strong>type </strong>when you need more advanced type compositions.</p></br><p><strong>Example of Type</strong></p><p><strong>1. Type for an object</strong></p><pre data-language=\"plain\">\ntype User = {\n  id: number;\n  name: string;\n  isActive: boolean;\n};\n</pre></br><p><strong>2. Type alias for primitive values</strong></p><pre data-language=\"plain\">\ntype ID = number | string;\n</pre></br><p><strong>3. Type alias for functions</strong></p><pre data-language=\"plain\">\ntype Callback = (message: string) =&gt; void;\n</pre></br><p><strong>4. Type alias for tuples</strong></p><pre data-language=\"plain\">\ntype Point = [number, number];\n</pre></br><p><strong>5. Type alias for union &amp; intersection types</strong></p><pre data-language=\"plain\">\ntype Status = &quot;success&quot; | &quot;error&quot; | &quot;loading&quot;;\ntype Employee = User &amp; { salary: number };\n</pre></br><p><strong>Example of interface</strong></p><p><strong>1. Basic Interface Example</strong></p><pre data-language=\"plain\">\ninterface User {\n  id: number;\n  name: string;\n  isActive: boolean;\n}\n</pre><p><strong>Purpose:</strong> Defines the shape of an object.</p></br><p><strong>2. Interface with Optional Properties</strong></p><pre data-language=\"plain\">\ninterface Employee {\n  id: number;\n  name: string;\n  salary?: number;  // optional\n}\n</pre></br><p><strong>3. Interface with Readonly Properties</strong></p><pre data-language=\"plain\">\ninterface Product {\n  readonly id: number;\n  name: string;\n}\n</pre><p><strong>Purpose:</strong> Prevents modification.</p></br><p><strong>4. Interface with Functions</strong></p><pre data-language=\"plain\">\ninterface Logger {\n  log(message: string): void;\n}\n\nconst consoleLogger: Logger = {\n  log(msg) {\n    console.log(&quot;Log:&quot;, msg);\n  }\n};\n</pre><p><strong>Purpose:</strong> Defines a contract for functions.</p></br><p><strong>5. Interface Extending Another Interface</strong></p><pre data-language=\"plain\">\ninterface Person {\n  name: string;\n  age: number;\n}\n\ninterface Developer extends Person {\n  skills: string[];\n}\n</pre><p><strong>Purpose:</strong> Inheritance between interfaces.</p></br><p><strong>6. Using Interface with Classes</strong></p><pre data-language=\"plain\">\ninterface Printable {\n  print(): void;\n}\n\nclass Report implements Printable {\n  print() {\n    console.log(&quot;Printing report...&quot;);\n  }\n}\n</pre><p><strong>Purpose:</strong> Enforces that class implements specific methods.</p></br><p><strong>7. Interface for Array Structure</strong></p><pre data-language=\"plain\">\ninterface StringArray {\n  [index: number]: string;\n}\n\nconst names: StringArray = [&quot;Amit&quot;, &quot;Ravi&quot;, &quot;Sohan&quot;];\n</pre><p><strong>Purpose:</strong> Index signature for arrays.</p></br><p><strong>8. Interface with Multiple Index Signatures</strong></p><pre data-language=\"plain\">\ninterface Dictionary {\n  [key: string]: number;\n}\n\nconst scores: Dictionary = {\n  vipin: 95,\n  amit: 88,\n};\n</pre>",
                 "subjectId": 8,
                 "sectionId": 67,
                 "subSectionId": -1,
                 "contentId": 206,
                 "text": "<p><strong>Difference between type vs interface and when to use each.</strong></p>"
-            },
-            {
-                "description": "<p>In <strong>TypeScript</strong>, <code><strong>any</strong></code> is a <strong>special type</strong> that <strong>disables type checking</strong>.</p><p> If we use it, we lose all <strong>TypeScript safety</strong> and <strong>mistakes</strong> won’t be caught during <strong>compilation</strong>.</p></br><p><code><strong>unknown</strong></code> is better than <code><strong>any</strong></code>.</p><p> If we assign anything to <strong>unknown</strong>, we <strong>cannot use it directly</strong> without <strong>checking its type first</strong>.</p><p> We can <strong>prevent runtime errors</strong>.</p></br><p><code><strong>never</strong></code> is a type in <strong>TypeScript</strong> that represents <strong>values that should never happen</strong>.</p>",
-                "subjectId": 8,
-                "sectionId": 67,
-                "subSectionId": -1,
-                "contentId": 207,
-                "text": "<p><strong>Difference between any, unknown, never.</strong></p>"
-            },
-            {
-                "description": "<p>In <strong>TypeScript</strong>, a <strong>Generic</strong> is a powerful feature that allows you to <strong>create reusable, type-safe components</strong> (functions, classes, or interfaces) that work with <strong>any data type</strong> — without losing type information.</p></br><p>For example, <strong>Angular’s HttpClient</strong> uses <strong>Generics</strong> so that we can define the <strong>expected response type</strong>, which avoids using <strong>any</strong> and provides <strong>compile-time safety</strong> and <strong>IntelliSense</strong>.</p></br><pre data-language=\"plain\">\n// Instead of this (unsafe, returns any):\nthis.http.get(&#39;api/users&#39;);\n\n// We use Generics (safe, typed):\nthis.http.get&lt;User[]&gt;(&#39;api/users&#39;).subscribe(users =&gt; {\n  console.log(users[0].name); // ✅ Type-safe\n});\n</pre>",
-                "subjectId": 8,
-                "sectionId": 67,
-                "subSectionId": -1,
-                "contentId": 208,
-                "text": "<p><strong>Generics – why needed, real example with Angular services (e.g., HttpClient).</strong></p>"
-            },
-            {
-                "description": "<p><strong>Decorators in TypeScript</strong> are special functions that allow you to <strong>modify or enhance classes, methods, properties, or parameters</strong> at design time.</p><p>They are widely used in frameworks like <strong>Angular</strong> to add metadata and behavior to different parts of the code.</p><p>There are several types of decorators:</p><ol><li><strong>Class Decorators</strong> – Used to modify classes.<ul><li>Examples: <code>@Component</code>, <code>@Directive</code>, <code>@Pipe</code>, <code>@Injectable</code></li></ul></li><li><strong>Property Decorators</strong> – Used to modify or observe properties within a class.<ul><li>Examples: <code>@Input</code>, <code>@Output</code>, <code>@ViewChild</code>, <code>@ViewChildren</code>, <code>@ContentChild</code>, <code>@ContentChildren</code></li></ul></li><li><strong>Method Decorators</strong> – Used to modify methods.<ul><li>Examples: <code>@HostListener</code>, <code>@HostBinding</code></li></ul></li><li><strong>Parameter Decorators</strong> – Used to access metadata about parameters in class constructors.<ul><li>Example: <code>@Inject()</code></li></ul></li></ol></br><p><strong>Notes:</strong></p><ul><li><strong>Metadata</strong> = extra information about a class, method, or property — which helps Angular or TypeScript understand <strong>how to treat it</strong>.</li><li><strong>Behavior</strong> = extra functionality added by the decorator.</li></ul></br>",
-                "subjectId": 8,
-                "sectionId": 67,
-                "subSectionId": -1,
-                "contentId": 209,
-                "text": "<p><strong>Decorators in TypeScript (how Angular uses them).</strong></p>"
-            },
-            {
-                "description": "<p>Tuple types in TypeScript allow you to <strong>define an array with a fixed number of elements where each element has a specific type</strong>.</p></br><pre data-language=\"plain\">\nlet person: [string, number] = [&quot;Vivek&quot;, 31];\n</pre></br>",
-                "subjectId": 8,
-                "sectionId": 67,
-                "subSectionId": -1,
-                "contentId": 210,
-                "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What are </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">tuple types</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">?</span></p>"
             },
             {
                 "description": "<p>Enums in TypeScript are a special type that allow you to define a <strong>set of named constant values</strong>. They help make code more <strong>readable, maintainable, and type-safe</strong>, especially when working with a known set of options.</p>",
@@ -65,7 +33,7 @@
         ]
     },
     {
-        "name": "<p><strong>Omit, keyof</strong></p>",
+        "name": "<p><strong>Omit, keyof, Access Modifiers, Generics, Decorators, Tuple, Enums</strong></p>",
         "sectionId": 101,
         "subSectionId": -1,
         "subjectId": 8,
@@ -101,6 +69,74 @@
                         "subjectId": 8,
                         "contentId": 407,
                         "description": "<p>In TypeScript, <code><strong>keyof</strong></code><strong> is a type operator that takes an object type and returns a union of its keys.</strong></p><pre data-language=\"plain\">\ninterface User {\n  name: string;\n  email: string;\n  age: number;\n}\n\ntype UserKeys = keyof User;\n</pre></br><pre data-language=\"plain\">\n// UserKeys = &quot;name&quot; | &quot;email&quot; | &quot;age&quot;\n</pre></br></br>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>Access Modifiers</strong></p>",
+                "sectionId": 101,
+                "subSectionId": 128,
+                "subjectId": 8,
+                "contents": [
+                    {
+                        "description": "<p>In <strong>TypeScript</strong>, <code><strong>any</strong></code> is a <strong>special type</strong> that <strong>disables type checking</strong>.</p><p> If we use it, we lose all <strong>TypeScript safety</strong> and <strong>mistakes</strong> won’t be caught during <strong>compilation</strong>.</p></br><p><code><strong>unknown</strong></code> is better than <code><strong>any</strong></code>.</p><p> If we assign anything to <strong>unknown</strong>, we <strong>cannot use it directly</strong> without <strong>checking its type first</strong>.</p><p> We can <strong>prevent runtime errors</strong>.</p></br><p><code><strong>never</strong></code> is a type in <strong>TypeScript</strong> that represents <strong>values that should never happen</strong>.</p>",
+                        "subjectId": 8,
+                        "sectionId": 101,
+                        "subSectionId": 128,
+                        "contentId": 207,
+                        "text": "<p><strong>Difference between any, unknown, never.</strong></p>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>Generics</strong></p>",
+                "sectionId": 101,
+                "subSectionId": 129,
+                "subjectId": 8,
+                "contents": [
+                    {
+                        "description": "<p>In <strong>TypeScript</strong>, a <strong>Generic</strong> is a powerful feature that allows you to <strong>create reusable, type-safe components</strong> (functions, classes, or interfaces) that work with <strong>any data type</strong> — without losing type information.</p></br><p>For example, <strong>Angular’s HttpClient</strong> uses <strong>Generics</strong> so that we can define the <strong>expected response type</strong>, which avoids using <strong>any</strong> and provides <strong>compile-time safety</strong> and <strong>IntelliSense</strong>.</p></br><pre data-language=\"plain\">\n// Instead of this (unsafe, returns any):\nthis.http.get(&#39;api/users&#39;);\n\n// We use Generics (safe, typed):\nthis.http.get&lt;User[]&gt;(&#39;api/users&#39;).subscribe(users =&gt; {\n  console.log(users[0].name); // ✅ Type-safe\n});\n</pre>",
+                        "subjectId": 8,
+                        "sectionId": 101,
+                        "subSectionId": 129,
+                        "contentId": 208,
+                        "text": "<p><strong>Generics – why needed, real example with Angular services (e.g., HttpClient).</strong></p>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>Decorators</strong></p>",
+                "sectionId": 101,
+                "subSectionId": 130,
+                "subjectId": 8,
+                "contents": [
+                    {
+                        "description": "<p><strong>Decorators in TypeScript</strong> are special functions that allow you to <strong>modify or enhance classes, methods, properties, or parameters</strong> at design time.</p><p>They are widely used in frameworks like <strong>Angular</strong> to add metadata and behavior to different parts of the code.</p><p>There are several types of decorators:</p><ol><li><strong>Class Decorators</strong> – Used to modify classes.<ul><li>Examples: <code>@Component</code>, <code>@Directive</code>, <code>@Pipe</code>, <code>@Injectable</code></li></ul></li><li><strong>Property Decorators</strong> – Used to modify or observe properties within a class.<ul><li>Examples: <code>@Input</code>, <code>@Output</code>, <code>@ViewChild</code>, <code>@ViewChildren</code>, <code>@ContentChild</code>, <code>@ContentChildren</code></li></ul></li><li><strong>Method Decorators</strong> – Used to modify methods.<ul><li>Examples: <code>@HostListener</code>, <code>@HostBinding</code></li></ul></li><li><strong>Parameter Decorators</strong> – Used to access metadata about parameters in class constructors.<ul><li>Example: <code>@Inject()</code></li></ul></li></ol></br><p><strong>Notes:</strong></p><ul><li><strong>Metadata</strong> = extra information about a class, method, or property — which helps Angular or TypeScript understand <strong>how to treat it</strong>.</li><li><strong>Behavior</strong> = extra functionality added by the decorator.</li></ul></br>",
+                        "subjectId": 8,
+                        "sectionId": 101,
+                        "subSectionId": 130,
+                        "contentId": 209,
+                        "text": "<p><strong>Decorators in TypeScript (how Angular uses them).</strong></p>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>Tuple</strong></p>",
+                "sectionId": 101,
+                "subSectionId": 131,
+                "subjectId": 8,
+                "contents": [
+                    {
+                        "description": "<p>Tuple types in TypeScript allow you to <strong>define an array with a fixed number of elements where each element has a specific type</strong>.</p></br><pre data-language=\"plain\">\nlet person: [string, number] = [&quot;Vivek&quot;, 31];\n</pre></br>",
+                        "subjectId": 8,
+                        "sectionId": 101,
+                        "subSectionId": 131,
+                        "contentId": 210,
+                        "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What are </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">tuple types</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">?</span></p>"
                     }
                 ],
                 "subSections": []
