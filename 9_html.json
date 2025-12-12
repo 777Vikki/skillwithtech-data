@@ -169,7 +169,7 @@
                 "text": "<p>Difference between <strong>HTML </strong>and <strong>HTML5</strong>?</p>"
             },
             {
-                "description": "<p><code><strong>srcset</strong></code><strong> attribute</strong> allows you to provide <strong>multiple versions of the same image</strong> for <strong>different screen sizes</strong> and <strong>resolutions</strong>.</p><p>The <strong>browser automatically chooses</strong> the <strong>best image</strong> to load depending on the <strong>device DPI (pixel density)</strong> and <strong>viewport width</strong>.</p></br><pre data-language=\"plain\">\n&lt;img \n  src=&quot;image-small.jpg&quot; \n  srcset=&quot;image-small.jpg 480w, image-medium.jpg 800w, image-large.jpg 1200w&quot; \n</pre><p>  alt=&quot;Sample Image&quot;&gt;</p></br><p>👉 <strong>Explanation:</strong></p><ul><li><strong>image-small.jpg 480w</strong> → use when <strong>viewport ≤480px</strong>.</li><li><strong>image-medium.jpg 800w</strong> → use when <strong>viewport ≤800px</strong>.</li><li><strong>image-large.jpg 1200w</strong> → use when <strong>viewport ≤1200px</strong>.</li></ul><p><strong>Browser picks the most suitable image automatically.</strong></p></br>",
+                "description": "<p><code>srcset</code> lets the <strong>browser </strong>choose the best <strong>image </strong>from a list of multiple <strong>resolutions</strong>.</p><p> It improves <strong>performance </strong>and <strong>responsiveness </strong>by loading the most appropriate <strong>image </strong>based on screen <strong>size </strong>and <strong>pixel density</strong>.</p></br><pre data-language=\"plain\">\n&lt;img\n  src=&quot;image-small.jpg&quot;\n  srcset=&quot;\n    image-small.jpg 300w,\n    image-medium.jpg 600w,\n    image-large.jpg 1200w\n  &quot;\n  sizes=&quot;(max-width: 600px) 300px, (max-width: 900px) 600px, 1200px&quot;\n  alt=&quot;Sample Image&quot;\n/&gt;\n</pre></br>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -177,7 +177,7 @@
                 "text": "<p>What is <code><strong>srcset</strong></code><strong> </strong>?</p>"
             },
             {
-                "description": "<p><code><strong>src</strong></code>: Tells the <strong>browser</strong> to <strong>embed the resource</strong> at that location (<strong>replace the element’s content</strong>). Example: <code>&lt;img src=&quot;image.png&quot;&gt;</code>.</p></br><p><code><strong>href</strong></code>: Tells the <strong>browser</strong> to <strong>navigate</strong> or <strong>link</strong> to that <strong>resource</strong>. Example: <code>&lt;a href=&quot;page.html&quot;&gt;</code>.</p>",
+                "description": "<p><code>src</code> loads and embeds <strong>content </strong>into the <strong>document </strong>(like images, scripts), while <code>href</code> links to external resources (like CSS files, webpages) without embedding them.</p>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -185,7 +185,7 @@
                 "text": "<p>What is the difference between <code><strong>src</strong></code><strong> </strong>and <code><strong>href</strong></code> in <strong>HTML</strong>?</p>"
             },
             {
-                "description": "<p><code>&lt;img src=&quot;...&quot;&gt;</code> → <strong>for images</strong>.</p><p><code>&lt;script src=&quot;...&quot;&gt;</code> → <strong>for JavaScript files</strong>.</p><p><code>&lt;iframe src=&quot;...&quot;&gt;</code> → <strong>for embedding pages</strong>.</p><p><code>&lt;audio src=&quot;...&quot;&gt;</code> / <code>&lt;video src=&quot;...&quot;&gt;</code> → <strong>for media</strong>.</p><p><code>&lt;source src=&quot;...&quot;&gt;</code> → <strong>inside &lt;audio&gt; or &lt;video&gt;</strong>.</p>",
+                "description": "<p>The <code><strong>src</strong></code><strong> (source)</strong> attribute tells the browser where to <strong>load and embed external resources</strong>. such as <code>&lt;img&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;source&gt;</code>, and <code>&lt;embed&gt;</code>.</p>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -193,7 +193,7 @@
                 "text": "<p>What tags commonly use the <code><strong>&lt;src&gt;</strong></code> attribute?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>HTML5 Canvas</strong> is a special HTML element (<code>&lt;canvas&gt;</code>) that allows you to <strong>draw graphics</strong>, such as <strong>shapes</strong>, <strong>text</strong>, <strong>animations</strong>, and <strong>charts</strong>, using <strong>JavaScript</strong>.</p></br><p>It provides a <strong>pixel-based drawing area</strong> inside the browser.</p><p>Everything drawn on a canvas is <strong>dynamic</strong> and controlled by JavaScript.</p></br><pre data-language=\"plain\">\n&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot;&gt;&lt;/canvas&gt;\n\n&lt;script&gt;\n  const canvas = document.getElementById(&#39;myCanvas&#39;);\n  const ctx = canvas.getContext(&#39;2d&#39;);\n\n  ctx.fillStyle = &#39;blue&#39;;\n  ctx.fillRect(20, 20, 150, 60);\n&lt;/script&gt;\n</pre>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -201,7 +201,7 @@
                 "text": "<p>What is <strong>HTML5</strong> <code>Canvas</code>?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>SVG (Scalable Vector Graphics)</strong> is an <strong>XML-based</strong> format used for creating <strong>vector graphics</strong> in the browser.</p></br><p>Unlike <strong>images </strong>like PNG or JPG, SVG does <strong>not lose quality</strong> even when zoomed or resized.</p><p>SVG graphics are <strong>mathematically drawn</strong>, not pixel-based, which makes them sharp and scalable on any device.</p>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -209,7 +209,7 @@
                 "text": "<p>What is <strong>SVG</strong>?</p>"
             },
             {
-                "description": "",
+                "description": "<p><code>data-*</code> attributes allow storing <strong>custom data</strong> on <strong>HTML </strong>elements that can be <strong>accessed </strong>via <strong>JavaScript </strong>or <strong>frameworks </strong>like <strong>Angular</strong>, making it easier to handle dynamic behaviors without adding extra <strong>DOM elements</strong>.</p></br><pre data-language=\"plain\">\n// Example with Angular Event Handling\n\n&lt;button (click)=&quot;deleteUser($event)&quot; data-user-id=&quot;55&quot;&gt;\n  Delete\n&lt;/button&gt;\n\ndeleteUser(event: Event) {\n  const element = event.target as HTMLElement;\n  const id = element.dataset[&#39;userId&#39;];\n  console.log(&#39;Deleting user with id:&#39;, id);\n}\n</pre></br><pre data-language=\"plain\">\n// Reading data-* inside a Custom Directive\n\n&lt;div data-color=&quot;red&quot; appHighlight&gt;\n  Highlight me\n&lt;/div&gt;\n\n@Directive({\n  selector: &#39;[appHighlight]&#39;\n})\nexport class HighlightDirective {\n  constructor(private el: ElementRef) {}\n\n  ngOnInit() {\n    const color = this.el.nativeElement.dataset[&#39;color&#39;];\n    this.el.nativeElement.style.backgroundColor = color;\n  }\n}\n</pre></br><pre data-language=\"true\">\n// Passing dynamic Angular values to data- attributes*:\n\n&lt;div [attr.data-role]=&quot;user.role&quot; [attr.data-id]=&quot;user.id&quot;&gt;\n  {{ user.name }}\n&lt;/div&gt;\n</pre></br>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -217,7 +217,7 @@
                 "text": "<p>What is the purpose of <code><strong>data-*</strong></code> attributes?</p>"
             },
             {
-                "description": "",
+                "description": "<p>Custom data attributes (<code>data-*</code>) are used to store <strong>extra information</strong> (metadata) directly in HTML elements <strong>without affecting the UI or layout</strong>. This data can be easily accessed using <strong>JavaScript</strong> or frameworks like <strong>Angular</strong>, and is often used to add behavior, configuration, or identifiers to DOM elements.</p>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -225,7 +225,7 @@
                 "text": "<p>What are <strong>custom data attributes</strong> used for?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>Accessibility (A11Y) </strong>means building websites that everyone—including people with disabilities—can <strong>navigate</strong>, <strong>understand</strong>, and <strong>interact </strong>with easily.</p></br><p><strong>In Angular</strong>, we achieve accessibility by using s<strong>emantic HTML</strong>, <strong>ARIA attributes</strong>, <strong>keyboard navigation</strong>, proper focus <strong>management</strong>, accessible<strong> Angular Material components</strong>, and <strong>WCAG-compliant</strong> color contrast and labels.</p>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -233,7 +233,7 @@
                 "text": "<p>What is <strong>accessibility (A11Y)</strong>?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>ARIA </strong>is a set of <strong>HTML attributes</strong> that improve accessibility by helping assistive technologies understand the <strong>role</strong>, <strong>state</strong>, and <strong>behavior of UI elements</strong>—especially dynamic components in frameworks like <strong>Angular</strong>.</p>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -241,15 +241,7 @@
                 "text": "<p>What is <strong>ARIA</strong>?</p>"
             },
             {
-                "description": "",
-                "subjectId": 9,
-                "sectionId": 70,
-                "subSectionId": -1,
-                "contentId": 241,
-                "text": "<p>What is <strong>lazy loading</strong> in <strong>HTML</strong>?</p>"
-            },
-            {
-                "description": "",
+                "description": "<p><code><strong>&lt;b&gt;</strong></code> and <code><strong>&lt;i&gt;</strong></code> are purely <strong>presentational (bold/italic)</strong>, while <code><strong>&lt;strong&gt;</strong></code> and <code><strong>&lt;em&gt;</strong></code> are semantic <strong>tags </strong>that add meaning and help with <strong>accessibility </strong>and <strong>SEO</strong>.</p>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -257,7 +249,7 @@
                 "text": "<p>What is the difference between <code><strong>&lt;b&gt;</strong></code> vs <code><strong>&lt;strong&gt;</strong></code> and <code><strong>&lt;i&gt;</strong></code> vs <code><strong>&lt;em&gt;</strong></code>?</p>"
             },
             {
-                "description": "",
+                "description": "<p><code>rel=&quot;noopener noreferrer&quot;</code> is used with <code>target=&quot;_blank&quot;</code> links to <strong>prevent security risks</strong> (like tab-napping) and <strong>protect user privacy</strong> by blocking access to <code>window.opener</code> and hiding the referrer.</p>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -265,7 +257,7 @@
                 "text": "<p>What is the purpose of <code><strong>rel=&quot;noopener noreferrer&quot;</strong></code>?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>Self-closing tags </strong>are HTML elements that don’t wrap any content and therefore don’t need a closing tag.</p><p><strong>Tags </strong>like <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;input&gt;</code>, and <code>&lt;meta&gt;</code> are<strong> self-closing</strong> because they represent <strong>standalone </strong>elements.</p><p><strong>In HTML5</strong>, using the <strong>trailing slash (</strong><code><strong>/&gt;</strong></code><strong>)</strong> is optional, but the tag still behaves as <strong>self-closing</strong>.</p>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
@@ -273,7 +265,7 @@
                 "text": "<p>What are <strong>self-closing</strong> tags?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>HTML5 </strong>supports offline storage through <strong>localStorage</strong>, <strong>sessionStorage</strong>, <strong>IndexedDB</strong>, and modern <strong>Service Workers</strong> with Cache API, enabling web apps to <strong>store data</strong> locally and work without an <strong>internet connection</strong>.</p>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
