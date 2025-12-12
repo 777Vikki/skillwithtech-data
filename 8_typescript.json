@@ -43,7 +43,7 @@
                         "subSectionId": 118,
                         "subjectId": 8,
                         "contentId": 406,
-                        "description": "<p><code>Omit&lt;Type, Keys&gt;</code> creates a <strong>new type</strong> by <strong>removing specific keys</strong> from an existing type.</p></br><pre data-language=\"plain\">\nOmit&lt;Type, &#39;key1&#39; | &#39;key2&#39;&gt;\n</pre></br><pre data-language=\"plain\">\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n  password: string;\n}\n\ntype UserWithoutPassword = Omit&lt;User, &#39;password&#39;&gt;;\ntype UserWithoutPasswordEmail = Omit&lt;User, &#39;password&#39; | &#39;email&#39;&gt;;\n</pre></br>"
+                        "description": "<p><code>Omit</code> is a <strong>TypeScript </strong>utility type used to create a new type by removing specific properties from an existing type.</p><p>It&#39;s useful when you want to reuse a <strong>model </strong>but exclude certain fields—like removing <code>password</code> from a User <strong>type</strong>, or <strong>removing</strong> <code>id</code> when sending <strong>create/update</strong> requests in Angular. It improves type safety and reduces repeated code.</p></br><pre data-language=\"plain\">\nOmit&lt;Type, &#39;key1&#39; | &#39;key2&#39;&gt;\n</pre></br><pre data-language=\"plain\">\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n  password: string;\n}\n\ntype UserWithoutPassword = Omit&lt;User, &#39;password&#39;&gt;;\ntype UserWithoutPasswordEmail = Omit&lt;User, &#39;password&#39; | &#39;email&#39;&gt;;\n</pre>"
                     }
                 ],
                 "subSections": []
@@ -72,7 +72,7 @@
                 "subjectId": 8,
                 "contents": [
                     {
-                        "description": "<p>In <strong>TypeScript</strong>, <code><strong>any</strong></code> is a <strong>special type</strong> that <strong>disables type checking</strong>.</p><p> If we use it, we lose all <strong>TypeScript safety</strong> and <strong>mistakes</strong> won’t be caught during <strong>compilation</strong>.</p></br><p><code><strong>unknown</strong></code> is better than <code><strong>any</strong></code>.</p><p> If we assign anything to <strong>unknown</strong>, we <strong>cannot use it directly</strong> without <strong>checking its type first</strong>.</p><p> We can <strong>prevent runtime errors</strong>.</p></br><p><code><strong>never</strong></code> is a type in <strong>TypeScript</strong> that represents <strong>values that should never happen</strong>.</p>",
+                        "description": "<p><code>any</code> disables all type checking, so <strong>TypeScript </strong>won’t warn you about incorrect operations.</p></br><p><code>unknown</code> is similar to <code>any</code> in accepting all values, but it forces you to check the type before using it, making it safer.</p></br><p><code>never</code> represents a value that can never occur — usually used for functions that never return or to enforce exhaustive checks.</p>",
                         "subjectId": 8,
                         "sectionId": 101,
                         "subSectionId": 128,
@@ -89,7 +89,7 @@
                 "subjectId": 8,
                 "contents": [
                     {
-                        "description": "<p>In <strong>TypeScript</strong>, a <strong>Generic</strong> is a powerful feature that allows you to <strong>create reusable, type-safe components</strong> (functions, classes, or interfaces) that work with <strong>any data type</strong> — without losing type information.</p></br><p>For example, <strong>Angular’s HttpClient</strong> uses <strong>Generics</strong> so that we can define the <strong>expected response type</strong>, which avoids using <strong>any</strong> and provides <strong>compile-time safety</strong> and <strong>IntelliSense</strong>.</p></br><pre data-language=\"plain\">\n// Instead of this (unsafe, returns any):\nthis.http.get(&#39;api/users&#39;);\n\n// We use Generics (safe, typed):\nthis.http.get&lt;User[]&gt;(&#39;api/users&#39;).subscribe(users =&gt; {\n  console.log(users[0].name); // ✅ Type-safe\n});\n</pre>",
+                        "description": "<p><strong>Generics </strong>are needed to write <strong>reusable </strong>and <strong>type-safe</strong> code in <strong>TypeScript</strong>.</p></br><p>They let us create <strong>functions </strong>and <strong>services </strong>that work with any data type without losing type information.</p></br><p>A very common real example is <strong>Angular&#39;s HttpClient</strong>, where we specify the expected response type using <strong>generics</strong>, like <code>this.http.get&lt;User[]&gt;(&#39;/api&#39;)</code>.</p></br><p>In my projects, I create a <strong>generic API </strong>service using <code>get&lt;T&gt;()</code> and <code>post&lt;T&gt;()</code> to return strongly typed data across all <strong>services</strong>.</p></br><p>This improves <strong>maintainability</strong>, <strong>avoids runtime errors</strong>, and gives <strong>better IntelliSense</strong>.</p></br><p>&lt;T&gt; means <strong>Generic </strong>T in <strong>angle brackets</strong></p></br><pre data-language=\"plain\">\n// Instead of this (unsafe, returns any):\nthis.http.get(&#39;api/users&#39;);\n\n// We use Generics (safe, typed):\nthis.http.get&lt;User[]&gt;(&#39;api/users&#39;).subscribe(users =&gt; {\n  console.log(users[0].name); // ✅ Type-safe\n});\n</pre>",
                         "subjectId": 8,
                         "sectionId": 101,
                         "subSectionId": 129,
@@ -106,7 +106,7 @@
                 "subjectId": 8,
                 "contents": [
                     {
-                        "description": "<p><strong>Decorators in TypeScript</strong> are special functions that allow you to <strong>modify or enhance classes, methods, properties, or parameters</strong> at design time.</p><p>They are widely used in frameworks like <strong>Angular</strong> to add metadata and behavior to different parts of the code.</p><p>There are several types of decorators:</p><ol><li><strong>Class Decorators</strong> – Used to modify classes.<ul><li>Examples: <code>@Component</code>, <code>@Directive</code>, <code>@Pipe</code>, <code>@Injectable</code></li></ul></li><li><strong>Property Decorators</strong> – Used to modify or observe properties within a class.<ul><li>Examples: <code>@Input</code>, <code>@Output</code>, <code>@ViewChild</code>, <code>@ViewChildren</code>, <code>@ContentChild</code>, <code>@ContentChildren</code></li></ul></li><li><strong>Method Decorators</strong> – Used to modify methods.<ul><li>Examples: <code>@HostListener</code>, <code>@HostBinding</code></li></ul></li><li><strong>Parameter Decorators</strong> – Used to access metadata about parameters in class constructors.<ul><li>Example: <code>@Inject()</code></li></ul></li></ol></br><p><strong>Notes:</strong></p><ul><li><strong>Metadata</strong> = extra information about a class, method, or property — which helps Angular or TypeScript understand <strong>how to treat it</strong>.</li><li><strong>Behavior</strong> = extra functionality added by the decorator.</li></ul></br>",
+                        "description": "<p><strong>Decorators </strong>in <strong>TypeScript </strong>are special functions <strong>prefixed </strong>with <code>@</code> that allow us to <strong>add metadata</strong>, <strong>modify behavior</strong>, or <strong>configure classes</strong>, <strong>methods</strong>, <strong>properties</strong>, and <strong>parameters </strong>at design time.</p></br><p><strong>Types of Decorators in Angular</strong></p><p><strong>1. Class Decorators: </strong>Used to tell Angular what type of class it is.</p><ul><li><code>@Component</code> → marks a class as a component</li><li><code>@Directive</code> → custom directives</li><li><code>@Pipe</code> → custom pipe</li><li><code>@Injectable</code> → marks a class as a service and enables DI</li></ul></br><p><strong>2. Property Decorators:</strong> Used to modify or observe class properties.</p><ul><li><code>@Input</code> → receive data from parent</li><li><code>@Output</code> → emit events to parent</li><li><code>@ViewChild</code> / <code>@ViewChildren</code> → access child components/elements</li><li><code>@ContentChild</code> / <code>@ContentChildren</code> → access projected content</li></ul></br><p><strong>3. Method Decorators:</strong> Used to modify behavior of methods.</p><ul><li><code>@HostListener</code> → listens to DOM events on host</li><li><code>@HostBinding</code> → bind host element properties</li></ul></br><p><strong>4. Parameter Decorators:</strong> Used to read or modify constructor parameters, mainly for DI.</p><ul><li><code>@Inject()</code> → manually inject dependencies</li><li><code>@Optional()</code> → optional dependency</li></ul></br><p><strong>Notes:</strong></p><ul><li><strong>Metadata</strong> = extra information about a class, method, or property — which helps Angular or TypeScript understand <strong>how to treat it</strong>.</li><li><strong>Behavior</strong> = extra functionality added by the decorator.</li></ul>",
                         "subjectId": 8,
                         "sectionId": 101,
                         "subSectionId": 130,
@@ -146,6 +146,32 @@
                         "subSectionId": 132,
                         "contentId": 211,
                         "text": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What are </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Enums</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> and where are they </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">used</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">?</span></p>"
+                    }
+                ],
+                "subSections": []
+            }
+        ]
+    },
+    {
+        "name": "<p><strong>Extends and Implements</strong></p>",
+        "sectionId": 133,
+        "subSectionId": -1,
+        "subjectId": 8,
+        "contents": [],
+        "subSections": [
+            {
+                "name": "<p><strong>Extends and Implements</strong></p>",
+                "sectionId": 133,
+                "subSectionId": 134,
+                "subjectId": 8,
+                "contents": [
+                    {
+                        "text": "<p>In <strong>TypeScript</strong>, we use <code>extends</code> and <code>implements</code>. What is the difference between them?</p>",
+                        "sectionId": 133,
+                        "subSectionId": 134,
+                        "subjectId": 8,
+                        "contentId": 422,
+                        "description": "<p><code>extends</code> is used for <strong>class inheritance</strong> — it copies properties and methods.</p><p><code>implements</code> is used to enforce that a <strong>class </strong>follows an <strong>interface </strong>— it provides no implementation.</p><p>Use <code>extends</code> for code reuse, <code>implements</code> for structure enforcement.</p></br><p><strong>1. </strong><code><strong>extends</strong></code><strong> → Inheritance (Reusing Implementation):</strong></p><pre data-language=\"plain\">\nclass Animal {\n  move() {\n    console.log(&quot;Moving&quot;);\n  }\n}\n\nclass Dog extends Animal {\n  bark() {\n    console.log(&quot;Bark!&quot;);\n  }\n}\n</pre></br></br><p><strong>2. implements → Contract Checking (Structure Only)</strong></p><pre data-language=\"plain\">\ninterface Drivable {\n  start(): void;\n  stop(): void;\n}\n\nclass Car implements Drivable {\n  start() {}\n  stop() {}\n}\n</pre>"
                     }
                 ],
                 "subSections": []
