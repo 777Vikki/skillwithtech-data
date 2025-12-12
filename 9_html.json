@@ -7,44 +7,44 @@
         "subSections": [],
         "contents": [
             {
-                "description": "<p>HTML is a <strong>markup language</strong>, not a programming language.</p><p>It uses <strong>tags</strong> (like <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;div&gt;</code>, etc.) to <strong>define the structure and content</strong> of a web page.</p></br><p>Here’s a simple HTML example:</p></br><p>&lt;!DOCTYPE html&gt;</p><p>&lt;html&gt;</p><p>  &lt;head&gt;</p><p>    &lt;title&gt;My First Web Page&lt;/title&gt;</p><p>  &lt;/head&gt;</p><p>  &lt;body&gt;</p><p>    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;</p><p>    &lt;p&gt;This is a paragraph of text.&lt;/p&gt;</p><p>    &lt;a href=&quot;https://www.google.com&quot;&gt;Go to Google&lt;/a&gt;</p><p>  &lt;/body&gt;</p><p>&lt;/html&gt;</p></br><p><strong>Explanation:</strong></p><ul><li><code>&lt;!DOCTYPE html&gt;</code> → Defines the document type (HTML5)</li><li><code>&lt;html&gt;</code> → Root element</li><li><code>&lt;head&gt;</code> → Contains meta info (like title, links, scripts)</li><li><code>&lt;body&gt;</code> → Contains visible page content</li></ul></br><p>🔹<strong>HTML Works With:</strong></p><p><strong>CSS</strong> → for styling and layout</p><p><strong>JavaScript</strong> → for interactivity and dynamic behavior</p>",
+                "description": "<p><strong>HTML </strong>stands for <strong>HyperText Markup Language</strong>. It is the <strong>core structure</strong> of any <strong>webpage </strong>and defines the layout using elements like <strong>headings</strong>, <strong>paragraphs</strong>, <strong>images</strong>, <strong>lists</strong>, and <strong>forms</strong>. <strong>HTML</strong> provides the <strong>skeleton</strong>, <strong>CSS </strong>adds styling, and <strong>JavaScript </strong>adds interactivity.</p></br><p>Here’s a simple HTML example:</p></br><pre data-language=\"plain\">\n&lt;!DOCTYPE html&gt;\n&lt;html lang=&quot;en&quot;&gt;\n&lt;head&gt;\n    &lt;meta charset=&quot;UTF-8&quot; /&gt;\n    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;\n    &lt;title&gt;Simple HTML Page&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n    &lt;h1&gt;Welcome to My Page&lt;/h1&gt;\n    &lt;p&gt;This is a basic example of an HTML structure.&lt;/p&gt;\n\n    &lt;a href=&quot;https://example.com&quot;&gt;Visit Example&lt;/a&gt;\n\n    &lt;ul&gt;\n        &lt;li&gt;HTML&lt;/li&gt;\n        &lt;li&gt;CSS&lt;/li&gt;\n        &lt;li&gt;JavaScript&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n</pre>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 212,
-                "text": "<p>What is HTML?</p>"
+                "text": "<p>What is <strong>HTML</strong>?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>DOCTYPE </strong>is required to tell the browser which <strong>HTML </strong>standard to use. It forces the browser into standards mode, ensuring consistent and correct rendering. Without it, the browser may fall back to quirks mode, causing layout and CSS issues.</p>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 213,
-                "text": "<p>Why is DOCTYPE required?</p>"
+                "text": "<p>Why is <strong>DOCTYPE </strong>required?</p>"
             },
             {
-                "description": "<p><strong>Inline</strong>: Does <strong>not start on a new line</strong> (<code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>).</p></br><p><strong>Block</strong>: <strong>Occupies full width</strong>, <strong>starts on new line</strong> (<code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>).</p></br><p><strong>Inline-block</strong>: <strong>Behaves like inline</strong> but <strong>supports block properties</strong> (<strong>height/width</strong>).</p>",
+                "description": "<p><strong>Block elements</strong> take up the <strong>full width</strong> and start on a <strong>new line</strong>, like <code>&lt;div&gt;</code> and <code>&lt;p&gt;</code>.</p></br><p><strong>Inline elements</strong> only take as much space as needed, don’t start a <strong>new line</strong>, like <code>&lt;span&gt;</code> and <code>&lt;a&gt;</code>.</p></br><p><strong>Inline-block</strong> elements combine both: they stay <strong>inline </strong>but allow width and height to be set, useful for <strong>horizontally </strong>aligned boxes.</p>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 214,
-                "text": "<p>What is the difference between inline, block, and inline-block elements?</p>"
+                "text": "<p>What is the difference between <strong>inline</strong>, <strong>block</strong>, and <strong>inline-block</strong> elements?</p>"
             },
             {
-                "description": "<p><strong>Semantic HTML tags</strong> describe the <strong>meaning of content</strong> (<strong>improve SEO &amp; accessibility</strong>).</p></br><p><strong>Examples:</strong> <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>.</p>",
+                "description": "<p><strong>Semantic HTML </strong>tags are elements that clearly describe their meaning and structure. They help <strong>browsers</strong>, developers, and search engines understand the content. <strong>Examples </strong>include <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;aside&gt;</code>.</p><p> Using <strong>semantic tags </strong>improves accessibility, SEO, and <strong>code readability</strong> compared to <strong>non-semantic</strong> tags like <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>.</p></br><p><strong>Examples:</strong> <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>.</p>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 215,
-                "text": "<p>What are semantic HTML tags? Can you give examples?</p>"
+                "text": "<p>What are <strong>semantic HTML tags</strong>? Can you give examples?</p>"
             },
             {
-                "description": "<p><strong>SEO (Search Engine Optimization)</strong> is the practice of <strong>improving a website’s visibility</strong> in <strong>search engines</strong> through <strong>content</strong>, <strong>structure</strong>, and <strong>performance optimization</strong>.</p>",
+                "description": "<p><strong>SEO </strong>stands for <strong>Search Engine Optimization</strong>. It is the practice of improving a website’s visibility in search engine results to attract more <strong>organic traffic</strong>. It involves optimizing <strong>content</strong>, <strong>meta tags</strong>, <strong>semantic HTML</strong>, <strong>page speed</strong>, and <strong>backlinks</strong>. In Angular, we can improve SEO using <strong>Angular Universal</strong>,<strong> semantic tags</strong>, and <strong>dynamic meta tags</strong>.</p>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 216,
-                "text": "<p>What is SEO?</p>"
+                "text": "<p>What is <strong>SEO</strong>?</p>"
             },
             {
                 "description": "<p>A <strong>Web Component</strong> is a <strong>set of web platform features</strong> that allows you to create <strong>reusable, encapsulated, and custom HTML elements</strong> that work across modern browsers.</p>",
@@ -52,87 +52,71 @@
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 217,
-                "text": "<p>What is a Web Component?</p>"
+                "text": "<p>What is a <strong>Web Component</strong>?</p>"
             },
             {
-                "description": "<p><strong>id:</strong> <strong>Unique per page</strong>, used for <strong>specific elements</strong>.</p></br><p><strong>class:</strong> Can be <strong>shared by multiple elements</strong>, used for <strong>styling</strong> and <strong>grouping</strong>.</p>",
+                "description": "<p>The <code>id</code> attribute uniquely identifies a single element on a page, while <code>class</code> can be used for multiple elements. <code>id</code> is commonly used for unique <strong>components </strong>like a <strong>header </strong>or <strong>footer</strong>, whereas <code>class</code> is used to <strong>group elements</strong> for <strong>styling </strong>or <strong>scripting</strong>. In CSS, <code>id</code> is selected with <code>#</code> and <code>class</code> with <code>.</code>. In <strong>JavaScript</strong>, <code>id</code> can be accessed with <code>getElementById</code> and <code>class</code> with <code>getElementsByClassName</code> or <code>querySelectorAll</code>.</p>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 218,
-                "text": "<p>Difference between id and class attributes in HTML?</p>"
+                "text": "<p>Difference between <strong>id </strong>and <strong>class </strong>attributes in <strong>HTML</strong>?</p>"
             },
             {
-                "description": "<p><strong>Custom attributes</strong> (e.g., <code>data-user-id=&quot;123&quot;</code>) used to <strong>store extra data</strong> without <strong>cluttering code</strong>.</p></br><p> 👉 <strong>Useful in Angular</strong> for <strong>passing small dataset</strong> to <strong>components</strong>.</p>",
+                "description": "<p><code>data-*</code> attributes in HTML are <strong>custom attributes</strong> that allow storing<strong> extra information</strong> on elements. They are accessible via <strong>JavaScript </strong>using the <code>dataset</code> property. In <strong>Angular</strong>, they are useful for passing <strong>extra information</strong> to event handlers or storing <strong>element-specific metadata</strong> without adding extra <strong>component state</strong>. <strong>For example</strong>, you can store a <strong>user ID</strong> on a button with <code>data-user-id</code> and retrieve it in the <strong>click event</strong>.</p></br><p>// In JavaScript </p></br><pre data-language=\"plain\">\n&lt;div data-user-id=&quot;101&quot; data-role=&quot;admin&quot;&gt;John Doe&lt;/div&gt;\n\nconst div = document.querySelector(&#39;div&#39;);\nconsole.log(div.dataset.userId);  // 101\nconsole.log(div.dataset.role);    // admin\n</pre></br><p>// In Angular</p></br><pre data-language=\"plain\">\n&lt;button (click)=&quot;handleClick($event)&quot; data-user-id=&quot;101&quot;&gt;Click Me&lt;/button&gt;\n\nhandleClick(event: Event) {\n  const target = event.target as HTMLElement;\n  console.log(target.dataset.userId); // 101\n}\n</pre></br>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 219,
-                "text": "<p>What are data- attributes* in HTML? How are they useful in Angular?</p>"
+                "text": "<p>What are <strong>data- attributes*</strong> in <strong>HTML</strong>? How are they useful in <strong>Angular</strong>?</p>"
             },
             {
-                "description": "<p><code>&lt;div&gt;</code>: <strong>Block-level container</strong>.</p></br><p> <code>&lt;span&gt;</code>: <strong>Inline container</strong> for <strong>styling specific text/part</strong>.</p>",
+                "description": "<p><code>&lt;div&gt;</code> is a <strong>block-level element</strong> that starts on a new line and is used to group larger <strong>sections </strong>or <strong>layouts</strong>.<code>&lt;span&gt;</code> is an <strong>inline element</strong> used to group small portions of text or inline elements for <strong>styling</strong>.</p></br><p> <code>&lt;div&gt;</code> can have <strong>width </strong>and <strong>height</strong>, while <code>&lt;span&gt;</code> cannot. Use <code>&lt;div&gt;</code> for <strong>structure </strong>and <code>&lt;span&gt;</code> for <strong>inline styling</strong>.</p>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 220,
-                "text": "<p>Difference between &lt;div&gt; and &lt;span&gt; tags?</p>"
+                "text": "<p>Difference between <code><strong>&lt;div&gt;</strong></code> and <code><strong>&lt;span&gt;</strong></code> tags?</p>"
             },
             {
-                "description": "",
+                "description": "<p>Both <code>localStorage</code> and <code>sessionStorage</code> are <strong>Web Storage APIs</strong> that allow browsers to <strong>store key-value data on the client side</strong>.</p></br><p><code>localStorage</code> and <code>sessionStorage</code> are client-side storage <strong>APIs</strong>.</p><p><code>localStorage</code> stores data persistently across browser sessions, while <code>sessionStorage</code> stores data only for the current <strong>tab session</strong>.</p></br><p>Both store data as <strong>key-value</strong> strings and are commonly used in <strong>Angular </strong>for <strong>storing tokens</strong>, user preferences, or temporary <strong>form data</strong>.</p>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 221,
-                "text": "<p>What is localStorage and sessionStorage?</p>"
+                "text": "<p>What is <strong>localStorage </strong>and <strong>sessionStorage</strong>?</p>"
             },
             {
-                "description": "",
+                "description": "<p><strong>Placing </strong><code>&lt;script&gt;</code> in the <code>&lt;head&gt;</code> loads and executes the JavaScript <strong>before the HTML is rendered</strong>, which can block page rendering and may not have access to <strong>DOM elements </strong>defined later.</p><p><strong>Placing </strong><code>&lt;script&gt;</code> at the end of <code>&lt;body&gt;</code> ensures the script runs <strong>after the DOM is parsed</strong>, allowing safe DOM access and better performance.</p></br><p><strong>In modern practice,</strong> using <code>&lt;script defer&gt;</code> in the head is also common.</p></br><p><strong>The best approach</strong> is to either place <code>&lt;script&gt;</code> at the end of <code>&lt;body&gt;</code> or use <code>&lt;script defer&gt;</code> in the <code>&lt;head&gt;</code>. Both ensure scripts run <strong>after the DOM is parsed</strong>, preventing <strong>render-blocking</strong> issues and allowing safe <strong>DOM access</strong>. <code>async</code> is only for independent scripts that don’t rely on the <strong>DOM</strong>.</p>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 222,
-                "text": "<p>What is the difference between <code>&lt;script&gt;</code> at head vs body?</p>"
+                "text": "<p>What is the <strong>difference </strong>between <code><strong>&lt;script&gt;</strong></code> at <code><strong>&lt;head&gt;</strong></code><strong> </strong>vs <code><strong>&lt;body&gt;</strong></code> ?</p>"
             },
             {
-                "description": "",
+                "description": "<p>The <code>&lt;meta&gt;</code> tag provides <strong>metadata </strong>about the <strong>HTML document</strong>, which is not displayed on the page but used by <strong>browsers</strong>, <strong>search engines</strong>, and <strong>services</strong>.</p><p>Common purposes include setting character <strong>encoding</strong>, <strong>viewport </strong>for <strong>responsive design</strong>,<strong> page description</strong> and <strong>keywords </strong>for <strong>SEO</strong>, <strong>author info</strong>, and <strong>controlling browser</strong> behavior like <strong>refresh </strong>or <strong>redirects</strong>.</p></br><pre data-language=\"plain\">\n// Character Encoding\n\n&lt;meta charset=&quot;UTF-8&quot;&gt;\n</pre></br><pre data-language=\"plain\">\n// Responsive Design\n\n&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;\n</pre></br><pre data-language=\"plain\">\n//  SEO (Description &amp; Keywords)\n\n&lt;meta name=&quot;description&quot; content=&quot;This is a sample website for Angular tutorials.&quot;&gt;\n&lt;meta name=&quot;keywords&quot; content=&quot;Angular, HTML, CSS, JavaScript&quot;&gt;\n</pre></br><pre data-language=\"plain\">\n// Author\n\n&lt;meta name=&quot;author&quot; content=&quot;Vivek Maurya&quot;&gt;\n</pre></br><pre data-language=\"plain\">\n// Page Refresh / Redirect\n\n&lt;meta http-equiv=&quot;refresh&quot; content=&quot;5;url=https://example.com&quot;&gt;\n</pre></br>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 223,
-                "text": "<p>What is the purpose of the <code>&lt;meta&gt;</code> tag?</p>"
+                "text": "<p>What is the purpose of the <code><strong>&lt;meta&gt;</strong></code> tag?</p>"
             },
             {
-                "description": "",
+                "description": "<p>The <strong>viewport meta </strong>tag tells the <strong>browser </strong>how to render a webpage on <strong>different devices</strong>.</p><p> It is essential for <strong>responsive design</strong>, allowing the page to scale correctly on <strong>mobile devices</strong>. For example, <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code> sets the page width to the device width and the initial zoom to 1, ensuring a proper <strong>mobile</strong> layout.</p></br><pre data-language=\"plain\">\n&lt;head&gt;\n  &lt;meta charset=&quot;UTF-8&quot;&gt;\n  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;\n  &lt;title&gt;Responsive Page&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n  &lt;div class=&quot;container&quot;&gt;Content here&lt;/div&gt;\n&lt;/body&gt;\n</pre></br>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 224,
-                "text": "<p> What is the viewport meta tag?</p>"
+                "text": "<p>What is the <code><strong>viewport</strong></code><strong> </strong>meta tag?</p>"
             },
             {
-                "description": "",
+                "description": "<p>The <code>&lt;link&gt;</code> tag is used to attach external <strong>resources </strong>like <strong>CSS</strong>, <strong>fonts</strong>, or <strong>icons </strong>to the <strong>HTML document </strong>and is placed in the <code>&lt;head&gt;</code>. It is not <strong>visible </strong>or <strong>clickable</strong>.</p></br><p> The <code>&lt;a&gt;</code> tag creates a <strong>clickable hyperlink </strong>in the page content that <strong>navigates users </strong>to <strong>another URL</strong>. <code>&lt;link&gt;</code> is for <strong>resources</strong>; <code>&lt;a&gt;</code> is for <strong>navigation</strong>.</p></br><pre data-language=\"plain\">\n// &lt;link&gt; Tag (External CSS)\n\n&lt;head&gt;\n  &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;\n&lt;/head&gt;\n</pre></br><pre data-language=\"plain\">\n// &lt;a&gt; Tag (Hyperlink)\n\n&lt;body&gt;\n  &lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot;&gt;Visit Example&lt;/a&gt;\n&lt;/body&gt;\n</pre>",
                 "subjectId": 9,
                 "sectionId": 68,
                 "subSectionId": -1,
                 "contentId": 225,
-                "text": "<p>Difference between &lt;link&gt; and &lt;a&gt; tag?</p>"
-            },
-            {
-                "description": "",
-                "subjectId": 9,
-                "sectionId": 68,
-                "subSectionId": -1,
-                "contentId": 226,
-                "text": "<p>What is the use of <code>&lt;template&gt;</code> tag?</p>"
-            },
-            {
-                "description": "",
-                "subjectId": 9,
-                "sectionId": 68,
-                "subSectionId": -1,
-                "contentId": 227,
-                "text": "<p>What is the shadow DOM?</p>"
+                "text": "<p>Difference between <code><strong>&lt;link&gt;</strong></code> and <code><strong>&lt;a&gt;</strong></code> tag?</p>"
             }
         ]
     },
@@ -144,28 +128,28 @@
         "subSections": [],
         "contents": [
             {
-                "description": "<p><code>&lt;input type=&quot;text&quot;&gt;</code>: <strong>Single line input</strong>.</p></br><p> <code>&lt;textarea&gt;</code>: <strong>Multi-line input</strong>.</p>",
+                "description": "<p><code>&lt;input type=&quot;text&quot;&gt;</code> is used for <strong>single-line</strong> text such as <strong>name </strong>or <strong>email</strong>, while <code>&lt;textarea&gt;</code> is used for <strong>multi-line text</strong> like <strong>comments </strong>or <strong>messages</strong>. The input tag is <strong>self-closing</strong> and <strong>supports </strong>only one line, whereas <code>&lt;textarea&gt;</code> allows <strong>multiple lines</strong> and is better for larger text entry.</p></br><pre data-language=\"plain\">\n// Input (Single-line)\n\n&lt;input type=&quot;text&quot; placeholder=&quot;Enter your name&quot;&gt;\n</pre></br><pre data-language=\"plain\">\n// extarea (Multi-line)\n\n&lt;textarea rows=&quot;4&quot; cols=&quot;40&quot; placeholder=&quot;Enter your message&quot;&gt;&lt;/textarea&gt;\n</pre></br>",
                 "subjectId": 9,
                 "sectionId": 69,
                 "subSectionId": -1,
                 "contentId": 228,
-                "text": "<p>What is the difference between &lt;input type=&quot;text&quot;&gt; and &lt;textarea&gt;?</p>"
+                "text": "<p>What is the difference between <code><strong>&lt;input type=&quot;text&quot;&gt;</strong></code> and <code><strong>&lt;textarea&gt;</strong></code>?</p>"
             },
             {
-                "description": "<p><code>&lt;button&gt;</code>: <strong>More flexible</strong> (can contain <strong>HTML inside</strong>, default type is <strong>&quot;submit&quot;</strong>).</p></br><p> <code>&lt;input type=&quot;button&quot;&gt;</code>: <strong>Fixed</strong>, only <strong>text value</strong>.</p>",
+                "description": "<p>The <code>&lt;button&gt;</code> <strong>element </strong>is more <strong>flexible </strong>because it can contain <strong>HTML elements</strong> like <strong>icons </strong>or <strong>spans</strong>, and its default type in a <strong>form </strong>is <code>submit</code>. <code>&lt;input type=&quot;button&quot;&gt;</code> is a <strong>self-closing</strong> tag that can only display text through the <code>value</code> attribute and never <strong>submits </strong>a form. Because of flexibility and styling options, <code>&lt;button&gt;</code> is preferred in modern applications.</p>",
                 "subjectId": 9,
                 "sectionId": 69,
                 "subSectionId": -1,
                 "contentId": 229,
-                "text": "<p>Difference between &lt;button&gt; and &lt;input type=&quot;button&quot;&gt;?</p>"
+                "text": "<p>Difference between <code><strong>&lt;button&gt;</strong></code> and <code><strong>&lt;input type=&quot;button&quot;&gt;</strong></code>?</p>"
             },
             {
-                "description": "<p><strong>GET:</strong> <strong>Data visible in URL</strong> (<strong>not secure</strong>, <strong>limited length</strong>).</p></br><p> <strong>POST:</strong> <strong>Data hidden in body</strong> (<strong>secure</strong>, used for <strong>sensitive data</strong>).</p>",
+                "description": "<p><strong>GET</strong> sends <strong>form data</strong> through the <strong>URL</strong>, which makes it visible, limited in size, and suitable for retrieving or searching data. <strong>POST </strong>sends data in the <strong>request body</strong>, which is more secure, supports large amounts of data, and is used for <strong>actions </strong>like <strong>login</strong>, <strong>registration</strong>, or <strong>submitting sensitive information</strong>.</p></br><pre data-language=\"plain\">\n// GET example\n\n&lt;form method=&quot;GET&quot; action=&quot;/search&quot;&gt;\n  &lt;input type=&quot;text&quot; name=&quot;query&quot;&gt;\n  &lt;button type=&quot;submit&quot;&gt;Search&lt;/button&gt;\n&lt;/form&gt;\n\nResulting URL:\n /search?query=angular\n</pre></br><pre data-language=\"plain\">\n// POST example\n\n&lt;form method=&quot;POST&quot; action=&quot;/login&quot;&gt;\n  &lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;\n  &lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;\n  &lt;button type=&quot;submit&quot;&gt;Login&lt;/button&gt;\n&lt;/form&gt;\n\nData is sent in the request body, not visible in URL.\n</pre></br>",
                 "subjectId": 9,
                 "sectionId": 69,
                 "subSectionId": -1,
                 "contentId": 230,
-                "text": "<p>What is the difference between GET and POST form methods?</p>"
+                "text": "<p>What is the difference between <strong>GET </strong>and <strong>POST </strong>form methods?</p>"
             }
         ]
     },
@@ -177,12 +161,12 @@
         "subSections": [],
         "contents": [
             {
-                "description": "",
+                "description": "<p><strong>HTML </strong>is the older standard for structuring <strong>web pages</strong>, but it had limitations like no <strong>native multimedia</strong> or <strong>storage support</strong>. <strong>HTML5 </strong>is a modern upgrade that introduces <strong>semantic tags</strong>,<strong> built-in audio/video support</strong>, <strong>canvas </strong>for graphics, <strong>new form input types</strong>, and APIs like <strong>localStorage</strong>, <strong>geolocation</strong>, and <strong>web workers</strong>. It makes <strong>websites </strong>more <strong>interactive</strong>, <strong>mobile-friendly</strong>, and capable of <strong>complex applications </strong>without relying on external <strong>plugins</strong>.</p>",
                 "subjectId": 9,
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 231,
-                "text": "<p>Difference between HTML and HTML5?</p>"
+                "text": "<p>Difference between <strong>HTML </strong>and <strong>HTML5</strong>?</p>"
             },
             {
                 "description": "<p><code><strong>srcset</strong></code><strong> attribute</strong> allows you to provide <strong>multiple versions of the same image</strong> for <strong>different screen sizes</strong> and <strong>resolutions</strong>.</p><p>The <strong>browser automatically chooses</strong> the <strong>best image</strong> to load depending on the <strong>device DPI (pixel density)</strong> and <strong>viewport width</strong>.</p></br><pre data-language=\"plain\">\n&lt;img \n  src=&quot;image-small.jpg&quot; \n  srcset=&quot;image-small.jpg 480w, image-medium.jpg 800w, image-large.jpg 1200w&quot; \n</pre><p>  alt=&quot;Sample Image&quot;&gt;</p></br><p>👉 <strong>Explanation:</strong></p><ul><li><strong>image-small.jpg 480w</strong> → use when <strong>viewport ≤480px</strong>.</li><li><strong>image-medium.jpg 800w</strong> → use when <strong>viewport ≤800px</strong>.</li><li><strong>image-large.jpg 1200w</strong> → use when <strong>viewport ≤1200px</strong>.</li></ul><p><strong>Browser picks the most suitable image automatically.</strong></p></br>",
@@ -190,7 +174,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 232,
-                "text": "<p>What is srcset?</p>"
+                "text": "<p>What is <code><strong>srcset</strong></code><strong> </strong>?</p>"
             },
             {
                 "description": "<p><code><strong>src</strong></code>: Tells the <strong>browser</strong> to <strong>embed the resource</strong> at that location (<strong>replace the element’s content</strong>). Example: <code>&lt;img src=&quot;image.png&quot;&gt;</code>.</p></br><p><code><strong>href</strong></code>: Tells the <strong>browser</strong> to <strong>navigate</strong> or <strong>link</strong> to that <strong>resource</strong>. Example: <code>&lt;a href=&quot;page.html&quot;&gt;</code>.</p>",
@@ -198,7 +182,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 233,
-                "text": "<p>What is the difference between src and href in HTML?</p>"
+                "text": "<p>What is the difference between <code><strong>src</strong></code><strong> </strong>and <code><strong>href</strong></code> in <strong>HTML</strong>?</p>"
             },
             {
                 "description": "<p><code>&lt;img src=&quot;...&quot;&gt;</code> → <strong>for images</strong>.</p><p><code>&lt;script src=&quot;...&quot;&gt;</code> → <strong>for JavaScript files</strong>.</p><p><code>&lt;iframe src=&quot;...&quot;&gt;</code> → <strong>for embedding pages</strong>.</p><p><code>&lt;audio src=&quot;...&quot;&gt;</code> / <code>&lt;video src=&quot;...&quot;&gt;</code> → <strong>for media</strong>.</p><p><code>&lt;source src=&quot;...&quot;&gt;</code> → <strong>inside &lt;audio&gt; or &lt;video&gt;</strong>.</p>",
@@ -206,7 +190,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 234,
-                "text": "<p>What tags commonly use the src attribute?</p>"
+                "text": "<p>What tags commonly use the <code><strong>&lt;src&gt;</strong></code> attribute?</p>"
             },
             {
                 "description": "",
@@ -214,7 +198,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 235,
-                "text": "<p>What is HTML5 Canvas?</p>"
+                "text": "<p>What is <strong>HTML5</strong> <code>Canvas</code>?</p>"
             },
             {
                 "description": "",
@@ -222,7 +206,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 236,
-                "text": "<p> What is SVG?</p>"
+                "text": "<p>What is <strong>SVG</strong>?</p>"
             },
             {
                 "description": "",
@@ -230,7 +214,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 237,
-                "text": "<p>What is the purpose of <code>data-*</code> attributes?</p>"
+                "text": "<p>What is the purpose of <code><strong>data-*</strong></code> attributes?</p>"
             },
             {
                 "description": "",
@@ -238,7 +222,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 238,
-                "text": "<p>What are custom data attributes used for?</p>"
+                "text": "<p>What are <strong>custom data attributes</strong> used for?</p>"
             },
             {
                 "description": "",
@@ -246,7 +230,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 239,
-                "text": "<p>What is accessibility (A11Y)?</p>"
+                "text": "<p>What is <strong>accessibility (A11Y)</strong>?</p>"
             },
             {
                 "description": "",
@@ -254,7 +238,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 240,
-                "text": "<p>What is ARIA?</p>"
+                "text": "<p>What is <strong>ARIA</strong>?</p>"
             },
             {
                 "description": "",
@@ -262,7 +246,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 241,
-                "text": "<p>What is lazy loading in HTML?</p>"
+                "text": "<p>What is <strong>lazy loading</strong> in <strong>HTML</strong>?</p>"
             },
             {
                 "description": "",
@@ -270,7 +254,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 242,
-                "text": "<p>What is the difference between <code>&lt;b&gt;</code> vs <code>&lt;strong&gt;</code> and <code>&lt;i&gt;</code> vs <code>&lt;em&gt;</code>?</p>"
+                "text": "<p>What is the difference between <code><strong>&lt;b&gt;</strong></code> vs <code><strong>&lt;strong&gt;</strong></code> and <code><strong>&lt;i&gt;</strong></code> vs <code><strong>&lt;em&gt;</strong></code>?</p>"
             },
             {
                 "description": "",
@@ -278,7 +262,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 243,
-                "text": "<p>What is the purpose of <code>rel=&quot;noopener noreferrer&quot;</code>?</p>"
+                "text": "<p>What is the purpose of <code><strong>rel=&quot;noopener noreferrer&quot;</strong></code>?</p>"
             },
             {
                 "description": "",
@@ -286,7 +270,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 244,
-                "text": "<p>What are self-closing tags?</p>"
+                "text": "<p>What are <strong>self-closing</strong> tags?</p>"
             },
             {
                 "description": "",
@@ -294,7 +278,7 @@
                 "sectionId": 70,
                 "subSectionId": -1,
                 "contentId": 245,
-                "text": "<p>How does HTML5 support offline storage?</p>"
+                "text": "<p>How does <strong>HTML5 </strong>support offline <strong>storage</strong>?</p>"
             }
         ]
     }
