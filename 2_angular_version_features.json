@@ -38,6 +38,14 @@
                 "subSectionId": -1,
                 "contentId": 87,
                 "text": "<p>Can standalone components be lazy-loaded?</p>"
+            },
+            {
+                "text": "<p>Why has <strong>angular </strong>introduced <strong>standalone </strong>component?</p>",
+                "sectionId": 28,
+                "subSectionId": -1,
+                "subjectId": 2,
+                "contentId": 426,
+                "description": "<p><strong>Angular </strong>introduced standalone components to simplify application <strong>structure</strong>,<strong> </strong>reduce <strong>NgModule</strong> boilerplate, improve<strong> lazy loading </strong>and<strong> tree-shaking</strong>, and align Angular with <strong>modern development patterns</strong>. They make components more <strong>self-contained</strong>, easier to test, and easier to scale, while remaining backward compatible with <strong>NgModules</strong>.</p></br><p><strong>Simpler &amp; Clearer Architecture:</strong></p><p>Hard to track where components were declared and exported.</p></br><p><strong>Align with Modern JavaScript &amp; Angular APIs:</strong></p><p>Angular is moving towards a <strong>functional and modern API design</strong>:</p><ul><li><code>inject()</code></li><li>Functional guards</li><li>Functional interceptors</li><li>Signals</li></ul></br><p><strong>Backward Compatible (Important!)</strong></p><p>NgModules are <strong>not removed</strong></p>"
             }
         ]
     },
