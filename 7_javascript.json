@@ -266,7 +266,7 @@
         ]
     },
     {
-        "name": "<p><strong>Event Handlers</strong></p>",
+        "name": "<p><strong>Event Handlers, Web Storage API (localStorage, sessionStorage)</strong></p>",
         "sectionId": 114,
         "subSectionId": -1,
         "subjectId": 7,
@@ -285,6 +285,23 @@
                         "subjectId": 7,
                         "contentId": 403,
                         "description": "<p><strong>Event handlers</strong> are functions that run in response to user actions or browser events.</p><p>Examples of events:</p><ul><li>Click</li><li>Input</li><li>Key press</li><li>Mouse over</li><li>Scroll</li><li>Submit</li><li>Load</li></ul><p>When an event happens, the handler function executes.</p></br></br>"
+                    }
+                ],
+                "subSections": []
+            },
+            {
+                "name": "<p><strong>Web Storage API</strong></p>",
+                "sectionId": 114,
+                "subSectionId": 135,
+                "subjectId": 7,
+                "contents": [
+                    {
+                        "text": "<p>What is difference between  <code><strong>localStorage</strong></code><strong> </strong>and  <code><strong>sessionStorage</strong></code><strong> </strong>?</p>",
+                        "sectionId": 114,
+                        "subSectionId": 135,
+                        "subjectId": 7,
+                        "contentId": 427,
+                        "description": "<p>Both <code>localStorage</code> and <code>sessionStorage</code> are part of the <strong>Web Storage API</strong> and are used to store data in the browser as <strong>key–value pairs</strong>.</p></br><p><strong>Data Persistence:</strong></p><p><strong>localStorage</strong></p><ul><li>Data persists even after the browser is closed and reopened.</li></ul><p><strong>sessionStorage</strong></p><ul><li>Data is cleared when the <strong>tab or browser session is closed</strong>.</li></ul></br><p><strong>Scope:</strong></p><p><strong>localStorage</strong></p><ul><li>Shared across <strong>all tabs and windows</strong> of the same origin.</li><li>Shared between original tab and duplicate tab</li></ul><p><strong>sessionStorage</strong></p><ul><li>Scoped to a <strong>single browser tab</strong>.</li><li>Opening the same app in a new tab creates a <strong>new session</strong>.</li><li>Data is copied initially in some browsers, but after that they are <strong>independent</strong></li></ul></br></br><p><strong>Storage Limit:</strong></p><p>Both typically allow around <strong>5–10 MB</strong> (browser-dependent).</p></br><p><strong>Security:</strong></p><ul><li>Both are accessible via JavaScript</li><li><strong>Not secure against XSS attacks</strong></li><li>Do <strong>not</strong> store sensitive information like passwords</li></ul></br><pre data-language=\"plain\">\nfromEvent&lt;StorageEvent&gt;(window, &#39;storage&#39;).subscribe(d =&gt; {\n      console.log(&#39;fromEvent: &#39;, d);\n});\n\nwindow.addEventListener(&#39;storage&#39;, (event) =&gt; {\n      console.log(&#39;addEventListener: &#39;, event);\n});\n</pre>"
                     }
                 ],
                 "subSections": []

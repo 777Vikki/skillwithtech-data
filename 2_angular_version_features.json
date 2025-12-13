@@ -106,20 +106,36 @@
         "subSections": [],
         "contents": [
             {
-                "description": "",
+                "text": "<p>Key New Features in <strong>Angular 17</strong></p>",
+                "sectionId": 31,
+                "subSectionId": -1,
+                "subjectId": 2,
+                "contentId": 428,
+                "description": "<p><strong>Angular 17</strong> focuses on <strong>performance</strong>, <strong>developer experience</strong>, and <strong>modernized templates</strong>. It introduces a new built-in <strong>control flow</strong> syntax (<code><strong>@if</strong></code><strong>, </strong><code><strong>@for</strong></code>), <strong>deferrable views </strong>for lazy loading within templates, and improved <strong>SSR </strong>with the new <code><strong>@angular/ssr</strong></code> package. The build system now defaults to<strong> Vite/esbuild</strong> for <strong>faster builds</strong>, and <strong>standalone components</strong> are the default. It also adds new <strong>lifecycle hooks</strong> (<code><strong>afterRender</strong></code><strong>, </strong><code><strong>afterNextRender</strong></code>) and enhances DevTools to inspect <strong>dependency injection</strong>. Together, these make Angular apps <strong>faster</strong>, <strong>easier </strong>to debug, and simpler to <strong>structure</strong>.</p>"
+            },
+            {
+                "description": "<p>Angular 17 introduces a <strong>new declarative control-flow syntax</strong> (<code><strong>@if</strong></code><strong>, </strong><code><strong>@for</strong></code><strong>, </strong><code><strong>@switch</strong></code>, etc.) that replaces traditional structural directives like <code><strong>*ngIf</strong></code><strong>, </strong><code><strong>*ngFor</strong></code>, and <code><strong>*ngSwitch</strong></code>.</p></br><p>Built-in <strong>control flow</strong> is compiled directly by <strong>Angular</strong>, so it avoids <strong>directive </strong>overhead and improves <strong>runtime performance</strong>.</p>",
                 "subjectId": 2,
                 "sectionId": 31,
                 "subSectionId": -1,
                 "contentId": 92,
-                "text": "<p>What is <strong>defer()</strong> in <strong>Angular</strong>?</p>"
+                "text": "<p>What is new Built-In <strong>Control Flow</strong> Syntax</p>"
             },
             {
-                "description": "",
+                "description": "<p>Deferrable Views are also known as <code><strong>@defer</strong></code><strong> blocks</strong>, and this is a powerful tool that can be used to reduce the initial bundle size of an Angular application.</p></br><p>We can use the Deferrable View concept if we want to load any content or a block of a component based on a specific condition or event.</p></br><p>A defer block wraps the component inside an <code>@defer</code> block to load it as a separate chunk, and by default, the defer block is triggered when the browser state becomes idle.</p></br><p>The <code>@placeholder</code>, <code>@loading</code>, and <code>@error</code> blocks are optional and help manage the user experience during deferred loading.</p></br><p><code>@placeholder</code> is an optional block that declares content to show before the defer block is triggered.</p></br><p><code>@loading</code> is an optional block that allows us to declare content that will be shown during the loading of any deferred dependency.</p></br><p><code>@error</code> is an optional block. We can use this error block in case of a deferred loading failure.</p></br><pre data-language=\"plain\">\n@defer {\n  &lt;app-student&gt;&lt;/app-student&gt;\n}\n@placeholder (minimum 1000ms) {\n  &lt;p&gt;Student information table placeholder.&lt;/p&gt;\n}\n@loading (minimum 2000ms) {\n  &lt;p&gt;Loading...&lt;/p&gt;\n}\n@error {\n  &lt;p&gt;Failed to load table&lt;/p&gt;\n}\n</pre>",
                 "subjectId": 2,
                 "sectionId": 31,
                 "subSectionId": -1,
                 "contentId": 93,
-                "text": "<p>What is the new <strong>Control Flow</strong> in<strong> Angular 17</strong>?</p>"
+                "text": "<p>Deferrable Views using <code><strong>@defer</strong></code></p>"
+            },
+            {
+                "text": "<p>How many types we trigger<strong> Deferrable View</strong>? </p>",
+                "sectionId": 31,
+                "subSectionId": -1,
+                "subjectId": 2,
+                "contentId": 429,
+                "description": "<p>There are two types of triggers that we have: <code><strong>when</strong></code> and <code><strong>on</strong></code>.</p><p><code>when</code> is a custom condition and can be defined as a Boolean expression.</p></br><pre data-language=\"plain\">\n@defer (when isLoading) {\n  &lt;app-student&gt;&lt;/app-student&gt;\n}\n@placeholder {\n  &lt;p&gt;Loading student table.&lt;/p&gt;\n}\n@loading (minimum 1000ms) {\n  &lt;p&gt;Loading...&lt;/p&gt;\n}\n</pre></br><p>There are <strong>six types of triggers</strong> that come under the <code><strong>on</strong></code> attribute: <strong>immediate, timer, idle, viewport, interaction, and hover</strong>.</p><p>The <strong>immediate</strong> trigger will render once the Angular application is rendered in the browser.</p><p>We can specify the time using the <strong>timer</strong> trigger.</p><p><strong>Idle</strong> is the default behavior. It will load the content once the browser is in an idle state.</p></br><pre data-language=\"plain\">\n@defer (on immediate) {\n  &lt;app-student&gt;&lt;/app-student&gt;\n}\n</pre></br><pre data-language=\"plain\">\n@defer (on timer(5000ms)) {\n  &lt;app-student&gt;&lt;/app-student&gt;\n}\n</pre></br><pre data-language=\"plain\">\n@defer (on idle) {\n  &lt;app-student&gt;&lt;/app-student&gt;\n}\n</pre></br><pre data-language=\"plain\">\n@defer (on viewport) {\n  &lt;app-student&gt;&lt;/app-student&gt;\n}@placeholder (minimum 5s) {\n  &lt;p&gt;Loading...&lt;/p&gt;\n}\n</pre></br><pre data-language=\"plain\">\n&lt;button #showTable&gt;Show Table Data&lt;/button&gt;\n@defer (on interaction(showTable)) {\n  &lt;app-student&gt;&lt;/app-student&gt;\n}@placeholder {\n  &lt;p&gt;Table Data&lt;/p&gt;\n}@loading (minimum 2s) {\n  &lt;p&gt;Loading Table...&lt;/p&gt;\n}\n</pre></br><pre data-language=\"plain\">\n// When I click on Table Data placeholder. Table will display.\n\n@defer(on interaction) {\n&lt;app-student&gt;&lt;/app-student&gt;\n} @placeholder {\n&lt;p&gt;Table Data&lt;/p&gt;\n} @loading(minimum 2s) {\n&lt;p&gt;Loading Table...&lt;/p&gt;\n}\n</pre></br><pre data-language=\"plain\">\n&lt;button #hoverBtn&gt;Hover Button&lt;/button&gt;\n@defer (on hover(hoverBtn)) {\n  &lt;app-student&gt;&lt;/app-student&gt;\n}@placeholder {\n  &lt;p&gt;Table Data&lt;/p&gt;\n}@loading (minimum 2s) {\n  &lt;p&gt;Loading Table...&lt;/p&gt;\n}\n</pre></br><pre data-language=\"plain\">\n// When I hover on Table Data placeholder. Table will display.\n\n@defer(on hover) {\n&lt;app-student&gt;&lt;/app-student&gt;\n} @placeholder {\n&lt;p&gt;Table Data&lt;/p&gt;\n} @loading(minimum 2s) {\n&lt;p&gt;Loading Table...&lt;/p&gt;\n}\n</pre></br><pre data-language=\"plain\">\n// We can apply OR\n@defer(on interaction; on timer(2s)) {\n&lt;app-student&gt;&lt;/app-student&gt;\n} @placeholder {\n&lt;p&gt;Table Data&lt;/p&gt;\n} @loading(minimum 2s) {\n&lt;p&gt;Loading Table...&lt;/p&gt;\n}\n</pre>"
             }
         ]
     },
