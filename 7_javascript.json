@@ -387,6 +387,14 @@
                         "text": "<pre data-language=\"plain\">\nconst details = {\n  name: &quot;Vivek&quot;,\n  regularFn: function() {\n      return this.name;\n  },\n  arrowFn: () =&gt; {\n      return this.name;\n  },\n};\n\nconsole.log(details.regularFn());\nconsole.log(details.arrowFn());\n\n</pre>"
                     },
                     {
+                        "text": "<pre data-language=\"plain\">\nconst details = {\n  name: &quot;Vivek&quot;,\n  regularFn: function() {\n      return this.name;\n  },\n  arrowFn: () =&gt; {\n      return this.name;\n  },\n};\n\nconst regularFunc = details.regularFn;\nconst arrowFunc = details.arrowFn;\n\nconsole.log(regularFunc());\nconsole.log(arrowFunc());\n</pre>",
+                        "sectionId": 64,
+                        "subSectionId": 65,
+                        "subjectId": 7,
+                        "contentId": 431,
+                        "description": "<p>When <code>regularFn</code> is assigned to another variable and called, it loses its object context, so <code>this</code> becomes <code>undefined</code> and <code>this.name</code> returns <code>undefined</code>. The arrow function does not have its own <code>this</code> and uses lexical <code>this</code>, which is not the object, so <code>this.name</code> is also <code>undefined</code>.</p></br><p>We can fix regularFunc using <code>call</code>:</p></br><pre data-language=\"plain\">\nconst regularFunc = details.regularFn;\nconst arrowFunc = details.arrowFn;\n\nconsole.log(regularFunc.call(details));\nconsole.log(arrowFunc());\n</pre></br><p>We can fix regularFunc using <code>bind</code>:</p></br><pre data-language=\"plain\">\nconst regularFunc = details.regularFn.bind(details);\nconst arrowFunc = details.arrowFn;\n\nconsole.log(regularFunc());\nconsole.log(arrowFunc());\n</pre>"
+                    },
+                    {
                         "description": "<p>When this code runs, it prints undefined, not an error. This happens because of <strong>JavaScript </strong>hoisting. During the <strong>memory creation phase</strong>, the variable declared with var is hoisted to the top of its scope and is initialized with the value <strong>undefined</strong>. So when <strong>console.log(name)</strong> executes, the variable name already exists in memory but has not yet been assigned the value<strong> &quot;Vivek&quot;</strong>. The assignment happens afterward. That’s why the output is <strong>undefined </strong>instead of <strong>Vivek</strong>.</p>",
                         "subjectId": 7,
                         "sectionId": 64,
